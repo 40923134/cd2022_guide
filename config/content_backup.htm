@@ -1,14 +1,23 @@
 <h1>About</h1>
-<p>此內容管理系統以 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 作為 submodule 運作, 可以選定對應的版本運作, cmsimde 可以持續改版, 不會影響之前設為 submodule, 使用舊版 cmsimde 模組的內容管理相關運作.</p>
-<h4>利用 cmsimde 建立靜態網誌方法:</h4>
-<p>1. 在 github 建立倉儲, git clone 到近端</p>
-<p>2. 參考 <a href="https://github.com/mdecourse/newcms">https://github.com/mdecourse/newcms</a>, 加入除了 cmsimde 目錄外的所有內容</p>
-<p>以 git submodule add <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> cmsimde</p>
-<p>建立 cmsimde 目錄, 並從 github 取下子模組內容.</p>
-<p>3.在近端維護時, 更換目錄到倉儲中的 cmsimde, 以 python wsgi.py 啟動近端網際伺服器.</p>
-<p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
-<p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
-<p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
-<h1>Develop</h1>
-<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
-<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
+<p>課程倉儲與網站:</p>
+<p style="padding-left: 30px;"><a href="https://github.com/mdecourse/cd2022">https://github.com/mdecourse/cd2022</a></p>
+<p style="padding-left: 30px;"><a href="https://mde.tw/cd2022">https://mde.tw/cd2022</a></p>
+<h4>Week1:</h4>
+<h4 style="padding-left: 30px;">網路設定:</h4>
+<p style="padding-left: 60px;">由於目前電腦輔助設計室中的電腦只要將網路連接到系上的主幹 (因為課程要全面在純 IPv6 網段上運作), 直接連外, 電腦中就會有蠕蟲程式啟動攻擊, 造成操作系統所安裝的防毒軟體為了防堵惡意攻擊而關閉網路連線.</p>
+<p style="padding-left: 60px;">為因應上述問題, 可以在切換至連外網段後, 將系統的代理主機自動偵測關閉, 且自行設定能夠支援 IPv6 與 IPv4 的代理主機, 並且關閉網路卡的 IPv4 網路協定, 就可以避開惡意軟體的攻擊.</p>
+<p style="padding-left: 60px;">若要在開機後, 防毒軟體啟動前, 以批次檔案的執行, 自動完成上述三項設定, 可以參考:</p>
+<p style="padding-left: 90px;">電腦輔助設計室 <a href="https://github.com/mdecourse/wcm2022/discussions/2">IPv6 網路設定</a></p>
+<h4 style="padding-left: 30px;">分組:</h4>
+<p style="padding-left: 60px;">利用 Ethercalc 收集各班學員的 Github 帳號與組別, 存入 <a href="https://github.com/mdecourse/studlist/tree/main/2022spring">https://github.com/mdecourse/studlist/tree/main/2022spring</a></p>
+<p style="padding-left: 60px;">以 2b 為例, 每一大組 8 人, 且分為兩個 4 人小組, 目前可以透過 <a href="http://mde.tw/studlist/2022spring/2b.txt">http://mde.tw/studlist/2022spring/2b.txt</a> 讀取. 且透過 <a href="/downloads/read_data_from_nfulist.py">read_data_from_nfulist.py</a> 可以在近端讀取各班學員的 github 帳號與組別.</p>
+<p style="padding-left: 60px;">目前碰到的問題是:</p>
+<p style="padding-left: 90px;">能不能透過隨機方式自動幫尚未納組的學員分組?</p>
+<p style="padding-left: 90px;">能不能直接在網站上顯示出各學員的 cd2022 課程倉儲與網站?</p>
+<h4 style="padding-left: 30px;">下載課程工具:</h4>
+<p style="padding-left: 60px;">協同產品設計實習課程將會用到 NX1980, 若在電腦輔助設計室, 可以直接從 <a href="http://wcm.cycu.org:88/">http://wcm.cycu.org:88/</a> 下載.</p>
+<h4 style="padding-left: 30px;">讀取各學員每週工作內容:</h4>
+<p style="padding-left: 60px;">當完成分組後, 且各學員已經透過各自 Github 帳號下的 cd2022 倉儲開始執行課程任務後, 能否透過程式逐日或逐週讀取各學員的工作內容?</p>
+<p style="padding-left: 30px;"></p>
+<p style="padding-left: 30px;"></p>
+<p style="padding-left: 60px;"></p>
