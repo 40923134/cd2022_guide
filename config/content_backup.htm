@@ -1,5 +1,8 @@
 <h1>About</h1>
-<p>課程倉儲與網站:</p>
+<h4>何謂協同?</h4>
+<p style="padding-left: 30px;">若以拔河為例, "合作" (Cooperation) 的層次在多人參與既定的拔河活動, 過程中有許多傳統的實體集合練習, 最終目的則是能夠在傳統拔河活動中勝出.</p>
+<p style="padding-left: 30px;">在 cd2022 課程的定義下, "協同" (Collaborative) 設計的層次則希望能夠在"合作"的架構下, 納入更多的創新思維, 探討能否讓多人參與拔河活動, 各自在不同地理位置, 能在虛實整合與機電資架構的合成設計下, 讓多人進行一場公平的拔河活動, 且讓夢想成真的一隊得以克敵制勝.</p>
+<h4>課程倉儲與網站:</h4>
 <p style="padding-left: 30px;"><a href="https://github.com/mdecourse/cd2022">https://github.com/mdecourse/cd2022</a></p>
 <p style="padding-left: 30px;"><a href="https://mde.tw/cd2022">https://mde.tw/cd2022</a></p>
 <h4>Week1:</h4>
@@ -14,6 +17,7 @@
 <p style="padding-left: 60px;">以 2b 為例, 每一大組 8 人, 且分為兩個 4 人小組, 目前可以透過 <a href="http://mde.tw/studlist/2022spring/2b.txt">http://mde.tw/studlist/2022spring/2b.txt</a> 讀取. 且透過 <a href="/downloads/read_data_from_nfulist.py">read_data_from_nfulist.py</a> 可以在近端讀取各班學員的 github 帳號與組別.</p>
 <p style="padding-left: 60px;">目前碰到的問題是:</p>
 <p style="padding-left: 90px;">能不能透過隨機方式自動幫尚未納組的學員分組?</p>
+<p style="padding-left: 120px;">參考: <a href="https://mde.tw/cd2022_guide/content/run.html?src=https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/47ba006b45b227bc1135542f91adcc025f3f2590/grp_2022.py">grp_2022</a></p>
 <p style="padding-left: 90px;">能不能直接在網站上顯示出各學員的 cd2022 課程倉儲與網站?</p>
 <h4 style="padding-left: 30px;">下載課程工具:</h4>
 <p style="padding-left: 60px;">協同產品設計實習課程將會用到 NX1980, 若在電腦輔助設計室, 可以直接從 <a href="http://wcm.cycu.org:88/">http://wcm.cycu.org:88/</a> 下載.</p>
@@ -37,8 +41,34 @@
     (d.head || d.body).appendChild(s);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<h1>run</h1>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><h2>IPv6</h2>
+<p>電腦輔助設計室 <a href="https://github.com/mdecourse/wcm2022/discussions/2">IPv6 網路設定</a></p>
+<p><a href="https://www.tipo.gov.tw/tw/cp-180-219597-bf26c-1.html">智慧財產局學校行政與電算中心篇</a></p>
+<p><a href="https://www.netadmin.com.tw/netadmin/zh-tw/snapshot/484F7B4D900C4BDF988F0D6AAE2A8706">惡意軟體侵害</a></p>
+<h4>問題:</h4>
+<p style="padding-left: 30px;">為何不使用 NAT 機制讓電腦輔助設計室中的電腦連上網路?</p>
+<p style="padding-left: 30px;">使用 IPv6 連網有哪些好處? 有沒有壞處?</p>
+<p style="padding-left: 30px;">如何使用批次檔案完成 IPv6 網路設定, 避開惡意軟體的網路攻擊?</p>
+<p></p><h1>Solvespace</h1>
+<p>根據 <a href="https://mde.tw/cad2021/content/Compile%20Solvespace.html">https://mde.tw/cad2021/content/Compile%20Solvespace.html</a> 中的說明, 可以利用 <a href="https://drive.google.com/file/d/16L08jH3ZtoMeeGWBJrP9DuIk-cby_Wqw/view?usp=sharing">compile_copsim_for_cd2022.7z</a> (file size: 5 GB, extracted size: 17.3 GB), 完成編譯.</p>
+<p>自行編譯 Solvespace 的目的是希望透過 <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm</a> 與 <a href="https://www.coppeliarobotics.com/helpFiles/en/importExport.htm">https://www.coppeliarobotics.com/helpFiles/en/importExport.htm</a> 的資訊, 自行在 Solvespace 中將組立檔案直接轉入 Coppeliasim 的場景檔案. 其中牽涉如何將 Solvespace 組立件中的零件檔案進行分割後, 以 <a href="https://en.wikipedia.org/wiki/STL">STL</a>、<a href="http://wiki.ros.org/urdf">URDF</a> 或 <a href="http://sdformat.org/">SDF</a> 格式直接轉入 Coppeliasim.</p><h1>NX1980</h1>
+<h4>NX1980 參考頁面:</h4>
+<p style="padding-left: 30px;"><a href="https://mde.tw/cd2022/content/NX1980.html">https://mde.tw/cd2022/content/NX1980.html</a></p>
+<p style="padding-left: 30px;">假如在系上網段, 可直接從 <a href="http://wcm.cycu.org:88">http://wcm.cycu.org:88</a> 下載 <a href="http://wcm.cycu.org:88/NX1980_cd2022.7z">http://wcm.cycu.org:88/NX1980_cd2022.7z</a>.</p>
+<h4 style="padding-left: 30px;">問題:</h4>
+<p style="padding-left: 60px;"><a href="http://wcm.cycu.org:88">http://wcm.cycu.org:88</a> 是如何建置的? (採純 IPv6 設定, 且只允許特定網段下載)</p>
+<p style="padding-left: 60px;">可攜 NX1980 是如何建立的?</p>
+<p style="padding-left: 60px;">如何讓 NX1980 認證伺服器能夠 IPv6 相容?</p>
+<p style="padding-left: 60px;">如何安裝 NX1980 認證伺服器?</p><h1>Onshape</h1>
+<p>以 <a href="https://cad.onshape.com/documents/21d631bfd9ab509e3a2079c0/w/832791ed26ad65d49a0711b4/e/6957bf222554da36040535be">Onshape 中的 uArm robot</a>. (並未自行繪製零組件而是從 <a href="/downloads/uArmSwiftPro_UP1300_3D.STEP">uArmSwiftPro_UP1300_3D.STEP</a> import)</p><h1>Tic-Tat-Toe</h1>
+<p><a href="https://www.universal-robots.com/products/ur10-robot/">UR10e</a> Robot 透過影像辨識與人進行 <a href="https://en.wikipedia.org/wiki/Tic-tac-toe">Tic-Tat-To</a>e 遊戲:</p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/e1qtmZxMd6A" title="YouTube video player" width="560"></iframe></p>
+<p><a href="https://mde.tw/cd2022">cd2022</a> 則希望透過 <a href="https://www.ufactory.cc/pages/uarm">uArm</a> robot 搬動 OX 棋子的方式進行 <a href="https://en.wikipedia.org/wiki/Tic-tac-toe">Tic-Tat-To</a>e 遊戲.</p>
+<p>且 uArm robot 的零組件要求分別由 Solvespace, NX1980 與 Onshape 執行設計繪圖後轉入 Coppeliasim 場景完成機電資系統模擬.</p>
+<p>其中 uArm 原型零件採用 3D 列印或雷射切割的製造過程可依照 <a href="https://mde.tw/cd2022/content/Realizable.html">Realization</a> 頁面中的模擬系統進行, 並包括齒輪減速機的設計運算與 <a href="https://wokwi.com/arduino/libraries/Servo/Sweep">Arduino 伺服馬達的控制模擬</a>.</p>
+<h4>uArm 零組件:</h4>
+<p style="padding-left: 30px;">以 <a href="https://cad.onshape.com/documents/21d631bfd9ab509e3a2079c0/w/832791ed26ad65d49a0711b4/e/6957bf222554da36040535be">Onshape 中的 uArm robot</a>. (並未自行繪製零組件而是從 <a href="/downloads/uArmSwiftPro_UP1300_3D.STEP">uArmSwiftPro_UP1300_3D.STEP</a> import)</p>
+<p></p><h1>run</h1>
 <script src="/static/brython.js">
 </script>
 <script src="/static/brython_stdlib.js"></script>
