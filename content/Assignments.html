@@ -1,0 +1,195 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>CD_Guide</title>
+        <meta charset="utf-8">
+<meta property="head" content="H2">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <!-- for Wink3 -->
+        <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
+        <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushRust.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container-fluid'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>cd2022_guide 協同產品設計實習課程導引</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">cd2022_guide 協同產品設計實習課程導引</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='IPv6.html'>IPv6</a><li><a href='Grouping.html'>Grouping</a><li><a href='Assignments.html'>Assignments</a></li></ul><li><a href='Solvespace.html'>Solvespace</a><li><a href='NX1980.html'>NX1980</a><li><a href='Onshape.html'>Onshape</a><li><a href='Tic-Tat-Toe.html'>Tic-Tat-Toe</a><li><a href='run.html'>run</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">Grouping << <a href='Grouping.html'>Previous</a> <a href='Solvespace.html'>Next</a> >> Solvespace<br /><h1>Assignments</h1>
+<p><a href="./../downloads/2a_w2_note.txt">2a_w2_note.txt</a></p>
+<p>20220302 工作流程:<br/><br/>將 cadlab 網路連線接到系 backbone (使用純 IPv6 設定後, 為了連結到 IPv4 網站, 必須透過雙協定支援的 proxy server)<br/><br/>將兩個隨身碟放入電腦 USB 3.0 插槽 (與 2.0 速度差 10 倍)<br/><br/>啟動電腦<br/><br/>在 Windows 10 尚未啟動防毒軟體之前, 以系統管理員身分執行 1_ipv6_network_setup.bat (為了避開蠕蟲惡意的網路攻擊)<br/><br/>批次檔案將會開啟 Firefox 連結到 cd2022 課程倉儲<br/><br/>希望修改 cmsimde 倉儲內容, 以 git clone --recurse-submodules git@github.com:mdecourse/cmsimde.git 取下倉儲資料時, 電腦回報沒有 correct access rights<br/><br/>上個步驟表示 putty session github.com 並沒有設定, 帶出上週在 cdb 從 registry 匯出的 2022_cdb.reg, 直接以滑鼠點擊執行後, 再次執行 git clone --recurse-submodules git@github.com:mdecourse/cmsimde.git 取下 cmsimde 倉儲<br/><br/>但 cmsimde 無法直接產生靜態網頁與動態網頁, 因此擬以 git submodule add 透過另一個 cmsimde_site 倉儲進行修改後, 將資料回應至 cmsimde.<br/><br/>需要新增 github 倉儲, 因此登入 github<br/><br/>因為要取 2a 學員 github 帳號, 以 ssh 登入 17 電腦, 啟動 ethercalc<br/><br/>由於必須從教務主機取得 2a 學員學號, 經由 heroku 主機取得 https://nfulist.herokuapp.com/?semester=1102&amp;courseno=0752&amp;column=True<br/><br/>連接至 cd2022 gitter, 告知擷取 2a github 帳號的 ethercalc 表單連結<br/><br/>cd2022 要求每一學員必須在 github 帳號下建立 cd2022 倉儲與網頁, 並且由各小組組長建立 cd2022ag1-1 (為第一組第一小組), 且每位學員在 cd2022ag1-1 都擁有 git push 權限, 或採 pull requests 修改小組分組倉儲內容.<br/><br/>而每一大組的組長負責建立 cd2022ag1 (為 2a 第一大組) 後, 各大組學員對分組倉儲可以擁有 git push 權限, 或各學員採 pull requests 修改大分組倉儲內容.<br/><br/>各學員在每週會議後, 個人所負責完成的內容或簡報必須先放到個人的 cd2022 倉儲後, 再透過小組協同倉儲練習如何解決組員間提交內容的衝突後, 再整合至各大組的協同倉儲.<br/><br/>接著要從 ethercalc 取下 2a 學員的 github 帳號與大組分組資料 (能不能用程式協助?)<br/><br/>2a w2 assignments:<br/><br/>1. 在個人帳號下, 使用最新版的 cmsimde 建立 cd2022:<br/>git submodule add https://github.com/mdecourse/cmsimde.git cmsimde<br/><br/>或者 git clone --recurse-submodules https://github.com/mdecourse/cmsimde.git<br/><br/>將沒有 git 資料的 cmsimde 目錄放到個人倉儲.<br/><br/>2. 根據 https://mde.tw/cd2022_guide/content/Grouping.html 中的 2b 程式執行, 配合 https://mde.tw/studlist/2022spring/2a.txt 修改為能夠直接在頁面顯示各組員的 cd2022 倉儲與網頁連結, 以及各學員協同大分組倉儲與網頁連結 (例如: cd2022ag1).<br/><br/>3. 能否透過 github api 程式 (也可以逐一進入各班組員 github 帳號, 以手動查驗後, 以表格列出結果), 列出 w2 階段各組員帳號下 cd2022 與 cd2022ag1 (以 2a 第一組組員為例) 是否符合陽春的 cmsimde_site 內容.</p>
+<p></p><br />Grouping << <a href='Grouping.html'>Previous</a> <a href='Solvespace.html'>Next</a> >> Solvespace</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
