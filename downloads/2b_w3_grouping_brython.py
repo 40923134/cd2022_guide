@@ -121,7 +121,36 @@ for i in group_member:
     i[0] = str(grp)
     group.append(i)
     grp += 1
+# 假如各組已經全部補滿 8 人, 但 ungrouped 仍有學員
+# 則依序從第一組依序補滿
+ord = 0
+#print(len(ungrouped))
+if len(ungrouped) > 0:
+    for i in ungrouped:
+        group[ord].append(i)
+        ord += 1
 #print(group)
+# 根據最新的 group 資料更新 num_grp
+# 先清空 num_grp
+num_grp.clear()
+for i in group:
+    # 組序為 element one
+    grp_order = i[0]
+    stud_list = i[1:]
+    for j in stud_list:
+        # j 為該組組員學號
+        num_grp[j] = grp_order
+# 列出已經完成分組的結果, 準備更新至 mdecourse/studlist
+newstud = []
+print("2b\tgithub 帳號\t組別")
+for i in reg_data:
+    #print(i)
+    # i 為學號
+    try:
+        print(i + "\t" + num_github[i] + "\t" + num_grp[i])
+    except:
+        newstud.append(i)
+print("new: " + str(newstud))
 for i in group:
     brython_div <= "第" + str(i[0]) + "組:" + html.BR()
     grp_repo = course + aorb + "g" + str(i[0])
