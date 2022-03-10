@@ -42,12 +42,25 @@ for i in data:
 #print(num_grp)
 # 根據最新註冊資料更新 studlist 中的內容
 for i in reg_data:
-    # 納入新加入的學員
+    # 納入新加選的學員或從 data 中移除已經退選者
+    # 假如最新修課學員學號並不在原名單中, 則屬加選者
     if not(i in num_github):
         #print(i)
         # 先以學號作為帳號, 分組欄位空白
         num_github[i] = i
         num_grp[i] = ""
+# 因為隨後查詢 num_github 與 num_grp 會以 reg_data 為主
+# 在實作中可以無需從 num_github 或 num_grp 中移除退選者
+for i in data:
+    # 表示該 i 學號已經退選
+    if not(i in reg_data):
+        # 將 i 學號分別從 num_gihub 與 num_grp 移除
+        try:
+            del num_github[i]
+            del num_grp[i]
+        except:
+            # 表示沒有退選者
+            pass
 #print(num_github)
 for i in reg_data:
     big.append([i, num_github[i], num_grp[i]])
