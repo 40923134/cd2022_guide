@@ -1,4 +1,4 @@
-# 2b w3 grouping program, 與 2a 處理架構相同
+# 2a w3 grouping program, 與 2b 處理架構相同
 from browser import html
 from browser import document
 import random
@@ -11,15 +11,15 @@ def makeLink(href, content):
     #brython_div <= html.BR()
 
 # 2a
-#course_num = "0752"
+course_num = "0752"
 # 2b
-course_num = "0764"
+#course_num = "0764"
 
 reg_url = "https://nfulist.herokuapp.com/?semester=1102&courseno="+ course_num + "&column=True"
 reg_data = open(reg_url).read().split("\n")[:-1]
 #print(reg_data)
-aorb = "b"
-url = "https://mde.tw/studlist/2022spring/2b.txt"
+aorb = "a"
+url = "https://mde.tw/studlist/2022spring/2a.txt"
 course = "cd2022"
 # 從 url 讀取資料後, 以跳行符號分割資料進入數列後
 # 去除數列中的第一筆與最後一筆資料後可得每位學員所填的資料

@@ -1,4 +1,3 @@
-# 2b w3 grouping program, 與 2a 處理架構相同
 from browser import html
 from browser import document
 import random
@@ -10,61 +9,29 @@ def makeLink(href, content):
     brython_div <= html.A(content, href=href)
     #brython_div <= html.BR()
 
-# 2a
-#course_num = "0752"
-# 2b
-course_num = "0764"
-
-reg_url = "https://nfulist.herokuapp.com/?semester=1102&courseno="+ course_num + "&column=True"
-reg_data = open(reg_url).read().split("\n")[:-1]
-#print(reg_data)
-aorb = "b"
-url = "https://mde.tw/studlist/2022spring/2b.txt"
+aorb = "a"
+url = "https://mde.tw/studlist/2022spring/2a.txt"
 course = "cd2022"
 # 從 url 讀取資料後, 以跳行符號分割資料進入數列後
 # 去除數列中的第一筆與最後一筆資料後可得每位學員所填的資料
-data = open(url).read().split("\n")[1:-1]
+# 因為 2a.txt 採用 Windows 跳行符號, 必須使用 \r\n
+# 2b.txt 跳行符號為 \n
+nextline = "\r\n"
+data = open(url).read().split(nextline)[1:-1]
+#print(len(data))
 #print(data)
 # 再以 \t 分割每位學員的資料, 
 #可以取得每位學員的學號, github 帳號與組別
 big = []
 num_github = {}
-num_grp = {}
 for i in data:
     stud_no, github, grp_no = i.split("\t")
     #print(stud_no, github, grp_no)
-    # 因為納入新成員, 所以 big 必須之後才可組成
-    #big.append([stud_no, github, grp_no])
+    big.append([stud_no, github, grp_no])
     if github != "":
         num_github[stud_no] = github
     else:
         num_github[stud_no] = stud_no
-    num_grp[stud_no] = grp_no
-#print(num_grp)
-# 根據最新註冊資料更新 studlist 中的內容
-for i in reg_data:
-    # 納入新加選的學員或從 data 中移除已經退選者
-    # 假如最新修課學員學號並不在原名單中, 則屬加選者
-    if not(i in num_github):
-        #print(i)
-        # 先以學號作為帳號, 分組欄位空白
-        num_github[i] = i
-        num_grp[i] = ""
-# 因為隨後查詢 num_github 與 num_grp 會以 reg_data 為主
-# 在實作中可以無需從 num_github 或 num_grp 中移除退選者
-for i in data:
-    # 表示該 i 學號已經退選
-    if not(i in reg_data):
-        # 將 i 學號分別從 num_gihub 與 num_grp 移除
-        try:
-            del num_github[i]
-            del num_grp[i]
-        except:
-            # 表示沒有退選者
-            pass
-#print(num_github)
-for i in reg_data:
-    big.append([i, num_github[i], num_grp[i]])
 #print(big)
 # 根據每一 element 的第三個 element sort
 big.sort(key = lambda x: x[2])
@@ -114,6 +81,7 @@ for i in group_member:
         grouped.append(i)
 #print(grouped)
 #print(ungrouped)
+# 針對新的分組與未分組數列, 重新求 group_member
 d = {}
 # 逐一檢視 grouped 數列
 for i in grouped:
@@ -132,6 +100,7 @@ for i in grouped:
 group_member = list(d.values())
 # group_member 第一位為組序, 隨後為組員學號
 #print(group_member)
+# 準備以隨機方式將未分組組員納入未滿 8 名組員之組別
 random.shuffle(ungrouped)
 #print("ungrouped:" + str(len(ungrouped)))
 grp = 1
@@ -143,9 +112,10 @@ for i in group_member:
         # 若仍有學員未納組, 則可根據缺額補入學員學號
         try:
             #print("add " + str(ungrouped[:8-len(i[1:])]))
-            i.extend(list(ungrouped[:8-len(i[1:])]))
-            # 拿掉已經分配組別的學員學號
-            ungrouped = ungrouped[8-len(i[1:]):]
+            for j in range(8-len(i[1:])):
+                i.append(ungrouped[j])
+                ungrouped.remove(ungrouped[j])
+            #print(ungrouped)
         except:
             #print("no member to add!")
             pass
@@ -165,27 +135,6 @@ if len(ungrouped) > 0:
         group[ord].append(i)
         ord += 1
 #print(group)
-# 根據最新的 group 資料更新 num_grp
-# 先清空 num_grp
-num_grp.clear()
-for i in group:
-    # 組序為 element one
-    grp_order = i[0]
-    stud_list = i[1:]
-    for j in stud_list:
-        # j 為該組組員學號
-        num_grp[j] = grp_order
-# 列出已經完成分組的結果, 準備更新至 mdecourse/studlist
-newstud = []
-print("2" + aorb + "\tgithub 帳號\t組別")
-for i in reg_data:
-    #print(i)
-    # i 為學號
-    try:
-        print(i + "\t" + num_github[i] + "\t" + num_grp[i])
-    except:
-        newstud.append(i)
-print("new: " + str(newstud))
 for i in group:
     brython_div <= "第" + str(i[0]) + "組:" + html.BR()
     grp_repo = course + aorb + "g" + str(i[0])
