@@ -160,10 +160,13 @@ var winkVideoData = {
 <p><span style="background-color: #ffff99;">w4 各班上課時段前</span>, 請各小組與大組成員分別開會討論後, 採協同設計流程執行上述任務, 並準備在 w4 上課時段中直接利用網頁簡報呈現各大組的執行流程與結果.</p><h2>Revealjs</h2>
 <p><a href="https://revealjs.com/">https://revealjs.com/</a> 是一個 Javascript 程式框架, 可用來建立全球資訊網上的簡報.</p>
 <p><a href="https://github.com/hakimel/reveal.js">https://github.com/hakimel/reveal.js</a> 引用了許多 Javascript 程式庫, 這些程式庫的改版非常頻繁, 經常造成改版頻率相對緩慢的 <a href="https://github.com/mdecourse/cmsimde">cmsimde</a> 經常收到來自 Github 的改版通知.</p>
-<p>因此在利用 <a href="https://github.com/mdecourse/cmsimde">cmsimde</a> 建立 cd2022 課程網站與大分組網站時, 若要直接使用 Reveal.js 建立線上簡報, 就必須先處理這項議題.</p>
-<p><a href="https://github.com/mdecourse/cmsimde_site">https://github.com/mdecourse/cmsimde_site</a> 就是用於開發 <a href="https://github.com/mdecourse/cmsimde">cmsimde</a> 的倉儲. cmsimde_site 的 main 分支直接將 <a href="https://github.com/mdecourse/cmsimde">cmsimde</a> 內容放入 cmsimde 目錄, 可以直接根據需求修改其中的任何內容, 當測試無誤後(還沒能使用 <a href="https://docs.python.org/3/library/unittest.html">unittest</a>), 將改版內容反應至 <a href="https://github.com/mdecourse/cmsimde">cmsimde</a> 後, 將在 cmsimde_site 倉儲中的 submodule 分支中進行測試.</p>
-<p>git submodule update --init --recursive</p>
-<p>git checkout -f submodule --recurse-submodules</p><h1>Solvespace</h1>
+<p>因此在利用 <a href="https://github.com/mdecourse/cmsimde">cmsimde</a> 建立 cd2022 課程網站與大分組網站時, 若要直接使用 Reveal.js 建立線上簡報, 就必須將 <a href="https://github.com/mdecourse/cmsimde">cmsimde</a> 的 reveal 目錄內容保持在最新的 Reveal.js 版本.</p>
+<p><a href="https://github.com/mdecourse/cmsimde_site">https://github.com/mdecourse/cmsimde_site</a> 就是用於開發 <a href="https://github.com/mdecourse/cmsimde">cmsimde</a> 的倉儲. cmsimde_site 的 main 分支直接將 <a href="https://github.com/mdecourse/cmsimde">cmsimde</a> 內容放入 cmsimde 目錄, 可以直接根據需求修改其中的任何內容, 當測試無誤後(尚未使用 <a href="https://docs.python.org/3/library/unittest.html">unittest</a>), 將改版內容反應至 <a href="https://github.com/mdecourse/cmsimde">cmsimde</a> 後, 將在 cmsimde_site 倉儲中的 submodule 分支中進行測試.</p>
+<p>由於 cmsimde_site 的 main 分支直接將 cmsimde 當作子目錄, 而 submodule 分支則將 cmsimde 當作子模組. 從 main 分支切換到 submodule, 由於需要同時取下 cmsimde 子模組資料, 因此使用:</p>
+<p style="padding-left: 30px;">git checkout -f submodule --recurse-submodules</p>
+<p>而從 submodule 分支切換回 main 分支, 則使用:</p>
+<p style="padding-left: 30px;">git checkout -f main</p>
+<p><a href="https://github.com/mdecourse/cmsimde">cmsimde</a> 倉儲中的 config/reveal.leo 使用 <a href="https://leoeditor.com/">Leo Editor</a> 編輯各簡報頁面內容. reveal.leo 中包含 demo.html 中的各種簡報應用, 使用者可以從 Leo Editor 專案中取出所需的簡報頁面進行編輯.</p><h1>Solvespace</h1>
 <p>根據 <a href="https://mde.tw/cad2021/content/Compile%20Solvespace.html">https://mde.tw/cad2021/content/Compile%20Solvespace.html</a> 中的說明, 可以利用 <a href="https://drive.google.com/file/d/16L08jH3ZtoMeeGWBJrP9DuIk-cby_Wqw/view?usp=sharing">compile_copsim_for_cd2022.7z</a> (file size: 5 GB, extracted size: 17.3 GB), 完成編譯.</p>
 <p>自行編譯 Solvespace 的目的是希望透過 <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm</a> 與 <a href="https://www.coppeliarobotics.com/helpFiles/en/importExport.htm">https://www.coppeliarobotics.com/helpFiles/en/importExport.htm</a> 的資訊, 自行在 Solvespace 中將組立檔案直接轉入 Coppeliasim 的場景檔案. 其中牽涉如何將 Solvespace 組立件中的零件檔案進行分割後, 以 <a href="https://en.wikipedia.org/wiki/STL">STL</a>、<a href="http://wiki.ros.org/urdf">URDF</a> 或 <a href="http://sdformat.org/">SDF</a> 格式直接轉入 Coppeliasim.</p><h1>NX1980</h1>
 <h4>NX1980 參考頁面:</h4>
