@@ -8,7 +8,7 @@
   function getCamera() {
     var aspectRatio = window.innerWidth / window.innerHeight;
     var camera = new THREE.PerspectiveCamera(75, aspectRatio, 0.1, 1000);
-    camera.position.set(220,0, 0);
+    camera.position.set(150,0, 0);
     return camera;
   }
 
@@ -39,9 +39,9 @@
   function loadModel() {
     var loader = new THREE.OBJLoader();
     loader.load( 'jansen-asm.obj', function ( object ) {
-        object.rotation.z = 0.5;
-        object.rotation.x = -1.2;
-        object.rotation.y = 0;
+        object.rotation.z = 1.7;
+        object.rotation.x = -2.2;
+        object.rotation.y = 1.0;
 
       scene.add( object );
       document.querySelector('h1').style.display = 'none';
