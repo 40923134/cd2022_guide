@@ -166,10 +166,11 @@ var winkVideoData = {
 <p style="padding-left: 30px;">git checkout -f submodule --recurse-submodules</p>
 <p>而從 submodule 分支切換回 main 分支, 則使用:</p>
 <p style="padding-left: 30px;">git checkout -f main</p>
-<p><a href="https://github.com/mdecourse/cmsimde">cmsimde</a> 倉儲中的 config/reveal.leo 使用 <a href="https://leoeditor.com/">Leo Editor</a> 編輯各簡報頁面內容.</p><h1>Solvespace</h1>
+<p><a href="https://github.com/mdecourse/cmsimde">cmsimde</a> 倉儲中的 config/reveal.leo 使用 <a href="https://leoeditor.com/">Leo Editor</a> 編輯各簡報頁面內容. reveal.leo 中包含 demo.html 中的各種簡報應用, 使用者可以從 Leo Editor 專案中取出所需的簡報頁面進行編輯.</p><h1>Solvespace</h1>
 <p>根據 <a href="https://mde.tw/cad2021/content/Compile%20Solvespace.html">https://mde.tw/cad2021/content/Compile%20Solvespace.html</a> 中的說明, 可以利用 <a href="https://drive.google.com/file/d/16L08jH3ZtoMeeGWBJrP9DuIk-cby_Wqw/view?usp=sharing">compile_copsim_for_cd2022.7z</a> (file size: 5 GB, extracted size: 17.3 GB), 完成編譯.</p>
 <p>自行編譯 Solvespace 的目的是希望透過 <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm</a> 與 <a href="https://www.coppeliarobotics.com/helpFiles/en/importExport.htm">https://www.coppeliarobotics.com/helpFiles/en/importExport.htm</a> 的資訊, 自行在 Solvespace 中將組立檔案直接轉入 Coppeliasim 的場景檔案. 其中牽涉如何將 Solvespace 組立件中的零件檔案進行分割後, 以 <a href="https://en.wikipedia.org/wiki/STL">STL</a>、<a href="http://wiki.ros.org/urdf">URDF</a> 或 <a href="http://sdformat.org/">SDF</a> 格式直接轉入 Coppeliasim.</p><h1>NX1980</h1>
 <h4>NX1980 參考頁面:</h4>
+<p style="padding-left: 30px;">有關 Siemens NX 的歷史, 請參考 <a href="https://en.wikipedia.org/wiki/Siemens_NX">https://en.wikipedia.org/wiki/Siemens_NX</a></p>
 <p style="padding-left: 30px;"><a href="https://mde.tw/cd2022/content/NX1980.html">https://mde.tw/cd2022/content/NX1980.html</a></p>
 <p style="padding-left: 30px;">假如在系上網段, 可直接從 <a href="http://wcm.cycu.org:88">http://wcm.cycu.org:88</a> 下載 <a href="http://wcm.cycu.org:88/NX1980_cd2022.7z">http://wcm.cycu.org:88/NX1980_cd2022.7z</a>.</p>
 <p style="padding-left: 30px;"><a href="http://wcm.cycu.org:88">http://wcm.cycu.org:88</a> 中目前有三個與可攜 Python 程式有關的檔案, 有何差別, 建立的目的為何?</p>
@@ -179,15 +180,68 @@ var winkVideoData = {
 <p style="padding-left: 60px;"><a href="http://wcm.cycu.org:88/drive.7z">drive.7z</a> (file size: 2.6 MB, extracted size: 10 MB, 只包含 PUTTY, tcc, wscite 與 tmp 目錄, 採用 Hybrid 方式設定, 可與目前電腦輔助設計室中 SSD 硬碟所安裝的 Python 3.9.5 與 <a href="https://git-scm.com/download/win">Portablegit</a> 結合, 使用者只需自行設定啟動後的 home_ipv6 目錄與 home_ipv6/Desktop 目錄後即可以最輕薄便捷的方式將 SSH key 存入隨身碟, 並將個人與分組倉儲存入隨身碟啟動後的 tmp 目錄進行操作).</p>
 <h4 style="padding-left: 30px;">問題:</h4>
 <p style="padding-left: 60px;"><a href="http://wcm.cycu.org:88">http://wcm.cycu.org:88</a> 是如何建置的? (採純 IPv6 設定, 且只允許特定網段下載)</p>
+<p style="padding-left: 90px;">使用 <a href="https://nginx.org/">Nginx</a>, 採用如下設定:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">worker_processes  1;
+events {
+    worker_connections  1024;
+}
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+    server {
+        # port 80 僅開啟 IPv6 網路連線
+        listen       [::]:80 default ipv6only=on;
+        # 伺服器的符號名稱
+        server_name  xxx.xxxx.xxx;
+        return       301 https://$server_name$request_uri;
+    }
+
+   server {
+       # 同時開啟 IPv4 與 IPv6 連線, port 設為 88
+        listen       [::]:88 ipv6only=off;
+        listen       88;
+       # 允許系上 IPv4 網段連線
+        allow 140.xxx.xx.0/24;
+       # 允許特定單一 IPv4 電腦連線
+        allow xxx.xxx.xxx.xx;
+       # 允許系上 IPv6 網段連線
+        allow 2001:xxx:xxxx:xx::0/32;
+       # 其餘網段禁止連線
+        deny all;
+        location / {
+            # 根目錄設定
+            root X:/xxxxxx/xxxx/spring2022;
+            }
+        # 開啟 autoindex, 連線後會列出目錄下所有檔案內容
+        autoindex on;
+    }
+}</pre>
 <p style="padding-left: 60px;">可攜 NX1980 是如何建立的?</p>
-<p style="padding-left: 60px;">如何讓 NX1980 認證伺服器能夠 IPv6 相容?</p>
-<p style="padding-left: 60px;">如何安裝 NX1980 認證伺服器?</p>
-<p id="learnnx"></p>
+<p style="padding-left: 90px;">利用 <a href="https://github.com/Bioruebe/UniExtract2">UniExtract2</a> 將 NX1980 安裝檔案解開後, 透過批次檔案設定啟動.</p>
+<p style="padding-left: 60px;">如何讓 NX1980 認證伺服器 IPv6 相容?</p>
+<p style="padding-left: 90px;">開啟伺服器的 IPv6 網路連線.</p>
+<p style="padding-left: 60px;">Siemens NX 套件更新頻率?</p>
+<p style="padding-left: 90px;">請參見 <a href="https://docs.plm.automation.siemens.com/tdoc/nx/1899/updating_nx_installation/#uid:index_xid1688897">Updating the NX Installation</a>.</p>
+<p style="padding-left: 90px;">每 6 個月釋出一個大改版, 每個月則各有一次小改版.</p>
+<p style="padding-left: 90px;">NX1980 為 2021/06 釋出的版本. 目前 2022/03 最新版本為 2007 系列, 其他各版資訊請參考 <a href="https://nxcadtips.com/docs/list-of-nx-versions-with-documentation-links/">https://nxcadtips.com/docs/list-of-nx-versions-with-documentation-links/</a></p>
 <p style="padding-left: 60px;">如何學習利用 NX1980 進行 3D 零組件設計繪圖?</p>
+<p style="padding-left: 90px;"><a href="https://docs.plm.automation.siemens.com/tdoc/nx/1847/nx_help">NX1847 nx_help</a></p>
+<p style="padding-left: 90px;"><a href="https://docs.sw.siemens.com/en-US/release/209349590/NX%201980%20Series">NX1980 線上 Documentation</a></p>
 <p style="padding-left: 90px;"><a href="https://www.youtube.com/watch?v=GUaa97tALxE&amp;list=PLzEsJue49U_EMMv0eBo8MNJjJOq_WHCrl">NX1855-1919 零組件設計繪圖</a>教學影片</p>
 <p style="padding-left: 120px;">此一系列教學影片共有 38 個影片檔, 請各大組學員分別認領五個教學影片後, 以 Wink 製作教學影片後, 先將影片放入各自的 cd2022 網站中的 NX1980 H1 頁面中, 然後再整合至各小組與大組的協同網站中.</p>
 <p style="padding-left: 120px;">有關電腦輔助設計室 IPv6 網路設定流程, 可以利用手機參考<a href="https://mde.tw/wcm2022_guide/content/IPv6%20setup.html">設定教學</a>後, 利用隨身碟中的<a href="https://github.com/mdecourse/wcm2022/discussions/2">批次檔案</a>進行設定.</p>
-<p style="padding-left: 120px;">此階段的 NX1980 uArm 機械手臂零組件繪圖目的, 希望能以 NX1980 繪製 uArm (<a href="https://cad.onshape.com/documents/21d631bfd9ab509e3a2079c0/w/832791ed26ad65d49a0711b4/e/6957bf222554da36040535be">Onshpae 中的 uArm 組立檔</a>, 使用者可以在手機中安裝 Onshpe App (<a href="https://play.google.com/store/apps/details?id=com.onshape.app">Android</a>, <a href="https://apps.apple.com/us/app/onshape-3d-cad/id923421284">iPhone</a>) 後開啟 uArm 組立檔)</p><h1>Onshape</h1>
+<p style="padding-left: 120px;">此階段的 NX1980 uArm 機械手臂零組件繪圖目的, 希望能以 NX1980 繪製 uArm (<a href="https://cad.onshape.com/documents/21d631bfd9ab509e3a2079c0/w/832791ed26ad65d49a0711b4/e/6957bf222554da36040535be">Onshpae 中的 uArm 組立檔</a>, 使用者可以在手機中安裝 Onshpe App (<a href="https://play.google.com/store/apps/details?id=com.onshape.app">Android</a>, <a href="https://apps.apple.com/us/app/onshape-3d-cad/id923421284">iPhone</a>) 後開啟 uArm 組立檔)</p>
+<p style="padding-left: 60px;">NX1980 如何取得啟動授權?</p>
+<p style="padding-left: 90px;">系上購買的 NX1980 教育版是透過網路連線取得啟動授權, 意即啟動 NX1980 時, 必須連接到系上的伺服器取得授權後, 才能開啟.</p>
+<p style="padding-left: 90px;">假如是在校外, 可以透過 IPv4 或 IPv6 網路連線取得授權, 若在協同產品設計實習上課時段, 則只能透過 IPv6 協定連網, 因此使用者可以在 start_NX1980.bat 多台授權伺服器如下:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">set SPLM_LICENSE_SERVER=port@IPv4_server_address;port@[IPv6_server_address]</pre>
+<p style="padding-left: 90px;">就能同時在不同網路連線情況下, 啟動 NX1980.</p>
+<p style="padding-left: 90px;">以下的 bat 檔案, 能夠同時啟動 Python, Msys2 以及 NX1980:</p>
+<p style="padding-left: 120px;"><a href="/downloads/start_ipv6_nx1980_bat.txt">start_ipv6_nx1980_bat.txt</a></p>
+<p style="padding-left: 120px;">其中 Msys2 可用來編譯 Solvespace、SciTE、Fossil SCM 以及 CoppeliaSim, Python 可用來啟動個人動態與靜態網頁, 並透過 Leo Editor 編輯 Reveal.js 簡報.</p><h1>Onshape</h1>
 <p>以 <a href="https://cad.onshape.com/documents/21d631bfd9ab509e3a2079c0/w/832791ed26ad65d49a0711b4/e/6957bf222554da36040535be">Onshape 中的 uArm robot</a>. (並未自行繪製零組件而是從 <a href="/downloads/uArmSwiftPro_UP1300_3D.STEP">uArmSwiftPro_UP1300_3D.STEP</a> import)</p>
 <h1>Tic-Tat-Toe</h1>
 <p><a href="https://www.universal-robots.com/products/ur10-robot/">UR10e</a> Robot 透過影像辨識與人進行 <a href="https://en.wikipedia.org/wiki/Tic-tac-toe">Tic-Tat-Toe</a> 遊戲:</p>
