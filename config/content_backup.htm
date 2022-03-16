@@ -720,6 +720,8 @@ doc["grp2a_2022"].bind("click", grp2a_2022.do)
 ################################## grp2a_2022 end
 </script>
 </p><h2>Brython</h2>
+<p><a href="https://mde.tw/cd2022_guide/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/0999a227153ea9a20954e4b2b77f783337197627/w4_grp_src.py&amp;src2=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/0999a227153ea9a20954e4b2b77f783337197627/w4_grp_src2.py">2a 分組程式練習</a></p>
+<p><a href="/get_page/Brython/?src=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/507db6ddb7b5bcdd3027235761208b32ac93bcd0/w4_b_grp.py&amp;src2=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/507db6ddb7b5bcdd3027235761208b32ac93bcd0/w4_b_grp_src2.py">2b 分組程式練習</a></p>
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
 <!-- for ggame -->
@@ -841,7 +843,7 @@ def clear_bd2(ev):
 Ace2 = ace.Editor(editor_id="kw_editor2", console_id="kw_console2", container_id="kw_container2", storage_id="kw_py_src2" )
 # 從 gist 取出程式碼後, 放入 editor 作為 default 程式
 def run2():
-    # 利用 get 取下 src 變數值
+    # 利用 get 取下 src2 變數值
     try:
         url2 = doc.query["src2"]
     except:
@@ -874,46 +876,36 @@ run2()
 <p>
 <script type="text/python3">
 from browser import document as doc
-from browser import html
 import ace
+
 # 清除畫布
 def clear_bd3(ev):
-    bd = doc["brython_div3"]
-    bd.clear()
-# Brython 內建的 container 名稱為  'container' 且 turtle 輸出為 svg 必須使用 div 訂定 id
+    # 注意這裡清除的畫布 id 為 brython_div3
+    bd3 = doc["brython_div3"]
+    bd3.clear()
+
 Ace3 = ace.Editor(editor_id="kw_editor3", console_id="kw_console3", container_id="kw_container3", storage_id="kw_py_src3" )
-Ace3.editor.setValue("""from browser import html
-from browser import document as doc
-import browser.timer
-
-canvas = html.CANVAS(width = 400, height = 100)
-canvas.id = "game-board3"
-brython_div = doc["brython_div3"]
-brython_div <= canvas
-ctx = canvas.getContext("2d")
-px = 0
-py = 50
-width = 20
-height = 20
-speed = 2
-
-def game():
-    global px, py, width, height, speed
-    ctx.clearRect(px, py, width, height)
-    ctx.fillStyle = "red"
-    px += speed
-    if px < 0 or (px + width) > canvas.width:
-        speed = -speed
-    ctx.fillRect(px, py, width, height)
-    
-browser.timer.set_interval(game, 10)""")
-Ace3.editor.scrollToRow(0)
-Ace3.editor.gotoLine(0)
+# 從 gist 取出程式碼後, 放入 editor 作為 default 程式
+def run3():
+    # 利用 get 取下 src3 變數值
+    try:
+        url3 = doc.query["src3"]
+    except:
+        url3 = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c3a6deaf717f8f2739a4b1392a5ab10936e9693a/from_1_add_to_10_1.py"
+    prog3 = open(url3).read()
+    # 將程式載入編輯區
+    Ace3.editor.setValue(prog3)
+    Ace3.editor.scrollToRow(0)
+    Ace3.editor.gotoLine(0)
+    # 直接執行程式
+    Ace3.run()
 # 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
 doc['kw_run3'].bind('click', Ace3.run)
 doc['kw_show_console3'].bind('click', Ace3.show_console)
 doc['kw_clear_console3'].bind('click', Ace3.clear_console)
 doc['clear_bd3'].bind('click', clear_bd3)
+# 呼叫函式執行
+run3()
 </script>
 </p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
@@ -923,4 +915,4 @@ doc['clear_bd3'].bind('click', clear_bd3)
 <p><button id="kw_run3">Run</button> <button id="kw_show_console3">Output</button> <button id="kw_clear_console3">清除輸出區</button><button id="clear_bd3">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console3"></textarea></div>
 <div id="brython_div3"></div>
-<p><!-- 結束列印程式3 --></p>
+<p><!--  結束列印程式 3 --></p>
