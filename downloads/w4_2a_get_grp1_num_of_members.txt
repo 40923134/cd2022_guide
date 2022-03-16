@@ -1,0 +1,22 @@
+studlist_url = "https://mde.tw/studlist/2022spring/2a.txt"
+data = open(studlist_url).read()
+#print(data)
+stud = data.split("\n")
+#print(stud[1:])
+grp1 = []
+count = 0
+# 第一筆為標題, 最後一筆為空資料, 不予處理
+for i in stud[1:-1]:
+    #print(i)
+    
+    studno, github, grp = i.split("\t")
+    #print(studno, github, grp)
+    #print(type(grp))
+    # 因為有人沒有組別或沒有登記 github 帳號
+    if grp != "" and github != "":
+        if grp == "1":
+            #print(studno)
+            count += 1
+    else:
+        print("尚未分組者:", studno)
+print(count)
