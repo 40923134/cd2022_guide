@@ -400,7 +400,37 @@ start /MIN %Disk%:\wscite415\wscite\SciTE.exe
 %UGII_BASE_DIR%\ugii\ugraf.exe -nx
 
 Exit</pre>
-<h3>NX1980_setup</h3>
+<h3>Portable NX1980</h3>
+<p>在 Windows 10 配置可攜 NX1980 程式, 需要:</p>
+<ol>
+<li><a href="https://github.com/Bioruebe/UniExtract2">https://github.com/Bioruebe/UniExtract2</a></li>
+<li><a href="https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm">https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm</a></li>
+</ol>
+<p>等兩項工具, UniExtract2 用來解開 SiemensNX-1980_wntx64\nx\SiemensNX.msi, 以及 .msi, 而 wix 則用來解開 SiemensNX-1980_wntx64\nx\VC_redist.x64.exe</p>
+<p>製作 Portable NX1980 的步驟請參考以下影片:</p>
+<script>
+var winkVideoData = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+</script>
+<!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData" height="630" muted="true" width="1008">
+<source src="/downloads/w5_portable_nx1980/w5_portable_nx1980.mp4" type="video/mp4"/></video>
+<div class="winkVideoOverlayClass"></div>
+<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
+<div class="winkVideoControlBarProgressLeftClass"></div>
+<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
+<div class="winkVideoControlBarProgressRightClass"></div>
+<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
+<div class="winkVideoControlBarProgressThumbClass"></div>
+</div>
+<div class="winkVideoPlayOverlayClass"></div>
+</div><h3>NX1980_setup</h3>
 <p>以下影片說明如何設定 Journal 存檔格式, 關閉 Product Execellence Program, 並查驗版本與授權使用單位:</p>
 <p><a href="/downloads/w5_nx_api/w5_nx_api.txt">w5_nx_api.txt</a></p>
 <script>
@@ -425,8 +455,7 @@ var winkVideoData = {
 <div class="winkVideoControlBarProgressThumbClass"></div>
 </div>
 <div class="winkVideoPlayOverlayClass"></div>
-</div>
-<h3>NXOpen</h3>
+</div><h3>NXOpen</h3>
 <pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false"># nx_open_part.py
 # 導入 NXOpen
 import NXOpen
