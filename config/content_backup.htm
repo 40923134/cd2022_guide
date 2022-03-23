@@ -106,15 +106,14 @@ var winkVideoData = {
 </div>
 <p></p><h2>Revealjs</h2>
 <p><a href="https://revealjs.com/">https://revealjs.com/</a> 是一個 Javascript 程式框架, 可用來建立全球資訊網上的簡報.</p>
-<p><a href="https://github.com/hakimel/reveal.js">https://github.com/hakimel/reveal.js</a> 引用了許多 Javascript 程式庫, 這些程式庫的改版非常頻繁, 經常造成改版頻率相對緩慢的 <a href="https://github.com/mdecourse/cmsimde">cmsimde</a> 經常收到來自 Github 的改版通知.</p>
-<p>因此在利用 <a href="https://github.com/mdecourse/cmsimde">cmsimde</a> 建立 cd2022 課程網站與大分組網站時, 若要直接使用 Reveal.js 建立線上簡報, 就必須將 <a href="https://github.com/mdecourse/cmsimde">cmsimde</a> 的 reveal 目錄內容保持在最新的 Reveal.js 版本.</p>
-<p><a href="https://github.com/mdecourse/cmsimde_site">https://github.com/mdecourse/cmsimde_site</a> 就是用於開發 <a href="https://github.com/mdecourse/cmsimde">cmsimde</a> 的倉儲. cmsimde_site 的 main 分支直接將 <a href="https://github.com/mdecourse/cmsimde">cmsimde</a> 內容放入 cmsimde 目錄, 可以直接根據需求修改其中的任何內容, 當測試無誤後(尚未使用 <a href="https://docs.python.org/3/library/unittest.html">unittest</a>), 將改版內容反應至 <a href="https://github.com/mdecourse/cmsimde">cmsimde</a> 後, 將在 cmsimde_site 倉儲中的 submodule 分支中進行測試.</p>
+<p><a href="https://github.com/hakimel/reveal.js">https://github.com/hakimel/reveal.js</a> 引用了許多 Javascript 程式庫, 這些程式庫的改版非常頻繁, 經常造成改版頻率相對緩慢的 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 經常收到來自 Github 的改版通知.</p>
+<p>因此在利用 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 建立 cd2022 課程網站與大分組網站時, 若要直接使用 Reveal.js 建立線上簡報, 就必須將 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 的 reveal 目錄內容保持在最新的 Reveal.js 版本.</p>
+<p><a href="https://github.com/mdecycu/cmsimde_site">https://github.com/mdecycu/cmsimde_site</a> 就是用於開發 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 的倉儲. cmsimde_site 的 main 分支直接將 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 內容放入 cmsimde 目錄, 可以直接根據需求修改其中的任何內容, 當測試無誤後(尚未使用 <a href="https://docs.python.org/3/library/unittest.html">unittest</a>), 將改版內容反應至 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 後, 將在 cmsimde_site 倉儲中的 submodule 分支中進行測試.</p>
 <p>由於 cmsimde_site 的 main 分支直接將 cmsimde 當作子目錄, 而 submodule 分支則將 cmsimde 當作子模組. 從 main 分支切換到 submodule, 由於需要同時取下 cmsimde 子模組資料, 因此使用:</p>
 <p style="padding-left: 30px;">git checkout -f submodule --recurse-submodules</p>
 <p>而從 submodule 分支切換回 main 分支, 則使用:</p>
 <p style="padding-left: 30px;">git checkout -f main</p>
-<p><a href="https://github.com/mdecourse/cmsimde">cmsimde</a> 倉儲中的 config/reveal.leo 使用 <a href="https://leoeditor.com/">Leo Editor</a> 編輯各簡報頁面內容. reveal.leo 中包含 demo.html 中的各種簡報應用, 使用者可以從 Leo Editor 專案中取出所需的簡報頁面進行編輯.</p>
-<h2>Meeting</h2>
+<p><a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 倉儲中的 config/reveal.leo 使用 <a href="https://leoeditor.com/">Leo Editor</a> 編輯各簡報頁面內容. reveal.leo 中包含 demo.html 中的各種簡報應用, 使用者可以從 Leo Editor 專案中取出所需的簡報頁面進行編輯.</p><h2>Meeting</h2>
 <p><a href="https://www.atlassian.com/blog/teamwork/how-to-run-effective-meetings">https://www.atlassian.com/blog/teamwork/how-to-run-effective-meetings</a></p>
 <p style="padding-left: 30px;">Most of us don’t have formal training in meeting management skills, but anyone can learn to do it well – whether your team is in the office, fully virtual, or hybrid.</p>
 <p style="padding-left: 30px;">An efficient meeting starts promptly, stays on track due to good time management, includes as few people as possible, and achieves the stated objective.</p>
@@ -401,7 +400,7 @@ start /MIN %Disk%:\wscite415\wscite\SciTE.exe
 %UGII_BASE_DIR%\ugii\ugraf.exe -nx
 
 Exit</pre>
-<h2>NX2008</h2>
+<h3>NX1980_setup</h3><h2>NX2008</h2>
 <p>NX2008 於 2022.01 釋出, 屬於 NX2007 系列 (2021.12 釋出). 容量約 30 GB.</p>
 <p><a href="https://github.com/Bioruebe/UniExtract2">https://github.com/Bioruebe/UniExtract2</a> 可用來解開 SiemensNX-2008_wntx64\nx\SiemensNX.msi, 但必須配合 SiemensNX-2008_wntx64\nx\VC_redist.x64.exe 的安裝或解壓縮檔案才能執行.</p>
 <p>至於要解開 SiemensNX-2008_wntx64\nx\VC_redist.x64.exe 中的檔案, 可先利用 <a href="https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm">https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm</a> 中的 wix311-binaries.zip, 以 wix311-binaries\dark.exe vc_redist.x64.exe -x x64-extracted, 在 x64-extracted 目錄中取得 x64-extracted\AttachedContainer\packages\vcRuntimeMinimum_amd64\vc_runtimeMinimum_x64.msi 之後, 再利用 UniExtract2 解開所需的 dll 檔案後, 再放入 NXBIN 目錄.</p>
