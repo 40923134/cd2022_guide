@@ -128,7 +128,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='IPv6.html'>IPv6</a><li class='has-children'><a href='Grouping.html'>Grouping</a><ul class='dropdown'><li><a href='Pull requests.html'>Pull requests</a></li></ul><li class='has-children'><a href='Assignments.html'>Assignments</a><ul class='dropdown'><li><a href='各週任務.html'>各週任務</a></li></ul><li><a href='Revealjs.html'>Revealjs</a><li><a href='Meeting.html'>Meeting</a></li></ul><li><a href='Solvespace.html'>Solvespace</a><li class='has-children'><a href='NX.html'>NX</a><ul class='dropdown'><li class='has-children'><a href='NX1980.html'>NX1980</a><ul class='dropdown'><li><a href='Start_NX1980.html'>Start_NX1980</a></li></ul><li><a href='NX2008.html'>NX2008</a></li></ul><li><a href='Onshape.html'>Onshape</a><li class='has-children'><a href='Tic-Tat-Toe.html'>Tic-Tat-Toe</a><ul class='dropdown'><li><a href='Threejs.html'>Threejs</a></li></ul><li class='has-children'><a href='run.html'>run</a><ul class='dropdown'><li><a href='Brython.html'>Brython</a></li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='IPv6.html'>IPv6</a><li class='has-children'><a href='Grouping.html'>Grouping</a><ul class='dropdown'><li><a href='Pull requests.html'>Pull requests</a></li></ul><li><a href='Revealjs.html'>Revealjs</a><li><a href='Meeting.html'>Meeting</a></li></ul><li class='has-children'><a href='Assignments.html'>Assignments</a><ul class='dropdown'><li><a href='各週任務.html'>各週任務</a></li></ul><li><a href='Solvespace.html'>Solvespace</a><li class='has-children'><a href='NX.html'>NX</a><ul class='dropdown'><li class='has-children'><a href='NX1980.html'>NX1980</a><ul class='dropdown'><li><a href='Start_NX1980.html'>Start_NX1980</a></li></ul><li><a href='NX2008.html'>NX2008</a></li></ul><li><a href='Onshape.html'>Onshape</a><li class='has-children'><a href='Tic-Tat-Toe.html'>Tic-Tat-Toe</a><ul class='dropdown'><li><a href='Threejs.html'>Threejs</a></li></ul><li class='has-children'><a href='run.html'>run</a><ul class='dropdown'><li><a href='Brython.html'>Brython</a></li>
                       </ul>
                 </nav>
               </div>
@@ -145,26 +145,25 @@ img.add_border {
 <h4>課程倉儲與網站:</h4>
 <p style="padding-left: 30px;"><a href="https://github.com/mdecycu/cd2022">https://github.com/mdecycu/cd2022</a></p>
 <p style="padding-left: 30px;"><a href="https://mde.tw/cd2022">https://mde.tw/cd2022</a></p>
-<h4>Week1:</h4>
-<h4 style="padding-left: 30px;">網路設定:</h4>
-<p style="padding-left: 60px;">由於目前電腦輔助設計室中的電腦只要將網路連接到系上的主幹 (因為課程要全面在純 IPv6 網段上運作), 直接連外, 電腦中就會有蠕蟲程式啟動攻擊, 造成操作系統所安裝的防毒軟體為了防堵惡意攻擊而關閉網路連線.</p>
-<p style="padding-left: 60px;">為因應上述問題, 可以在切換至連外網段後, 將系統的代理主機自動偵測關閉, 且自行設定能夠支援 IPv6 與 IPv4 的代理主機, 並且關閉網路卡的 IPv4 網路協定, 就可以避開惡意軟體的攻擊.</p>
-<p style="padding-left: 60px;">若要在開機後, 防毒軟體啟動前, 以批次檔案的執行, 自動完成上述三項設定, 可以參考:</p>
-<p style="padding-left: 90px;">電腦輔助設計室 <a href="https://github.com/mdecourse/wcm2022/discussions/2">IPv6 網路設定</a></p>
-<h4 style="padding-left: 30px;">分組:</h4>
-<p style="padding-left: 60px;">利用 Ethercalc 收集各班學員的 Github 帳號與組別, 存入 <a href="https://github.com/mdecycu/studlist/tree/main/2022spring">https://github.com/mdecycu/studlist/tree/main/2022spring</a></p>
-<p style="padding-left: 60px;">各學員若 github 帳號有更動, 可以自行至 <a href="https://github.com/mdecycu/studlist">https://github.com/mdecycu/studlist</a>  倉儲, 以 pull requests 進行修改.</p>
-<p style="padding-left: 60px;">以 2b 為例, 每一大組 8 人, 且分為兩個 4 人小組, 目前可以透過 <a href="http://mde.tw/studlist/2022spring/2b.txt">http://mde.tw/studlist/2022spring/2b.txt</a> 讀取. 且透過 <a href="./../downloads/read_data_from_nfulist.py">read_data_from_nfulist.py</a> 可以在近端讀取各班學員的 github 帳號與組別.</p>
-<p style="padding-left: 60px;">目前碰到的問題是:</p>
-<p style="padding-left: 90px;">能不能透過隨機方式自動幫尚未納組的學員分組?</p>
-<p style="padding-left: 120px;">參考: <a href="https://mde.tw/cd2022_guide/content/run.html?src=https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/47ba006b45b227bc1135542f91adcc025f3f2590/grp_2022.py">grp_2022</a></p>
-<p style="padding-left: 90px;">能不能直接在網站上顯示出各學員的 cd2022 課程倉儲與網站?</p>
-<h4 style="padding-left: 30px;">下載課程工具:</h4>
-<p style="padding-left: 60px;">協同產品設計實習課程將會用到 NX1980, 若在電腦輔助設計室, 可以直接從 <a href="http://wcm.cycu.org:88/">http://wcm.cycu.org:88/</a> 下載.</p>
-<h4 style="padding-left: 30px;">讀取各學員每週工作內容:</h4>
-<p style="padding-left: 60px;">當完成分組後, 且各學員已經透過各自 Github 帳號下的 cd2022 倉儲開始執行課程任務後, 能否透過程式逐日或逐週讀取各學員的工作內容?</p>
-<h4 style="padding-left: 30px;">課程第一階段要求:</h4>
-<p style="padding-left: 60px;">每一個大組都要設法提供 solvespace, NX1980 格式的 <a href="https://cad.onshape.com/documents/21d631bfd9ab509e3a2079c0/w/832791ed26ad65d49a0711b4/e/6957bf222554da36040535be">uarm</a> (Onshape 格式) 機械手臂零組件.</p>
+<h4>網路設定:</h4>
+<p style="padding-left: 30px;">由於目前電腦輔助設計室中的電腦只要將網路連接到系上的主幹 (因為課程要全面在純 IPv6 網段上運作), 直接連外, 電腦中就會有蠕蟲程式啟動攻擊, 造成操作系統所安裝的防毒軟體為了防堵惡意攻擊而關閉網路連線.</p>
+<p style="padding-left: 30px;">為因應上述問題, 可以在切換至連外網段後, 將系統的代理主機自動偵測關閉, 且自行設定能夠支援 IPv6 與 IPv4 的代理主機, 並且關閉網路卡的 IPv4 網路協定, 就可以避開惡意軟體的攻擊.</p>
+<p style="padding-left: 30px;">若要在開機後, 防毒軟體啟動前, 以批次檔案的執行, 自動完成上述三項設定, 可以參考:</p>
+<p style="padding-left: 60px;">電腦輔助設計室 <a href="https://github.com/mdecourse/wcm2022/discussions/2">IPv6 網路設定</a></p>
+<h4>分組:</h4>
+<p style="padding-left: 30px;">利用 Ethercalc 收集各班學員的 Github 帳號與組別, 存入 <a href="https://github.com/mdecycu/studlist/tree/main/2022spring">https://github.com/mdecycu/studlist/tree/main/2022spring</a></p>
+<p style="padding-left: 30px;">各學員若 github 帳號有更動, 可以自行至 <a href="https://github.com/mdecycu/studlist">https://github.com/mdecycu/studlist</a>  倉儲, 以 pull requests 進行修改.</p>
+<p style="padding-left: 30px;">以 2b 為例, 每一大組 8 人, 且分為兩個 4 人小組, 目前可以透過 <a href="http://mde.tw/studlist/2022spring/2b.txt">http://mde.tw/studlist/2022spring/2b.txt</a> 讀取. 且透過 <a href="./../downloads/read_data_from_nfulist.py">read_data_from_nfulist.py</a> 可以在近端讀取各班學員的 github 帳號與組別.</p>
+<p style="padding-left: 30px;">目前碰到的問題是:</p>
+<p style="padding-left: 60px;">能不能透過隨機方式自動幫尚未納組的學員分組?</p>
+<p style="padding-left: 90px;">參考: <a href="https://mde.tw/cd2022_guide/content/run.html?src=https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/47ba006b45b227bc1135542f91adcc025f3f2590/grp_2022.py">grp_2022</a></p>
+<p style="padding-left: 60px;">能不能直接在網站上顯示出各學員的 cd2022 課程倉儲與網站?</p>
+<h4>下載課程工具:</h4>
+<p style="padding-left: 30px;">協同產品設計實習課程將會用到 NX1980, 若在電腦輔助設計室, 可以直接從 <a href="http://wcm.cycu.org:88/">http://wcm.cycu.org:88/</a> 下載.</p>
+<h4>讀取各學員每週工作內容:</h4>
+<p style="padding-left: 30px;">當完成分組後, 且各學員已經透過各自 Github 帳號下的 cd2022 倉儲開始執行課程任務後, 能否透過程式逐日或逐週讀取各學員的工作內容?</p>
+<h4>課程第一階段要求:</h4>
+<p style="padding-left: 30px;">每一個大組都要設法提供 solvespace, NX1980 格式的 <a href="https://cad.onshape.com/documents/21d631bfd9ab509e3a2079c0/w/832791ed26ad65d49a0711b4/e/6957bf222554da36040535be">uarm</a> (Onshape 格式) 機械手臂零組件.</p>
 <div id="disqus_thread"></div>
 <p>
 <script>
