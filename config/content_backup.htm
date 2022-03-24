@@ -5,7 +5,7 @@
 <p style="padding-left: 30px;"><a href="https://github.com/mdecycu/cd2022">https://github.com/mdecycu/cd2022</a></p>
 <p style="padding-left: 30px;"><a href="https://mde.tw/cd2022">https://mde.tw/cd2022</a></p>
 <h4>網路設定:</h4>
-<p style="padding-left: 30px;">由於目前電腦輔助設計室中的電腦只要將網路連接到系上的主幹 (因為課程要全面在純 IPv6 網段上運作), 直接連外, 電腦中就會有蠕蟲程式啟動攻擊, 造成操作系統所安裝的防毒軟體為了防堵惡意攻擊而關閉網路連線.</p>
+<p style="padding-left: 30px;">由於目前電腦輔助設計室中的電腦只要將網路連接到系上的主幹 (因為課程要全面在純 IPv6 網段上運作), 直接連外, 電腦中就會有蠕蟲程式啟動攻擊(Why?, 如何找到攻擊源頭?), 造成操作系統所安裝的防毒軟體為了防堵惡意攻擊而關閉網路連線.</p>
 <p style="padding-left: 30px;">為因應上述問題, 可以在切換至連外網段後, 將系統的代理主機自動偵測關閉, 且自行設定能夠支援 IPv6 與 IPv4 的代理主機, 並且關閉網路卡的 IPv4 網路協定, 就可以避開惡意軟體的攻擊.</p>
 <p style="padding-left: 30px;">若要在開機後, 防毒軟體啟動前, 以批次檔案的執行, 自動完成上述三項設定, 可以參考:</p>
 <p style="padding-left: 60px;">電腦輔助設計室 <a href="https://github.com/mdecourse/wcm2022/discussions/2">IPv6 網路設定</a></p>
@@ -15,10 +15,19 @@
 <p style="padding-left: 30px;">以 2b 為例, 每一大組 8 人, 且分為兩個 4 人小組, 目前可以透過 <a href="http://mde.tw/studlist/2022spring/2b.txt">http://mde.tw/studlist/2022spring/2b.txt</a> 讀取. 且透過 <a href="/downloads/read_data_from_nfulist.py">read_data_from_nfulist.py</a> 可以在近端讀取各班學員的 github 帳號與組別.</p>
 <p style="padding-left: 30px;">目前碰到的問題是:</p>
 <p style="padding-left: 60px;">能不能透過隨機方式自動幫尚未納組的學員分組?</p>
-<p style="padding-left: 90px;">參考: <a href="https://mde.tw/cd2022_guide/content/run.html?src=https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/47ba006b45b227bc1135542f91adcc025f3f2590/grp_2022.py">grp_2022</a></p>
 <p style="padding-left: 60px;">能不能直接在網站上顯示出各學員的 cd2022 課程倉儲與網站?</p>
+<p style="padding-left: 90px;">參考: <a href="https://mde.tw/cd2022_guide/content/run.html?src=https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/47ba006b45b227bc1135542f91adcc025f3f2590/grp_2022.py">grp_2022</a>, <a href="https://mde.tw/cd2022_guide/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/0999a227153ea9a20954e4b2b77f783337197627/w4_grp_src.py&amp;src2=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/0999a227153ea9a20954e4b2b77f783337197627/w4_grp_src2.py">2a 分組程式練習</a>, <a href="https://mde.tw/cd2022_guide/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/507db6ddb7b5bcdd3027235761208b32ac93bcd0/w4_b_grp.py&amp;src2=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/507db6ddb7b5bcdd3027235761208b32ac93bcd0/w4_b_grp_src2.py">2b 分組程式練習</a></p>
 <h4>下載課程工具:</h4>
 <p style="padding-left: 30px;">協同產品設計實習課程將會用到 NX1980, 若在電腦輔助設計室, 可以直接從 <a href="http://wcm.cycu.org:88/">http://wcm.cycu.org:88/</a> 下載.</p>
+<p style="padding-left: 30px;">NX12 版之後的版號:</p>
+<p style="padding-left: 60px;">2019.01: NX1847 開始啟動 Continuous Release</p>
+<p style="padding-left: 60px;">2019.06: NX1872 啟動每半年釋出一個累加 27 的 Series 版次</p>
+<p style="padding-left: 60px;">2019.12: NX1899 = NX1872 + 27</p>
+<p style="padding-left: 60px;">2020.06: NX1926 = NX1899 + 27</p>
+<p style="padding-left: 60px;">2020.12: NX1953 = NX1926 + 27</p>
+<p style="padding-left: 60px;">2021.06: NX1980 = NX1953 + 27</p>
+<p style="padding-left: 60px;">2021.12: NX2007 = NX1980 + 27</p>
+<p style="padding-left: 60px;">2022.06: NX2034 = NX2007 + 27</p>
 <h4>讀取各學員每週工作內容:</h4>
 <p style="padding-left: 30px;">當完成分組後, 且各學員已經透過各自 Github 帳號下的 cd2022 倉儲開始執行課程任務後, 能否透過程式逐日或逐週讀取各學員的工作內容?</p>
 <h4>課程第一階段要求:</h4>
@@ -134,12 +143,12 @@ var winkVideoData = {
 <p>結論是: 在協同產品設計流程, 該如何開會?</p>
 <h1>Assignments</h1>
 <p>協同產品設計實習課程學員評分要點:</p>
-<p>sustainable (永續):</p>
+<p>sustainable (可持續使用, 永續):</p>
 <p style="padding-left: 30px;">1 : capable of being sustained (可持續)</p>
 <p style="padding-left: 30px;">2a : of, relating to, or being a method of harvesting (獲取成果) or using a resource (運用資源) so that the resource (該資源) is not depleted (不致枯竭) or permanently damaged (永久損壞).</p>
 <p style="padding-left: 30px;">2b : of or relating to a lifestyle involving the use of sustainable methods (採取永續的生活方式)</p>
 <p style="padding-left: 30px;">在 cd2022 課程 sustainable 代表所採行的解題方式, <span style="background-color: #ffff99;">為所有分組組員認可是當下環境中, 最佳處理方式與流程, 可作為其他分組學習並能在課程各階段任務中延續使用</span>.</p>
-<p>resilience (應變能力):</p>
+<p>resilience (應變能力, 韌性):</p>
 <p style="padding-left: 30px;">1 : the capability of a strained body (承受應變物體) to recover its size and shape after deformation caused especially by compressive stress (尤指受到壓縮應力)</p>
 <p style="padding-left: 30px;">2 : an ability to recover (回復能力) from or adjust easily (易於調適) to misfortune or change (面臨意外情境或變化)</p>
 <p style="padding-left: 30px;">在 cd2022 課程 resilience 代表<span style="background-color: #ffff99;">各分組成員需具備一定的應變處理能力</span>.</p>
@@ -173,8 +182,7 @@ var winkVideoData = {
 <h4>2bw2:</h4>
 <p>建立個人 cd2022 與 cd2022bg1 (以 2b 第一大組為例) 時, 可以用 import <a href="https://github.com/mdecourse/cmsimde_site">cmsimde_site</a> 倉儲 (但 history 將會是 mdecourse 而非學員), 或 git submodule add 或直接將 cmsimde 下載 <a href="https://github.com/mdecourse/cmsimde/archive/refs/heads/master.zip">https://github.com/mdecourse/cmsimde/archive/refs/heads/master.zip</a> 後解開為倉儲下的 cmsimde 目錄, 之後再將 up_dir 內容複製到倉儲根目錄. 當評分檢查時, 各大組需繳交全班各學員是否達成任務要求.</p>
 <p>cd2022 w2 任務 1:</p>
-<p style="padding-left: 30px;">請各組利用一個小時建立一個欄位以 tab 隔開的 txt 檔案, 欄位標題分別為學號, 個人倉儲, 大分組倉儲排列, 按照各班學員學號順序 (<a href="https://nfulist.herokuapp.com/?semester=1102&amp;courseno=0752&amp;column=True">2a 修課學員</a>, <a href="https://nfulist.herokuapp.com/?semester=1102&amp;courseno=0764&amp;column=True">2b 修課學員</a>). 完成後請各大組將結果回應至 <a href="https://github.com/mdecourse/cd2022/discussions/16">2b w2 討論區</a>.</p>
-<h3>各週任務</h3>
+<p style="padding-left: 30px;">請各組利用一個小時建立一個欄位以 tab 隔開的 txt 檔案, 欄位標題分別為學號, 個人倉儲, 大分組倉儲排列, 按照各班學員學號順序 (<a href="https://nfulist.herokuapp.com/?semester=1102&amp;courseno=0752&amp;column=True">2a 修課學員</a>, <a href="https://nfulist.herokuapp.com/?semester=1102&amp;courseno=0764&amp;column=True">2b 修課學員</a>). 完成後請各大組將結果回應至 <a href="https://github.com/mdecourse/cd2022/discussions/16">2b w2 討論區</a>.</p><h3>各週任務</h3>
 <h4>w2 任務:</h4>
 <h4 style="padding-left: 30px;">問題緣起:</h4>
 <p style="padding-left: 60px;">第二週的任務<a href="https://mde.tw/cd2022_guide/content/Assignments.html#2aw2">啟動源頭</a>來自課程實際分組時所產生的問題.</p>
@@ -400,7 +408,37 @@ start /MIN %Disk%:\wscite415\wscite\SciTE.exe
 %UGII_BASE_DIR%\ugii\ugraf.exe -nx
 
 Exit</pre>
-<h3>NX1980_setup</h3>
+<h3>Portable NX1980</h3>
+<p>在 Windows 10 配置可攜 NX1980 程式, 需要:</p>
+<ol>
+<li><a href="https://github.com/Bioruebe/UniExtract2">https://github.com/Bioruebe/UniExtract2</a></li>
+<li><a href="https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm">https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm</a></li>
+</ol>
+<p>等兩項工具, UniExtract2 用來解開 SiemensNX-1980_wntx64\nx\SiemensNX.msi, 以及 .msi, 而 wix 則用來解開 SiemensNX-1980_wntx64\nx\VC_redist.x64.exe</p>
+<p>製作 Portable NX1980 的步驟請參考以下影片:</p>
+<script>
+var winkVideoData = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+</script>
+<!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData" height="630" muted="true" width="1008">
+<source src="/downloads/w5_portable_nx1980/w5_portable_nx1980.mp4" type="video/mp4"/></video>
+<div class="winkVideoOverlayClass"></div>
+<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
+<div class="winkVideoControlBarProgressLeftClass"></div>
+<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
+<div class="winkVideoControlBarProgressRightClass"></div>
+<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
+<div class="winkVideoControlBarProgressThumbClass"></div>
+</div>
+<div class="winkVideoPlayOverlayClass"></div>
+</div><h3>NX1980_setup</h3>
 <p>以下影片說明如何設定 Journal 存檔格式, 關閉 Product Execellence Program, 並查驗版本與授權使用單位:</p>
 <p><a href="/downloads/w5_nx_api/w5_nx_api.txt">w5_nx_api.txt</a></p>
 <script>
@@ -425,8 +463,95 @@ var winkVideoData = {
 <div class="winkVideoControlBarProgressThumbClass"></div>
 </div>
 <div class="winkVideoPlayOverlayClass"></div>
-</div>
-<h3>NXOpen</h3><h2>NX2008</h2>
+</div><h3>NXOpen</h3>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false"># nx_open_part.py
+# 導入 NXOpen
+import NXOpen
+import NXOpen.UF
+import NXOpen.Gateway
+  
+def main():
+    # 取得目前開啟的工作階段
+    theSession = NXOpen.Session.GetSession()
+    theUfSession = NXOpen.UF.UFSession.GetUFSession()
+     
+    # 建立 ListingWindow
+    listWin= theSession.ListingWindow
+    # 開啟零件檔案
+    basePart1 = theSession.Parts.OpenBaseDisplay("c:/tmp/block.prt")
+    workPart = theSession.Parts.Work
+    unit1 = workPart.UnitCollection.FindObject("MilliMeter")
+    # height
+    p7 = workPart.Expressions.FindObject("p7")
+    # width
+    p8 = workPart.Expressions.FindObject("p8")
+    # length
+    p9 = workPart.Expressions.FindObject("p9")
+    workPart.Expressions.EditWithUnits(p7, unit1, "30")
+    workPart.Expressions.EditWithUnits(p8, unit1, "60")
+    workPart.Expressions.EditWithUnits(p9, unit1, "90")
+    theSession.UpdateManager.DoUpdate(0)
+    #saveStatus1 = workPart.SaveAs("c:/tmp/block_new.prt")
+    #saveStatus1.Dispose()
+    # initialize list to hold bodies
+    theBodyTags = []
+  
+    for x in workPart.Bodies:
+        if x.IsSolidBody:
+            theBodyTags.append(x.Tag)
+     
+    # 準備輸出 ASCII 格式 STL 零件檔案
+    sTLCreator1 = theSession.DexManager.CreateStlCreator()
+    sTLCreator1.AutoNormalGen = True
+    sTLCreator1.ChordalTol = 0.08
+    sTLCreator1.AdjacencyTol = 0.08
+    sTLCreator1.OutputFile = "C:\\tmp\\block_ascii.stl"
+    # Binary STL: NXOpen.STLCreatorOutputTypeEnum.Binary
+    sTLCreator1.OutputType = NXOpen.STLCreatorOutputTypeEnum.Text
+    # 已知 body1 命名
+    body1 = workPart.Bodies.FindObject("EXTRUDE(2)")
+    added1 = sTLCreator1.ExportSelectionBlock.Add(body1)
+    nXObject1 = sTLCreator1.Commit()
+    sTLCreator1.Destroy()
+ 
+    # 開啟所建立的 ListingWindow
+    listWin.Open()
+    listWin.WriteLine("number of solid bodies: " + str(len(theBodyTags)))
+  
+    (massProps, Stats) = theUfSession.Modeling.AskMassProps3d(theBodyTags, len(theBodyTags), 1, 4, .03, 1, [0.99,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0])
+    listWin.WriteLine("units: kg, mm")
+    listWin.WriteLine("surface area: " + str(massProps[0]))
+    listWin.WriteLine("volume: " + str(massProps[1]*1E9))
+    # 在 ListingWindow 中寫入字串
+    listWin.WriteLine("Hello, NXOpen")
+    listWin.Close()
+    
+    # 將零件檔案 fit 之後, export 出 png 檔案
+    theUI = NXOpen.UI.GetUI()
+    imageExportBuilder1 = theUI.CreateImageExportBuilder()
+
+    custombackgroundcolor1 = [None] * 3 
+    custombackgroundcolor1[0] = 1.0
+    custombackgroundcolor1[1] = 1.0
+    custombackgroundcolor1[2] = 1.0
+
+    imageExportBuilder1.SetCustomBackgroundColor(custombackgroundcolor1)
+    imageExportBuilder1.FileFormat = NXOpen.Gateway.ImageExportBuilder.FileFormats.Png
+    imageExportBuilder1.FileName = "c:\\tmp\\block.png"
+
+    imageExportBuilder1.BackgroundOption = NXOpen.Gateway.ImageExportBuilder.BackgroundOptions.Original
+
+    imageExportBuilder1.EnhanceEdges = False
+    imageExportBuilder1.RegionMode = False
+    # fit view 後 commit export png
+    workPart.ModelingViews.WorkView.Fit()
+    nXObject6 = imageExportBuilder1.Commit()
+
+    imageExportBuilder1.Destroy()
+     
+if __name__ == "__main__":
+    main()</pre>
+<p></p><h2>NX2008</h2>
 <p>NX2008 於 2022.01 釋出, 屬於 NX2007 系列 (2021.12 釋出). 容量約 30 GB.</p>
 <p><a href="https://github.com/Bioruebe/UniExtract2">https://github.com/Bioruebe/UniExtract2</a> 可用來解開 SiemensNX-2008_wntx64\nx\SiemensNX.msi, 但必須配合 SiemensNX-2008_wntx64\nx\VC_redist.x64.exe 的安裝或解壓縮檔案才能執行.</p>
 <p>至於要解開 SiemensNX-2008_wntx64\nx\VC_redist.x64.exe 中的檔案, 可先利用 <a href="https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm">https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm</a> 中的 wix311-binaries.zip, 以 wix311-binaries\dark.exe vc_redist.x64.exe -x x64-extracted, 在 x64-extracted 目錄中取得 x64-extracted\AttachedContainer\packages\vcRuntimeMinimum_amd64\vc_runtimeMinimum_x64.msi 之後, 再利用 UniExtract2 解開所需的 dll 檔案後, 再放入 NXBIN 目錄.</p>
