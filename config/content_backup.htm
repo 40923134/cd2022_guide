@@ -19,9 +19,9 @@
 <p style="padding-left: 90px;">參考: <a href="https://mde.tw/cd2022_guide/content/run.html?src=https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/47ba006b45b227bc1135542f91adcc025f3f2590/grp_2022.py">grp_2022</a>, <a href="https://mde.tw/cd2022_guide/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/0999a227153ea9a20954e4b2b77f783337197627/w4_grp_src.py&amp;src2=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/0999a227153ea9a20954e4b2b77f783337197627/w4_grp_src2.py">2a 分組程式練習</a>, <a href="https://mde.tw/cd2022_guide/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/507db6ddb7b5bcdd3027235761208b32ac93bcd0/w4_b_grp.py&amp;src2=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/507db6ddb7b5bcdd3027235761208b32ac93bcd0/w4_b_grp_src2.py">2b 分組程式練習</a></p>
 <h4>下載課程工具:</h4>
 <p style="padding-left: 30px;">協同產品設計實習課程將會用到 NX1980, 若在電腦輔助設計室, 可以直接從 <a href="http://wcm.cycu.org:88/">http://wcm.cycu.org:88/</a> 下載.</p>
-<p style="padding-left: 30px;">NX12 版之後的版號:</p>
+<p style="padding-left: 30px;">NX12 版 (2017.10) 之後的版號:</p>
 <p style="padding-left: 60px;">2019.01: NX1847 開始啟動 Continuous Release</p>
-<p style="padding-left: 60px;">2019.06: NX1872 啟動每半年釋出一個累加 27 的 Series 版次</p>
+<p style="padding-left: 60px;">2019.06: NX1872 啟動每半年釋出一個累加 27 的 Series 版次號.</p>
 <p style="padding-left: 60px;">2019.12: NX1899 = NX1872 + 27</p>
 <p style="padding-left: 60px;">2020.06: NX1926 = NX1899 + 27</p>
 <p style="padding-left: 60px;">2020.12: NX1953 = NX1926 + 27</p>
@@ -204,7 +204,17 @@ var winkVideoData = {
 <p>根據 <a href="https://mde.tw/cad2021/content/Compile%20Solvespace.html">https://mde.tw/cad2021/content/Compile%20Solvespace.html</a> 中的說明, 可以利用 <a href="https://drive.google.com/file/d/16L08jH3ZtoMeeGWBJrP9DuIk-cby_Wqw/view?usp=sharing">compile_copsim_for_cd2022.7z</a> (file size: 5 GB, extracted size: 17.3 GB), 完成編譯.</p>
 <p>自行編譯 Solvespace 的目的是希望透過 <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm</a> 與 <a href="https://www.coppeliarobotics.com/helpFiles/en/importExport.htm">https://www.coppeliarobotics.com/helpFiles/en/importExport.htm</a> 的資訊, 自行在 Solvespace 中將組立檔案直接轉入 Coppeliasim 的場景檔案. 其中牽涉如何將 Solvespace 組立件中的零件檔案進行分割後, 以 <a href="https://en.wikipedia.org/wiki/STL">STL</a>、<a href="http://wiki.ros.org/urdf">URDF</a> 或 <a href="http://sdformat.org/">SDF</a> 格式直接轉入 Coppeliasim.</p>
 <h1>NX</h1>
-<h2>NX1980</h2>
+<h2>NX12</h2>
+<p>NX12 於 2017.10 釋出, 完整安裝容量約 18 GB.</p>
+<p>NX 自 NX10 之後支援 NXOpen Python API:</p>
+<p style="padding-left: 30px;"><a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/10/nx_api/en_US/custom/nxopen_python_ref">https://docs.plm.automation.siemens.com/data_services/resources/nx/10/nx_api/en_US/custom/nxopen_python_ref</a></p>
+<p style="padding-left: 30px;"><a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/custom/en_US/nxopen_python_ref">https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/custom/en_US/nxopen_python_ref</a></p>
+<h4>References:</h4>
+<p style="padding-left: 30px;"><a href="https://slideplayer.com/slide/11624773/">https://slideplayer.com/slide/11624773/</a> </p>
+<p style="padding-left: 30px;"><a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/common/en_US/graphics/fileLibrary/nx/nxopen/nxopen_getting_started_v12.pdf">https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/common/en_US/graphics/fileLibrary/nx/nxopen/nxopen_getting_started_v12.pdf</a> </p>
+<p style="padding-left: 30px;"><a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/common/en_US/graphics/fileLibrary/nx/snap/SNAP_Getting_Started_v12.pdf">https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/common/en_US/graphics/fileLibrary/nx/snap/SNAP_Getting_Started_v12.pdf</a> </p>
+<p style="padding-left: 30px;"></p><h2>NX1980</h2>
+<p>NX1980 於 2021.06 釋出, 完整安裝容量約 28 GB.</p>
 <h4>NX1980 參考頁面:</h4>
 <p style="padding-left: 30px;">有關 Siemens NX 的歷史, 請參考 <a href="https://en.wikipedia.org/wiki/Siemens_NX">https://en.wikipedia.org/wiki/Siemens_NX</a></p>
 <p style="padding-left: 30px;"><a href="https://mde.tw/cd2022/content/NX1980.html">https://mde.tw/cd2022/content/NX1980.html</a></p>
@@ -277,8 +287,7 @@ http {
 <p style="padding-left: 90px;">就能同時在不同網路連線情況下, 啟動 NX1980.</p>
 <p style="padding-left: 90px;">以下的 bat 檔案, 能夠同時啟動 Python, Msys2 以及 NX1980:</p>
 <p style="padding-left: 120px;"><a href="/downloads/start_ipv6_nx1980_bat.txt">start_ipv6_nx1980_bat.txt</a></p>
-<p style="padding-left: 120px;">其中 Msys2 可用來編譯 Solvespace、SciTE、Fossil SCM 以及 CoppeliaSim, Python 可用來啟動個人動態與靜態網頁, 並透過 Leo Editor 編輯 Reveal.js 簡報.</p>
-<h3>Start_NX1980</h3>
+<p style="padding-left: 120px;">其中 Msys2 可用來編譯 Solvespace、SciTE、Fossil SCM 以及 CoppeliaSim, Python 可用來啟動個人動態與靜態網頁, 並透過 Leo Editor 編輯 Reveal.js 簡報.</p><h3>Start_NX1980</h3>
 <p>NX1980 series 為 2021.06 的版本.</p>
 <p>啟動 NX1980 全部模組, 容量約 28.6 GB.</p>
 <p>start_nx1980_all.bat</p>
