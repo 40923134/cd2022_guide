@@ -113,7 +113,33 @@ var winkVideoData = {
 </div>
 <div class="winkVideoPlayOverlayClass"></div>
 </div>
-<p></p><h2>Revealjs</h2>
+<p></p>
+<script>
+var winkVideoData2 = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+    "1682": [
+      { type: "gotourl", rect: { x: 321, y: 166, width: 60, height: 24 }, target: "https://support.mozilla.org/en-US/questions/1230877", window: "reset certificate" },
+    ],
+  },
+};
+</script>
+<!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData2" height="630" muted="true" width="1008">
+<source src="/downloads/w5_pull_request/w5_pull_request.mp4" type="video/mp4"/></video>
+<div class="winkVideoOverlayClass"></div>
+<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
+<div class="winkVideoControlBarProgressLeftClass"></div>
+<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
+<div class="winkVideoControlBarProgressRightClass"></div>
+<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
+<div class="winkVideoControlBarProgressThumbClass"></div>
+</div>
+<div class="winkVideoPlayOverlayClass"></div>
+</div><h2>Revealjs</h2>
 <p><a href="https://revealjs.com/">https://revealjs.com/</a> 是一個 Javascript 程式框架, 可用來建立全球資訊網上的簡報.</p>
 <p><a href="https://github.com/hakimel/reveal.js">https://github.com/hakimel/reveal.js</a> 引用了許多 Javascript 程式庫, 這些程式庫的改版非常頻繁, 經常造成改版頻率相對緩慢的 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 經常收到來自 Github 的改版通知.</p>
 <p>因此在利用 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 建立 cd2022 課程網站與大分組網站時, 若要直接使用 Reveal.js 建立線上簡報, 就必須將 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 的 reveal 目錄內容保持在最新的 Reveal.js 版本.</p>
