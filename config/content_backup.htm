@@ -64,6 +64,7 @@
 <p style="padding-left: 60px;">好處如上, 而壞處是若要連線到只支援 IPv4 協定的網站, 需要透過雙協定支援的 Proxy, 其中包括 http(s) 與 git.</p>
 <p style="padding-left: 30px;">如何使用批次檔案完成 IPv6 網路設定, 避開惡意軟體的網路攻擊?</p>
 <p style="padding-left: 60px;">請參考 <a href="https://github.com/mdecourse/wcm2022/discussions/2">IPv6 網路設定</a> 說明.</p>
+<h3>template and SSH</h3>
 <p style="padding-left: 30px;"></p>
 <p></p><h2>Grouping</h2>
 <p><a href="https://mde.tw/cd2022">cd2022</a> 課程由學員自行分組, 每四人為一小組, 每兩小組組成一大組.</p>
@@ -148,7 +149,30 @@ var winkVideoData2 = {
 <p style="padding-left: 30px;">git checkout -f submodule --recurse-submodules</p>
 <p>而從 submodule 分支切換回 main 分支, 則使用:</p>
 <p style="padding-left: 30px;">git checkout -f main</p>
-<p><a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 倉儲中的 config/reveal.leo 使用 <a href="https://leoeditor.com/">Leo Editor</a> 編輯各簡報頁面內容. reveal.leo 中包含 demo.html 中的各種簡報應用, 使用者可以從 Leo Editor 專案中取出所需的簡報頁面進行編輯.</p><h2>Meeting</h2>
+<p><a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 倉儲中的 config/reveal.leo 使用 <a href="https://leoeditor.com/">Leo Editor</a> 編輯各簡報頁面內容. reveal.leo 中包含 demo.html 中的各種簡報應用, 使用者可以從 Leo Editor 專案中取出所需的簡報頁面進行編輯.</p>
+<script>
+var winkVideoData = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+</script>
+<!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData" height="630" muted="true" width="1008">
+<source src="/downloads/w5_reveal/w5_reveal.mp4" type="video/mp4"/></video>
+<div class="winkVideoOverlayClass"></div>
+<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
+<div class="winkVideoControlBarProgressLeftClass"></div>
+<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
+<div class="winkVideoControlBarProgressRightClass"></div>
+<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
+<div class="winkVideoControlBarProgressThumbClass"></div>
+</div>
+<div class="winkVideoPlayOverlayClass"></div>
+</div><h2>Meeting</h2>
 <p><a href="https://www.atlassian.com/blog/teamwork/how-to-run-effective-meetings">https://www.atlassian.com/blog/teamwork/how-to-run-effective-meetings</a></p>
 <p style="padding-left: 30px;">Most of us don’t have formal training in meeting management skills, but anyone can learn to do it well – whether your team is in the office, fully virtual, or hybrid.</p>
 <p style="padding-left: 30px;">An efficient meeting starts promptly, stays on track due to good time management, includes as few people as possible, and achieves the stated objective.</p>
