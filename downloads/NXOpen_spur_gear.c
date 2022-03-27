@@ -1,148 +1,4 @@
-<!DOCTYPE html><html>
-        <head>
-        <title>CD_Guide</title>
-        <meta charset="utf-8">
-<meta property="head" content="H3">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
-        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
-        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
-        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
-        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
-        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
-        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
-        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
-        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
-        
-        <style type='text/css'>
-            .site-section {
-            background-color: #FFFF;
-            padding: 40px 40px;
-            }
-            body > div > div.dropdown.open {
-                display: block;
-            }
-        </style>
-    
-        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
-        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
-        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
-        <script src="tipuesearch_content.js"></script>
-        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
-        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
-        <!-- for Wink3 -->
-        <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
-        <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
-        <script>
-            /* original tipuesearch
-            $(document).ready(function() {
-                 $('#tipue_search_input').tipuesearch();
-            });
-            */
-            // customed doSearch
-            function doSearch() {
-                $('#tipue_search_input').tipuesearch({
-                    newWindow: true, 
-                    minimumLength: 2,
-                    wholeWords: false, // for search 中文
-                });
-            }
-            $(document).ready(doSearch);
-        </script>
-        
-<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
-<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
-<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
-<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
-<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
-<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
-<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
-<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
-<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
-<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
-<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
-<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
-<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
-<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
-<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
-<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
-<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushRust.js"></script>
-<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
-<script type="text/javascript">SyntaxHighlighter.all();</script>
-<!-- 暫時不用
-<script src="./../cmsimde/static/fengari-web.js"></script>
-<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
-<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
-<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
--->
-<!-- for Brython 暫時不用
-<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
-<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
--->
-<style>
-img.add_border {
-    border: 3px solid blue;
-}
-</style>
-
-</head>
-<body>
-<div class='container-fluid'><nav>
-        
-    <div class="site-wrap">
-
-    <div class="site-mobile-menu">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div>
-    
-            <header class="site-navbar py-4 bg-white" role="banner">
-              <div class="container-fluid">
-                <div class="row align-items-center">
-                <h1>cd2022_guide 協同產品設計實習課程導引</h1>
-                <div class="pl-4">
-                    <form>
-                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
-                    </form>
-                </div>
-                  <!-- <div class="col-11 col-xl-2">
-                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">cd2022_guide 協同產品設計實習課程導引</a></h1> 
-                  </div>
-                  -->
-                  <div class="col-12 col-md-10 d-none d-xl-block">
-                    <nav class="site-navigation position-relative text-right" role="navigation">
-    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
-                        <li class="active has-children"><a href="index.html">Home</a>
-                        <ul class="dropdown">
-                            <li><a href="sitemap.html">Site Map</a></li>
-                            <li><a href="./../reveal/index.html">reveal</a></li>
-                            <li><a href="./../blog/index.html">blog</a></li>
-                        </ul>
-                      </li>
-                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li class='has-children'><a href='IPv6.html'>IPv6</a><ul class='dropdown'><li><a href='template and SSH.html'>template and SSH</a></li></ul><li class='has-children'><a href='Grouping.html'>Grouping</a><ul class='dropdown'><li><a href='Pull requests.html'>Pull requests</a></li></ul><li><a href='Revealjs.html'>Revealjs</a><li><a href='Meeting.html'>Meeting</a></li></ul><li class='has-children'><a href='Assignments.html'>Assignments</a><ul class='dropdown'><li><a href='各週任務.html'>各週任務</a></li></ul><li><a href='Solvespace.html'>Solvespace</a><li class='has-children'><a href='NX.html'>NX</a><ul class='dropdown'><li><a href='NX12.html'>NX12</a><li class='has-children'><a href='NX1980.html'>NX1980</a><ul class='dropdown'><li><a href='Start_NX1980.html'>Start_NX1980</a><li><a href='Portable NX1980.html'>Portable NX1980</a><li><a href='NX1980_setup.html'>NX1980_setup</a><li><a href='NXOpen.html'>NXOpen</a><li><a href='UGOpen.html'>UGOpen</a></li></ul><li><a href='NX2008.html'>NX2008</a></li></ul><li><a href='Onshape.html'>Onshape</a><li class='has-children'><a href='Tic-Tat-Toe.html'>Tic-Tat-Toe</a><ul class='dropdown'><li><a href='Threejs.html'>Threejs</a></li></ul><li class='has-children'><a href='run.html'>run</a><ul class='dropdown'><li><a href='Brython.html'>Brython</a></li>
-                      </ul>
-                </nav>
-              </div>
-              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
-              </div>
-
-            </div>
-          </div>
-          
-        </header>
-    <div id="tipue_search_content">NXOpen << <a href='NXOpen.html'>Previous</a> <a href='NX2008.html'>Next</a> >> NX2008<br /><h1>UGOpen</h1>
-<p><a href="https://nova.disfarm.unimi.it/manual/plugins/tcc-doc.htm">Tiny C Compiler</a> <a href="https://lists.nongnu.org/archive/html/tinycc-devel/2009-06/msg00043.html">可以</a>建立 dll 動態連結程式庫. 這樣有機會利用它來建立 UGOpen API 嗎?</p>
-<p><a href="./../downloads/UGOpen_spur_gear.c">UGOpen_spur_gear.c</a></p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">/******************************************************************************
+/******************************************************************************
  *                                                                            *
  * PROGRAM DESCRIPTION -                                                      *
  *   The following example requires a blank, open part. The code creates a    *
@@ -150,25 +6,19 @@ img.add_border {
  * gear_model2.c															  *
  ******************************************************************************/
 
-#include &lt;stdio.h&gt;
-#include &lt;math.h&gt;
-#include &lt;uf.h&gt;
-#include &lt;uf_defs.h&gt;
-#include &lt;uf_curve.h&gt;
-#include &lt;uf_modl.h&gt;
-#include &lt;uf_disp.h&gt;
-#include &lt;uf_ui.h&gt;
-#include &lt;uf_csys.h&gt;
-#include &lt;uf_obj.h&gt;
-#include &lt;uf_mtx.h&gt;
-#include &lt;uf_trns.h&gt;
-#include &lt;uf_view.h&gt;
+using System;
+using System.Collections;
+using System.IO;
+using NXOpen;
+using NXOpen.UF;
+using NXOpen.Utilities;
+using NXOpen.Assemblies;
 
-#define POLES 6
-#define WEIGHT 1.0
-#define ORDER 6
+const int POLES 6;
+const double WEIGHT 1.0;
+const int 6;
 
-#define UF_CALL(X) (report( __FILE__, __LINE__, #X, (X)))
+define UF_CALL(X) (report( __FILE__, __LINE__, #X, (X)))
 
 static int report( char *file, int line, char *call, int irc)
 {
@@ -179,7 +29,7 @@ static int report( char *file, int line, char *call, int irc)
      (UF_get_fail_message(irc, messg)) ?
        printf("    returned a %d\n", irc) :
        printf("    returned error %d:  %s\n", irc, messg);
-  }
+
   return(irc);
 }
 
@@ -195,16 +45,16 @@ static logical prompt_for_three_numbers(char *prompt, char *item1, char *item2, 
     double
         da[3];
 	
-    strncpy(&amp;menu[0][0], item1, 15);
-    strncpy(&amp;menu[1][0], item2, 15);
-	strncpy(&amp;menu[2][0], item3, 15);
+    strncpy(&menu[0][0], item1, 15);
+    strncpy(&menu[1][0], item2, 15);
+	strncpy(&menu[2][0], item3, 15);
 
 	
     da[0] = *number1;
     da[1] = *number2;
 	da[2] = *number3;
 	
-    resp = uc1609(prompt, menu, 3, da, &amp;irc);
+    resp = uc1609(prompt, menu, 3, da, &irc);
     if (resp == 3 || resp == 4)
     {
         *number1 = da[0];
@@ -260,9 +110,9 @@ static void do_ugopen_api(void)
 	UF_CURVE_line_t ln1;
 	uf_list_p_t loop_list, features, instances_feature_list;
 
-	for(i=0;i&lt;6;i++)
+	for(i=0;i<6;i++)
 	{
-	  for(j=0;j&lt;6;j++)
+	  for(j=0;j<6;j++)
 	  {
 		  t_mat[i][j]=0.0;
 		  l_mat[i][j]=0.0;
@@ -296,13 +146,13 @@ static void do_ugopen_api(void)
 	t_mat[2][5]=0.01024;
 	t_mat[3][0]=t_mat[2][5];  
 
-	for(i=0;i&lt;6;i++)
+	for(i=0;i<6;i++)
 	{
 		l_mat[i][i]=1.0;
 	}
 	u_mat[0][0]=1.0;
 	u_mat[5][5]=1.0;  
-	for(i=1;i&lt;6;i++)
+	for(i=1;i<6;i++)
 	{
 		l_mat[i][0]=t_mat[i][0];
 		u_mat[1][i]=t_mat[1][i];
@@ -325,12 +175,12 @@ static void do_ugopen_api(void)
 	
 	restart: ;
 
-	resp = uc1603 ("Standard Imperial Involute Gear Systems to ANSI &amp; AGMA", 0, options, 6 );
+	resp = uc1603 ("Standard Imperial Involute Gear Systems to ANSI & AGMA", 0, options, 6 );
 
 	if (resp == 2) goto ending1;
 
 	prompt_for_three_numbers("Gear Data", "Pitch Diameter", "No of Teeth", "Tooth length",
-			&amp;pitch_dia, &amp;teeth_no, &amp;tooth_length);
+			&pitch_dia, &teeth_no, &tooth_length);
 	style1 = resp - 4;
 	pitch_rad = pitch_dia/2.0;
 	switch (style1)
@@ -409,15 +259,15 @@ static void do_ugopen_api(void)
 	sprintf(tooth_length_st,"TOOTH_LENGTH1=%f",tooth_length);
 
 	UF_MODL_create_cyl1 (UF_NULLSIGN, origin,tooth_length_st, gear_od_st, 
-			zc_dir, &amp;cyl_tag);
+			zc_dir, &cyl_tag);
 
 	sprintf(start_limit_st,"0.0");
 	sprintf(end_limit_st,"TOOTH_LENGTH1");
-	strcpy(&amp;limit1[0][0],start_limit_st);
-	strcpy(&amp;limit1[1][0],end_limit_st);
+	strcpy(&limit1[0][0],start_limit_st);
+	strcpy(&limit1[1][0],end_limit_st);
 
-	if (root_rad &lt; base_rad) method = 0;
-	if (root_rad &gt; base_rad) method = 1;
+	if (root_rad < base_rad) method = 0;
+	if (root_rad > base_rad) method = 1;
 
 	switch (method)
 	{
@@ -426,7 +276,7 @@ static void do_ugopen_api(void)
 		theta1 = 0.0;
 		theta3 = 0.0;
 		delta_theta = (theta2-theta1)/5.0; 
-		for (i=0;i&lt;6;i++)
+		for (i=0;i<6;i++)
 		{
 			b_mat[i][0] = base_rad*sin(theta3)- base_rad*theta3*cos(theta3);
 			b_mat[i][1] = base_rad*cos(theta3)+ base_rad*theta3*sin(theta3);
@@ -473,13 +323,13 @@ static void do_ugopen_api(void)
 		theta_p = sqrt(sub1sq-1.0);
 		x_pitch = base_rad*sin(theta_p)-base_rad*theta_p*cos(theta_p);
 		rot_angle = PI/(2.0*teeth_no) - asin(x_pitch/rad2);
-		for (i=0;i&lt;6;i++)
+		for (i=0;i<6;i++)
 		{
 			poles1[i][0] = poles[i][0]*cos(-rot_angle)-poles[i][1]*sin(-rot_angle);
 			poles1[i][1] = poles[i][0]*sin(-rot_angle)+poles[i][1]*cos(-rot_angle);
 			poles1[i][2] = 0.0;
 		}  
-		for (i=0;i&lt;6;i++)
+		for (i=0;i<6;i++)
 		{
 			poles2[i][0] = -poles1[i][0];
 			poles2[i][1] = poles1[i][1];
@@ -510,7 +360,7 @@ static void do_ugopen_api(void)
 		pole_array[22] = 0.0;
 		pole_array[23] = 1.0;
 		UF_CALL(UF_MODL_create_spline(POLES,ORDER,knotseq,pole_array,
-						&amp;lh_spline, &amp;k_fixup,&amp;p_fixup));
+						&lh_spline, &k_fixup,&p_fixup));
 		pole_array[0] = poles2[0][0];
 		pole_array[1] = poles2[0][1];
 		pole_array[2] = 0.0;
@@ -536,13 +386,13 @@ static void do_ugopen_api(void)
 		pole_array[22] = 0.0;
 		pole_array[23] = 1.0;
 		UF_CALL(UF_MODL_create_spline(POLES,ORDER,knotseq,pole_array,
-						&amp;rh_spline, &amp;k_fixup,&amp;p_fixup));
+						&rh_spline, &k_fixup,&p_fixup));
 		point1[0] = 0.0;
 		point1[1] = pitch_dia/2.0 + addendum;
 		point1[2] = 0.0;
-		UF_CURVE_create_arc_thru_3pts ( create_flag, &amp;poles1[5][0],  point1, &amp;poles2[5][0], &amp;od_arc_tag);
-		UF_MODL_ask_curve_props(lh_spline, 0.0, &amp;point1[0], tangent1, junk3, junk3, junk3,junk3);
-		UF_VEC3_angle_between(vec_x,&amp;poles1[0][0],zc_dir,&amp;start_angle);
+		UF_CURVE_create_arc_thru_3pts ( create_flag, &poles1[5][0],  point1, &poles2[5][0], &od_arc_tag);
+		UF_MODL_ask_curve_props(lh_spline, 0.0, &point1[0], tangent1, junk3, junk3, junk3,junk3);
+		UF_VEC3_angle_between(vec_x,&poles1[0][0],zc_dir,&start_angle);
 		point2[0] = root_rad*cos(start_angle);
 		point2[1] = root_rad*sin(start_angle);
 		point2[2] = 0.0;
@@ -552,9 +402,9 @@ static void do_ugopen_api(void)
 		ln1.end_point[0] = point1[0];
 		ln1.end_point[1] = point1[1];
 		ln1.end_point[2] = 0.0;
-		UF_CALL(UF_CURVE_create_line(&amp;ln1,&amp;lh_base_spline));
-		UF_MODL_ask_curve_props(rh_spline, 0.0, &amp;point1[0], tangent1, junk3, junk3, junk3,junk3);
-		UF_VEC3_angle_between(vec_x,&amp;poles2[0][0],zc_dir,&amp;end_angle);
+		UF_CALL(UF_CURVE_create_line(&ln1,&lh_base_spline));
+		UF_MODL_ask_curve_props(rh_spline, 0.0, &point1[0], tangent1, junk3, junk3, junk3,junk3);
+		UF_VEC3_angle_between(vec_x,&poles2[0][0],zc_dir,&end_angle);
 		point3[0] = root_rad*cos(end_angle);
 		point3[1] = root_rad*sin(end_angle);
 		point3[2] = 0.0;
@@ -564,13 +414,13 @@ static void do_ugopen_api(void)
 		ln1.end_point[0] = point1[0];
 		ln1.end_point[1] = point1[1];
 		ln1.end_point[2] = 0.0;
-		UF_CALL(UF_CURVE_create_line(&amp;ln1,&amp;rh_base_spline));
-		UF_VEC3_distance(point3, point1, &amp;length1);
+		UF_CALL(UF_CURVE_create_line(&ln1,&rh_base_spline));
+		UF_VEC3_distance(point3, point1, &length1);
 		point1[0] = 0.0;
 		point1[1] = root_rad;
 		point1[2] = 0.0;
-		UF_CURVE_create_arc_thru_3pts ( create_flag, point2,  point1, point3, &amp;root_arc_tag);
-		if (length1 &gt; max_fillet)
+		UF_CURVE_create_arc_thru_3pts ( create_flag, point2,  point1, point3, &root_arc_tag);
+		if (length1 > max_fillet)
 		{
 			curve_obj[0] = root_arc_tag;
 			curve_obj[1] = lh_base_spline;
@@ -581,7 +431,7 @@ static void do_ugopen_api(void)
 			trim_opts[1] = TRUE;
 			arc_opts[0] = UF_CURVE_TANGENT_OUTSIDE;
 			UF_CURVE_create_fillet (UF_CURVE_2_CURVE, curve_obj, point1, 
-				max_fillet, trim_opts, arc_opts, &amp;lh_fillet); 
+				max_fillet, trim_opts, arc_opts, &lh_fillet); 
 			curve_obj[0] = rh_base_spline;
 			curve_obj[1] = root_arc_tag;
 			point1[0] = poles2[0][0] + max_fillet;
@@ -591,8 +441,8 @@ static void do_ugopen_api(void)
 			trim_opts[1] = TRUE;
 			arc_opts[1] = UF_CURVE_TANGENT_OUTSIDE;
 			UF_CURVE_create_fillet (UF_CURVE_2_CURVE, curve_obj, point1, 
-				max_fillet, trim_opts, arc_opts, &amp;rh_fillet);
-			UF_CALL(UF_MODL_create_list(&amp;loop_list));
+				max_fillet, trim_opts, arc_opts, &rh_fillet);
+			UF_CALL(UF_MODL_create_list(&loop_list));
 			UF_CALL(UF_MODL_put_list_item(loop_list, od_arc_tag));
 			UF_CALL(UF_MODL_put_list_item(loop_list, lh_spline));
 			UF_CALL(UF_MODL_put_list_item(loop_list, lh_base_spline));
@@ -602,11 +452,11 @@ static void do_ugopen_api(void)
 			UF_CALL(UF_MODL_put_list_item(loop_list, rh_base_spline));
 			UF_CALL(UF_MODL_put_list_item(loop_list, rh_spline));
 			UF_MODL_create_extruded1 (loop_list, taper_angle, limit1,
-                          origin, zc_dir, UF_NEGATIVE , cyl_tag, &amp;features);
-			UF_CALL(UF_MODL_ask_list_item(features, 0 , &amp;tooth_gap_tag));
-			UF_MODL_delete_list(&amp;loop_list);
-			UF_MODL_delete_list(&amp;features);
-			UF_CALL(UF_MODL_create_list(&amp;loop_list));
+                          origin, zc_dir, UF_NEGATIVE , cyl_tag, &features);
+			UF_CALL(UF_MODL_ask_list_item(features, 0 , &tooth_gap_tag));
+			UF_MODL_delete_list(&loop_list);
+			UF_MODL_delete_list(&features);
+			UF_CALL(UF_MODL_create_list(&loop_list));
 			UF_CALL(UF_MODL_put_list_item(loop_list, tooth_gap_tag));
 			UF_OBJ_set_blank_status (od_arc_tag, UF_OBJ_BLANKED);
 			UF_OBJ_set_blank_status (lh_spline, UF_OBJ_BLANKED);
@@ -617,7 +467,7 @@ static void do_ugopen_api(void)
 			UF_OBJ_set_blank_status (rh_base_spline, UF_OBJ_BLANKED);
 			UF_OBJ_set_blank_status (rh_spline, UF_OBJ_BLANKED);
 		}
-		else if (length1 &lt; max_fillet)
+		else if (length1 < max_fillet)
 		{
 			curve_obj[0] = root_arc_tag;
 			curve_obj[1] = lh_spline;
@@ -628,7 +478,7 @@ static void do_ugopen_api(void)
 			trim_opts[1] = TRUE;
 			arc_opts[0] = UF_CURVE_TANGENT_OUTSIDE;
 			UF_CURVE_create_fillet (UF_CURVE_2_CURVE, curve_obj, point1, 
-					max_fillet, trim_opts, arc_opts, &amp;lh_fillet); 
+					max_fillet, trim_opts, arc_opts, &lh_fillet); 
 			curve_obj[0] = rh_spline;
 			curve_obj[1] = root_arc_tag;
 			point1[0] = poles2[0][0] + max_fillet;
@@ -638,10 +488,10 @@ static void do_ugopen_api(void)
 			trim_opts[1] = TRUE;
 			arc_opts[1] = UF_CURVE_TANGENT_OUTSIDE;
 			UF_CURVE_create_fillet (UF_CURVE_2_CURVE, curve_obj, point1, 
-					max_fillet, trim_opts, arc_opts, &amp;rh_fillet);
+					max_fillet, trim_opts, arc_opts, &rh_fillet);
 			UF_OBJ_delete_object (lh_base_spline);
 			UF_OBJ_delete_object (rh_base_spline);
-			UF_CALL(UF_MODL_create_list(&amp;loop_list));
+			UF_CALL(UF_MODL_create_list(&loop_list));
 			UF_CALL(UF_MODL_put_list_item(loop_list, od_arc_tag));
 			UF_CALL(UF_MODL_put_list_item(loop_list, lh_spline));
 			UF_CALL(UF_MODL_put_list_item(loop_list, lh_fillet));
@@ -649,11 +499,11 @@ static void do_ugopen_api(void)
 			UF_CALL(UF_MODL_put_list_item(loop_list, rh_fillet));
 			UF_CALL(UF_MODL_put_list_item(loop_list, rh_spline));
 			UF_MODL_create_extruded1 (loop_list, taper_angle, limit1,
-                          origin, zc_dir, UF_NEGATIVE , cyl_tag, &amp;features);
-			UF_CALL(UF_MODL_ask_list_item(features, 0 , &amp;tooth_gap_tag));
-			UF_MODL_delete_list(&amp;loop_list);
-			UF_MODL_delete_list(&amp;features);
-			UF_CALL(UF_MODL_create_list(&amp;loop_list));
+                          origin, zc_dir, UF_NEGATIVE , cyl_tag, &features);
+			UF_CALL(UF_MODL_ask_list_item(features, 0 , &tooth_gap_tag));
+			UF_MODL_delete_list(&loop_list);
+			UF_MODL_delete_list(&features);
+			UF_CALL(UF_MODL_create_list(&loop_list));
 			UF_CALL(UF_MODL_put_list_item(loop_list, tooth_gap_tag));
 			UF_OBJ_set_blank_status (od_arc_tag, UF_OBJ_BLANKED);
 			UF_OBJ_set_blank_status (lh_spline, UF_OBJ_BLANKED);
@@ -669,7 +519,7 @@ static void do_ugopen_api(void)
 		theta1 = sqrt(sub2sq - 1.0);
 		theta3 = theta1;
 		delta_theta = (theta2-theta1)/5.0; 
-		for (i=0;i&lt;6;i++)
+		for (i=0;i<6;i++)
 		{
 			b_mat[i][0] = base_rad*sin(theta3)- base_rad*theta3*cos(theta3);
 			b_mat[i][1] = base_rad*cos(theta3)+ base_rad*theta3*sin(theta3);
@@ -714,13 +564,13 @@ static void do_ugopen_api(void)
 		theta_p = sqrt(sub1sq-1.0);
 		x_pitch = base_rad*sin(theta_p)-base_rad*theta_p*cos(theta_p);
 		rot_angle = PI/(2.0*teeth_no) - asin(x_pitch/rad2);
-		for (i=0;i&lt;6;i++)
+		for (i=0;i<6;i++)
 		{
 			poles1[i][0] = poles[i][0]*cos(-rot_angle)-poles[i][1]*sin(-rot_angle);
 			poles1[i][1] = poles[i][0]*sin(-rot_angle)+poles[i][1]*cos(-rot_angle);
 			poles1[i][2] = 0.0;
 		}  
-		for (i=0;i&lt;6;i++)
+		for (i=0;i<6;i++)
 		{
 			poles2[i][0] = -poles1[i][0];
 			poles2[i][1] = poles1[i][1];
@@ -751,7 +601,7 @@ static void do_ugopen_api(void)
 		pole_array[22] = 0.0;
 		pole_array[23] = 1.0;
 		UF_CALL(UF_MODL_create_spline(POLES,ORDER,knotseq,pole_array,
-						&amp;lh_spline, &amp;k_fixup,&amp;p_fixup));
+						&lh_spline, &k_fixup,&p_fixup));
 		pole_array[0] = poles2[0][0];
 		pole_array[1] = poles2[0][1];
 		pole_array[2] = 0.0;
@@ -777,15 +627,15 @@ static void do_ugopen_api(void)
 		pole_array[22] = 0.0;
 		pole_array[23] = 1.0;
 		UF_CALL(UF_MODL_create_spline(POLES,ORDER,knotseq,pole_array,
-						&amp;rh_spline, &amp;k_fixup,&amp;p_fixup));
+						&rh_spline, &k_fixup,&p_fixup));
 		point1[0] = 0.0;
 		point1[1] = pitch_dia/2.0 + addendum;
 		point1[2] = 0.0;
-		UF_CURVE_create_arc_thru_3pts ( create_flag, &amp;poles1[5][0],  point1, &amp;poles2[5][0], &amp;od_arc_tag);
+		UF_CURVE_create_arc_thru_3pts ( create_flag, &poles1[5][0],  point1, &poles2[5][0], &od_arc_tag);
 		point1[0] = 0.0;
 		point1[1] = root_rad;
 		point1[2] = 0.0;
-		UF_CURVE_create_arc_thru_3pts ( create_flag, &amp;poles1[0][0],  point1, &amp;poles2[0][0], &amp;root_arc_tag);
+		UF_CURVE_create_arc_thru_3pts ( create_flag, &poles1[0][0],  point1, &poles2[0][0], &root_arc_tag);
 		curve_obj[0] = root_arc_tag;
 		curve_obj[1] = lh_spline;
 		point1[0] = poles1[0][0];
@@ -794,7 +644,7 @@ static void do_ugopen_api(void)
 		trim_opts[0] = TRUE;
 		trim_opts[1] = TRUE;
 		arc_opts[0] = UF_CURVE_TANGENT_OUTSIDE;
-		UF_CURVE_create_fillet (UF_CURVE_2_CURVE, curve_obj, point1, max_fillet, trim_opts, arc_opts, &amp;lh_fillet);
+		UF_CURVE_create_fillet (UF_CURVE_2_CURVE, curve_obj, point1, max_fillet, trim_opts, arc_opts, &lh_fillet);
 		curve_obj[0] = rh_spline;
 		curve_obj[1] = root_arc_tag;
 		point1[0] = poles2[0][0] ;
@@ -803,8 +653,8 @@ static void do_ugopen_api(void)
 		trim_opts[0] = TRUE;
 		trim_opts[1] = TRUE;
 		arc_opts[1] = UF_CURVE_TANGENT_OUTSIDE;
-		UF_CURVE_create_fillet (UF_CURVE_2_CURVE, curve_obj, point1, max_fillet, trim_opts, arc_opts, &amp;rh_fillet);
-		UF_CALL(UF_MODL_create_list(&amp;loop_list));
+		UF_CURVE_create_fillet (UF_CURVE_2_CURVE, curve_obj, point1, max_fillet, trim_opts, arc_opts, &rh_fillet);
+		UF_CALL(UF_MODL_create_list(&loop_list));
 		UF_CALL(UF_MODL_put_list_item(loop_list, od_arc_tag));
 		UF_CALL(UF_MODL_put_list_item(loop_list, lh_spline));
 		UF_CALL(UF_MODL_put_list_item(loop_list, lh_fillet));
@@ -812,11 +662,11 @@ static void do_ugopen_api(void)
 		UF_CALL(UF_MODL_put_list_item(loop_list, rh_fillet));
 		UF_CALL(UF_MODL_put_list_item(loop_list, rh_spline));
 		UF_MODL_create_extruded1 (loop_list, taper_angle, limit1,
-                          origin, zc_dir, UF_NEGATIVE , cyl_tag, &amp;features);
-		UF_CALL(UF_MODL_ask_list_item(features, 0 , &amp;tooth_gap_tag));
-		UF_MODL_delete_list(&amp;loop_list);
-		UF_MODL_delete_list(&amp;features);
-		UF_CALL(UF_MODL_create_list(&amp;loop_list));
+                          origin, zc_dir, UF_NEGATIVE , cyl_tag, &features);
+		UF_CALL(UF_MODL_ask_list_item(features, 0 , &tooth_gap_tag));
+		UF_MODL_delete_list(&loop_list);
+		UF_MODL_delete_list(&features);
+		UF_CALL(UF_MODL_create_list(&loop_list));
 		UF_CALL(UF_MODL_put_list_item(loop_list, tooth_gap_tag));
 		UF_OBJ_set_blank_status (od_arc_tag, UF_OBJ_BLANKED);
 		UF_OBJ_set_blank_status (lh_spline, UF_OBJ_BLANKED);
@@ -830,18 +680,18 @@ static void do_ugopen_api(void)
 	sprintf(teeth_no_st,"%d", int_teeth_no);
 	angle1 = 360.0/teeth_no;
 	sprintf(angle_st,"%f",angle1);
-	UF_MODL_create_circular_iset (method1, origin, zc_dir, teeth_no_st, angle_st, loop_list, &amp;instances );
+	UF_MODL_create_circular_iset (method1, origin, zc_dir, teeth_no_st, angle_st, loop_list, &instances );
 
-	UF_MODL_ask_instance (instances, &amp;instances_feature_list );
+	UF_MODL_ask_instance (instances, &instances_feature_list );
 
-	UF_CALL(UF_MODL_ask_list_count(instances_feature_list,&amp;num_instances));
-	for (i=0;i&lt;num_instances;i++)
+	UF_CALL(UF_MODL_ask_list_count(instances_feature_list,&num_instances));
+	for (i=0;i<num_instances;i++)
 	{
-		UF_CALL(UF_MODL_ask_list_item(instances_feature_list,i,&amp;temp_tag));
+		UF_CALL(UF_MODL_ask_list_item(instances_feature_list,i,&temp_tag));
 		teeth_tag[i] = temp_tag;
 	}
 
-	UF_MODL_create_set_of_feature ("Teeth_set", &amp;teeth_tag[0], num_instances, 1, &amp;teeth_grp_tag );
+	UF_MODL_create_set_of_feature ("Teeth_set", &teeth_tag[0], num_instances, 1, &teeth_grp_tag );
 
 	ending1: ;
 
@@ -862,55 +712,5 @@ int ufusr_ask_unload(void)
 {
   return (UF_UNLOAD_IMMEDIATELY);
 }
-</pre>
-<p></p><br />NXOpen << <a href='NXOpen.html'>Previous</a> <a href='NX2008.html'>Next</a> >> NX2008</div>
-        
-    <!-- footer -->
-      <div class="container">
-        <div class="row pt-3 mx-auto">
-            <p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
-        </div>
-      </div>
-    <!-- for footer -->
-    
-        </div> <!-- for site wrap -->
-            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
-            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
-            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
-            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
-            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
-            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
-            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
-            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
-            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
-            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
-            <script src="../cmsimde/static/chimper/js/aos.js"></script>
-            <!--
-            <script src="../cmsimde/static/chimper/js/typed.js"></script>
-                    <script>
-                    var typed = new Typed('.typed-words', {
-                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
-                    typeSpeed: 80,
-                    backSpeed: 80,
-                    backDelay: 4000,
-                    startDelay: 1000,
-                    loop: true,
-                    showCursor: true
-                    });
-                    </script>
-            -->
-            <script src="../cmsimde/static/chimper/js/main.js"></script>
-        
-<!-- 啟用 LaTeX equations 編輯 -->
-  <!-- <script>
-  MathJax = {
-    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
-  };
-  </script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
-    </body></html>
-        
+
+
