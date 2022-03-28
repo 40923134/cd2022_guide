@@ -2,7 +2,7 @@
         <head>
         <title>CD_Guide</title>
         <meta charset="utf-8">
-<meta property="head" content="H3">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -139,137 +139,12 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">NX1980 << <a href='NX1980.html'>Previous</a> <a href='Portable NX1980.html'>Next</a> >> Portable NX1980<br /><h1>Start_NX1980</h1>
-<p>NX1980 series 為 2021.06 的版本.</p>
-<p>啟動 NX1980 全部模組, 容量約 28.6 GB.</p>
-<p>start_nx1980_all.bat</p>
-<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">@echo off
-set Disk=y
-subst %Disk%: "data"
-
-%Disk%:
-
-set HomePath=%Disk%:\home_mdecourse
-set HomeDrive=%Disk%:\home_mdecourse
-set Home=%Disk%:\home_mdecourse
-set USERPROFILE=%Disk%:\home_mdecourse
-
-REM 將系統 Python 程式的 io 設為 utf-8
-set PYTHONIOENCODING="utf-8"
-
-set PYTHONPATH=%Disk%:\py373\DLLs;%Disk%:\py373\Lib;%Disk%:\py373\Lib\site-packages;
-set PYTHONHOME=%Disk%:\py373
-
-set path_python=%Disk%:\py373;%Disk%:\py373\Scripts;
-set path_msys2=%Disk%:\msys64\mingw64\bin;
-REM coreutils is for compiling fossil scm
-set path_coreutils=%Disk%:\coreutils-5.3.0\bin;%Disk%:\depends22_x64;
-set path_tcc=%Disk%:\tcc;
-set path_cmake=%Disk%:\cmake-3.10.1-win64-x64\bin;
-set path_nodejs=Disk%:\nodejs;%Disk%:\nodejs\appdata\roaming\npm;
-set path_git=%Disk%:\portablegit\bin;
-set path_xming=%Disk%:\Xming;
-set path_latex=%%Disk%:\Pandoc;%Disk%:\TinyTeX\bin\win32;
-
-REM for NX1980
-REM use ipv6
-set FNP_IP_PRIORITY=6
-set UGII_BASE_DIR=%Disk%:\NX1980
-set TMP_DIR=%Disk%:\tmp
-set UGII_USER_PROFILE_DIR=%Disk%:\home_mdecourse
-set START_DIR=%TMP_DIR%
-set UGII_TMP_DIR=%TMP_DIR%
-set UGII_USER_DIR=%Disk%:\tmp
-set UGII_GROUP_DIR=%Disk%:\tmp
-set UGII_SITE_DIR=%Disk%:\tmp
-set UGII_BASE_DIR_CUSTOM=%UGII_BASE_DIR%
-
-set SPLM_LICENSE_SERVER=28000@xxx.xxx.xx.xx;28000@[xxxx:xxx:xxxx:xx::xx];28000@192.168.56.3
-set UGII_LANG=english
-
-set UGII_ROOT_DIR=%UGII_BASE_DIR%\ugii
-set UGS_LICENSE_BUNDLE=ACD10
-set UGII_TEMPLATE_DIR=%UGII_ROOT_DIR%\templates
-set ugpath=%UGII_BASE_DIR%\nxbin;%UGII_BASE_DIR%\ugii;%UGII_BASE_DIR%\NXBIN\Radical;%UGII_BASE_DIR%\NXBIN\managed;
-
-path=%ugpath%;%path%;%Disk%:;%path_python%;%path_msys2%;%path_tcc%;%path_git%;%path_cmake%;%path_coreutils%;
-
-start /MIN cmd.exe
-start /MIN cmd.exe
-start /MIN cmd.exe
-start /MIN cmd.exe
-
-start /MIN %Disk%:\wscite415\wscite\SciTE.exe
-start /MIN %Disk%:\wscite415\wscite\SciTE.exe
-
-%UGII_BASE_DIR%\ugii\ugraf.exe -nx | start /d  %UGII_BASE_DIR%\ugii %UGII_BASE_DIR%\nxbin\simcenter3d.exe | %UGII_BASE_DIR%\ugii\ugraf.exe -layout | %UGII_BASE_DIR%\ugii\ugraf.exe -view | %UGII_BASE_DIR%\ugii\ugraf.exe -mechatronics | %UGII_BASE_DIR%\ugii\ugraf.exe -simviewer
-
-Exit</pre>
-<p>指啟動 NX1980 基本模組, 容量約 15 GB.</p>
-<p>start_nx1980.bat</p>
-<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">@echo off
-set Disk=y
-subst %Disk%: "data"
-
-%Disk%:
-
-set HomePath=%Disk%:\home_mdecourse
-set HomeDrive=%Disk%:\home_mdecourse
-set Home=%Disk%:\home_mdecourse
-set USERPROFILE=%Disk%:\home_mdecourse
-
-REM 將系統 Python 程式的 io 設為 utf-8
-set PYTHONIOENCODING="utf-8"
-
-set PYTHONPATH=%Disk%:\py373\DLLs;%Disk%:\py373\Lib;%Disk%:\py373\Lib\site-packages;
-set PYTHONHOME=%Disk%:\py373
-
-set path_python=%Disk%:\py373;%Disk%:\py373\Scripts;
-set path_msys2=%Disk%:\msys64\mingw64\bin;
-REM coreutils is for compiling fossil scm
-set path_coreutils=%Disk%:\coreutils-5.3.0\bin;%Disk%:\depends22_x64;
-set path_tcc=%Disk%:\tcc;
-set path_cmake=%Disk%:\cmake-3.10.1-win64-x64\bin;
-set path_nodejs=Disk%:\nodejs;%Disk%:\nodejs\appdata\roaming\npm;
-set path_git=%Disk%:\portablegit\bin;
-set path_xming=%Disk%:\Xming;
-set path_latex=%%Disk%:\Pandoc;%Disk%:\TinyTeX\bin\win32;
-
-REM for NX1980
-REM use ipv6
-set FNP_IP_PRIORITY=6
-set UGII_BASE_DIR=%Disk%:\NX1980
-set TMP_DIR=%Disk%:\tmp
-set UGII_USER_PROFILE_DIR=%Disk%:\home_mdecourse
-set START_DIR=%TMP_DIR%
-set UGII_TMP_DIR=%TMP_DIR%
-set UGII_USER_DIR=%Disk%:\tmp
-set UGII_GROUP_DIR=%Disk%:\tmp
-set UGII_SITE_DIR=%Disk%:\tmp
-set UGII_BASE_DIR_CUSTOM=%UGII_BASE_DIR%
-
-set SPLM_LICENSE_SERVER=28000@xxx.xxx.xx.xx;28000@[xxxx:xxx:xxxx:xx::xx];28000@192.168.56.3
-set UGII_LANG=english
-
-set UGII_ROOT_DIR=%UGII_BASE_DIR%\ugii
-set UGS_LICENSE_BUNDLE=ACD10,ACD11
-set UGII_TEMPLATE_DIR=%UGII_ROOT_DIR%\templates
-set ugpath=%UGII_BASE_DIR%\nxbin;%UGII_BASE_DIR%\ugii;%UGII_BASE_DIR%\NXBIN\Radical;%UGII_BASE_DIR%\NXBIN\managed;
-
-path=%ugpath%;%path%;%Disk%:;%path_python%;%path_msys2%;%path_tcc%;%path_git%;%path_cmake%;%path_coreutils%;
-
-start /MIN cmd.exe
-start /MIN cmd.exe
-start /MIN cmd.exe
-start /MIN cmd.exe
-
-start /MIN %Disk%:\wscite415\wscite\SciTE.exe
-start /MIN %Disk%:\wscite415\wscite\SciTE.exe
-
-%UGII_BASE_DIR%\ugii\ugraf.exe -nx
-
-Exit</pre>
-<br />NX1980 << <a href='NX1980.html'>Previous</a> <a href='Portable NX1980.html'>Next</a> >> Portable NX1980</div>
+    <div id="tipue_search_content">Meeting << <a href='Meeting.html'>Previous</a> <a href='Assignments.html'>Next</a> >> Assignments<br /><h1>TEX and LaTeX</h1>
+<p>為什麼協同產品設計實習需要採用 TEX 與 LaTeX 輸出技術文件?</p>
+<p><a href="https://github.com/mdecycu/4072pj1/blob/master/.github/workflows/main.yml">https://github.com/mdecycu/4072pj1/blob/master/.github/workflows/main.yml</a> </p>
+<p><a href="https://ftp.ntou.edu.tw/ctan/info/gentle/gentle.pdf">https://ftp.ntou.edu.tw/ctan/info/gentle/gentle.pdf</a> </p>
+<p><a href="http://tug.ctan.org/info/impatient/book.pdf">http://tug.ctan.org/info/impatient/book.pdf</a> </p>
+<p><a href="https://texdoc.org/serve/TeXbyTopic.pdf/0">https://texdoc.org/serve/TeXbyTopic.pdf/0</a> </p><br />Meeting << <a href='Meeting.html'>Previous</a> <a href='Assignments.html'>Next</a> >> Assignments</div>
         
     <!-- footer -->
       <div class="container">
