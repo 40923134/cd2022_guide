@@ -196,6 +196,30 @@ var winkVideoData = {
 <div class="winkVideoControlBarProgressThumbClass"></div>
 </div>
 <div class="winkVideoPlayOverlayClass"></div>
+</div>
+<p>以下影片說明如何利用 Leo Editor 編輯 config/pelican.leo 網誌檔案:</p>
+<script>
+var winkVideoData2 = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+</script>
+<!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData2" height="630" muted="true" width="1008">
+<source src="/downloads/w6_blog/w6_blog.mp4" type="video/mp4"/></video>
+<div class="winkVideoOverlayClass"></div>
+<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
+<div class="winkVideoControlBarProgressLeftClass"></div>
+<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
+<div class="winkVideoControlBarProgressRightClass"></div>
+<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
+<div class="winkVideoControlBarProgressThumbClass"></div>
+</div>
+<div class="winkVideoPlayOverlayClass"></div>
 </div><h2>Meeting</h2>
 <p><a href="https://www.atlassian.com/blog/teamwork/how-to-run-effective-meetings">https://www.atlassian.com/blog/teamwork/how-to-run-effective-meetings</a></p>
 <p style="padding-left: 30px;">Most of us don’t have formal training in meeting management skills, but anyone can learn to do it well – whether your team is in the office, fully virtual, or hybrid.</p>
@@ -559,7 +583,21 @@ var winkVideoData = {
 <div class="winkVideoPlayOverlayClass"></div>
 </div><h3>NXOpen</h3>
 <p><a href="/downloads/NXOpen_spur_gear.c">NXOpen_spur_gear.c</a></p>
-<p><a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/1872/nx_api/common/en_US/graphics/fileLibrary/nx/nxopen/NXOpen_Getting_Started.pdf">Get Started with NXOpen.pdf</a> (2019)</p><h3>UGOpen</h3>
+<p><a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/1872/nx_api/common/en_US/graphics/fileLibrary/nx/nxopen/NXOpen_Getting_Started.pdf">Get Started with NXOpen.pdf</a> (2019)</p>
+<p>NX10: <a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/10/nx_api/en_US/custom/nxopen_python_ref/index.html">https://docs.plm.automation.siemens.com/data_services/resources/nx/10/nx_api/en_US/custom/nxopen_python_ref/index.html</a></p>
+<p>NX12: <a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/custom/en_US/nxopen_python_ref/index.html">https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/custom/en_US/nxopen_python_ref/index.html</a></p>
+<p>NXOpen Python 程式範例:</p>
+<p style="padding-left: 30px;"><a href="/downloads/nxopen/nxopen_ex1.py">nxopen_ex1.py</a></p>
+<p style="padding-left: 30px;"><a href="/downloads/nxopen/nxopen_ex2.py">nxopen_ex2.py</a></p>
+<p style="padding-left: 30px;"><a href="/downloads/nxopen/nxopen_ex3.py">nxopen_ex3.py</a></p>
+<h4>Referene:</h4>
+<p style="padding-left: 30px;"><a href="https://support.industrysoftware.automation.siemens.com/general/nx.shtml#lp-tab-1">NX 各版本技術手冊</a></p>
+<p style="padding-left: 30px;"><a href="https://docs.plm.automation.siemens.com/tdoc/nx/1899/nx_help">https://docs.plm.automation.siemens.com/tdoc/nx/1899/nx_help</a> </p>
+<p style="padding-left: 30px;">NX1980\NXBIN\managed\exceladdin_x64.dll</p>
+<p style="padding-left: 30px;"><a href="/downloads/nxopen/ugii_env_ug.dat.txt">ugii_env_ug.dat.txt</a></p>
+<p style="padding-left: 60px;">UGII_PYTHONPATH</p>
+<p style="padding-left: 60px;">UGII_PYTHON_LIBRARY_DIR</p>
+<p style="padding-left: 30px;"><a href="https://ntnuopen.ntnu.no/ntnu-xmlui/handle/11250/2656770">https://ntnuopen.ntnu.no/ntnu-xmlui/handle/11250/2656770</a> (Design of a KBE system for automatic weld path definition in CAD)</p><h3>UGOpen</h3>
 <p>在 NX3 時代, 因為尚未支援採用 Python 編寫 API 延伸程式, 但仍可透過當時的 UGOpen C 編寫為 Python 可呼叫的 pyd 動態連結程式庫, 然後由 Python 程式主導後續的<a href="/downloads/nx3_c_pyd/nx3_c_pyd_integ.pdf">延伸應用</a>.</p>
 <p><a href="/downloads/nx3_c_pyd/nx3_for_pyd.c">nx3_for_pyd.c</a></p>
 <p><a href="/downloads/nx3_c_pyd/nx3_call_pyd.py">nx3_call_pyd.py</a></p>
@@ -580,7 +618,13 @@ var winkVideoData = {
 <p>NX2008 啟動方式同 NX1980.</p>
 <h1>Onshape</h1>
 <p>以 <a href="https://cad.onshape.com/documents/21d631bfd9ab509e3a2079c0/w/832791ed26ad65d49a0711b4/e/6957bf222554da36040535be">Onshape 中的 uArm robot</a>. (並未自行繪製零組件而是從 <a href="/downloads/uArmSwiftPro_UP1300_3D.STEP">uArmSwiftPro_UP1300_3D.STEP</a> import)</p>
-<h1>Tic-Tat-Toe</h1>
+<h1>Copsim</h1>
+<p><a href="https://www.york.ac.uk/media/electronic-engineering/welcome/Simulation%20Challenge%20-%20Python%20Scripting.pdf">https://www.york.ac.uk/media/electronic-engineering/welcome/Simulation%20Challenge%20-%20Python%20Scripting.pdf</a></p>
+<p><a href="http://hades.mech.northwestern.edu/index.php/Getting_Started_with_the_CoppeliaSim_Simulator">http://hades.mech.northwestern.edu/index.php/Getting_Started_with_the_CoppeliaSim_Simulator</a> </p>
+<p><a href="https://www.doc.ic.ac.uk/~ajd/Robotics/RoboticsResources/questions1.pdf">https://www.doc.ic.ac.uk/~ajd/Robotics/RoboticsResources/questions1.pdf</a> </p>
+<p><a href="https://github.com/stepjam/PyRep">https://github.com/stepjam/PyRep</a> </p>
+<p><a href="https://www.diva-portal.org/smash/get/diva2:1569215/FULLTEXT02.pdf">https://www.diva-portal.org/smash/get/diva2:1569215/FULLTEXT02.pdf</a> </p><h1>Tic-Tat-Toe</h1>
+<p><a href="https://techvidvan.com/tutorials/python-game-project-tic-tac-toe/">https://techvidvan.com/tutorials/python-game-project-tic-tac-toe/</a> </p>
 <p><a href="https://www.universal-robots.com/products/ur10-robot/">UR10e</a> Robot 透過影像辨識與人進行 <a href="https://en.wikipedia.org/wiki/Tic-tac-toe">Tic-Tat-Toe</a> 遊戲:</p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/e1qtmZxMd6A" title="YouTube video player" width="560"></iframe></p>
 <p><a href="https://mde.tw/cd2022">cd2022</a> 則希望透過 <a href="https://www.ufactory.cc/pages/uarm">uArm</a> robot 搬動 OX 棋子的方式進行 <a href="https://en.wikipedia.org/wiki/Tic-tac-toe">Tic-Tat-Toe</a> 遊戲.</p>
@@ -596,8 +640,7 @@ var winkVideoData = {
 <p>且 uArm robot 的零組件要求分別由 Solvespace, NX1980 與 Onshape 執行設計繪圖後轉入 Coppeliasim 場景完成機電資系統模擬.</p>
 <p>其中 uArm 原型零件採用 3D 列印或雷射切割的製造過程可依照 <a href="https://mde.tw/cd2022/content/Realizable.html">Realization</a> 頁面中的模擬系統進行, 並包括齒輪減速機的設計運算與 <a href="https://wokwi.com/arduino/libraries/Servo/Sweep">Arduino 伺服馬達的控制模擬</a>.</p>
 <h4>uArm 零組件:</h4>
-<p style="padding-left: 30px;">以 <a href="https://cad.onshape.com/documents/21d631bfd9ab509e3a2079c0/w/832791ed26ad65d49a0711b4/e/6957bf222554da36040535be">Onshape 中的 uArm robot</a>. (並未自行繪製零組件而是從 <a href="/downloads/uArmSwiftPro_UP1300_3D.STEP">uArmSwiftPro_UP1300_3D.STEP</a> import)</p>
-<h2>Threejs</h2>
+<p style="padding-left: 30px;">以 <a href="https://cad.onshape.com/documents/21d631bfd9ab509e3a2079c0/w/832791ed26ad65d49a0711b4/e/6957bf222554da36040535be">Onshape 中的 uArm robot</a>. (並未自行繪製零組件而是從 <a href="/downloads/uArmSwiftPro_UP1300_3D.STEP">uArmSwiftPro_UP1300_3D.STEP</a> import)</p><h2>Threejs</h2>
 <p>假如能夠在 server 端配置 NX + Flask 延伸應用程式, 並讓 Brython 前端程式操控產品設計參數, 完成後的零組件將可在轉為 OBJ 格式後, 直接展示在客戶端的瀏覽器中.</p>
 <p><a href="https://jayconsystems.com/blog/exporting-3d-files-stl-vs-obj-vs-iges-vs-step">https://jayconsystems.com/blog/exporting-3d-files-stl-vs-obj-vs-iges-vs-step</a> </p>
 <p><a href="https://threejs.org/">https://threejs.org/</a></p>
