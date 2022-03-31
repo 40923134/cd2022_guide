@@ -305,7 +305,34 @@ var winkVideoData2 = {
 <p style="padding-left: 60px;">uArm 機械手臂的初步設計目的, 是完成 NX1980 組立圖後, 能轉入 Coppeliasim 環境中進行機電系統組合模擬, 讓操作者透過 <a href="https://www.coppeliarobotics.com/helpFiles/en/customUIPlugin.htm">Custom UIs 介面</a>操控四個自由度的 uArm 步進伺服馬達.</p>
 <h4 style="padding-left: 30px;">指定任務:</h4>
 <p style="padding-left: 60px;"><a href="https://mde.tw/cd2022_guide/content/NX1980.html#learnnx">這裡</a>有 38 個比較接近 NX1980 版本功能的教學影片 (<a href="https://www.youtube.com/watch?v=GUaa97tALxE&amp;list=PLzEsJue49U_EMMv0eBo8MNJjJOq_WHCrl">連結</a>), 請以每一學員分配 5 個影片的原則, 由各學員在 w3 標題頁面中, 根據影片中的教學內容, 以 Wink 影片互相對照的方式採 NX1980 執行操作進行整理, 完成後請將所負責的 Wink 教學影片嵌入個人與大分組的 w3 標題頁面中.</p>
-<p><span style="background-color: #ffff99;">w4 各班上課時段前</span>, 請各小組與大組成員分別開會討論後, 採協同設計流程執行上述任務, 並準備在 w4 上課時段中直接利用網頁簡報呈現各大組的執行流程與結果.</p><h1>Solvespace</h1>
+<p><span style="background-color: #ffff99;">w4 各班上課時段前</span>, 請各小組與大組成員分別開會討論後, 採協同設計流程執行上述任務, 並準備在 w4 上課時段中直接利用網頁簡報呈現各大組的執行流程與結果.</p>
+<h2>w6 任務</h2>
+<p><a href="/downloads/w6_blog/2a_stage1.txt">2a_stage1.txt</a></p>
+<p><a href="/downloads/w6_blog/2a_stage2.txt">2a_stage2.txt</a></p>
+<p>以下影片說明如何利用 Leo Editor 編輯 config/pelican.leo 網誌檔案:</p>
+<script>
+var winkVideoData2 = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+</script>
+<!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData2" height="630" muted="true" width="1008">
+<source src="/downloads/w6_blog/w6_blog.mp4" type="video/mp4"/></video>
+<div class="winkVideoOverlayClass"></div>
+<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
+<div class="winkVideoControlBarProgressLeftClass"></div>
+<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
+<div class="winkVideoControlBarProgressRightClass"></div>
+<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
+<div class="winkVideoControlBarProgressThumbClass"></div>
+</div>
+<div class="winkVideoPlayOverlayClass"></div>
+</div><h1>Solvespace</h1>
 <p>根據 <a href="https://mde.tw/cad2021/content/Compile%20Solvespace.html">https://mde.tw/cad2021/content/Compile%20Solvespace.html</a> 中的說明, 可以利用 <a href="https://drive.google.com/file/d/16L08jH3ZtoMeeGWBJrP9DuIk-cby_Wqw/view?usp=sharing">compile_copsim_for_cd2022.7z</a> (file size: 5 GB, extracted size: 17.3 GB), 完成編譯.</p>
 <p>自行編譯 Solvespace 的目的是希望透過 <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm</a> 與 <a href="https://www.coppeliarobotics.com/helpFiles/en/importExport.htm">https://www.coppeliarobotics.com/helpFiles/en/importExport.htm</a> 的資訊, 自行在 Solvespace 中將組立檔案直接轉入 Coppeliasim 的場景檔案. 其中牽涉如何將 Solvespace 組立件中的零件檔案進行分割後, 以 <a href="https://en.wikipedia.org/wiki/STL">STL</a>、<a href="http://wiki.ros.org/urdf">URDF</a> 或 <a href="http://sdformat.org/">SDF</a> 格式直接轉入 Coppeliasim.</p>
 <h1>NX</h1>
@@ -618,12 +645,15 @@ var winkVideoData = {
 <p>NX2008 啟動方式同 NX1980.</p>
 <h1>Onshape</h1>
 <p>以 <a href="https://cad.onshape.com/documents/21d631bfd9ab509e3a2079c0/w/832791ed26ad65d49a0711b4/e/6957bf222554da36040535be">Onshape 中的 uArm robot</a>. (並未自行繪製零組件而是從 <a href="/downloads/uArmSwiftPro_UP1300_3D.STEP">uArmSwiftPro_UP1300_3D.STEP</a> import)</p>
-<h1>Copsim</h1>
+<h1>Coppeliasim</h1>
+<p>根據 <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm</a> 中有關 simple format 的說明, 可直接將 uArm 機械手臂在 NX 中的零組件, 透過 NXOpen Python API 的程式轉為 CoppeliaSim 的 Scene hierarchy 組合狀態.</p>
+<p>如此便將 uArm 機械手臂各零組件參數化, 然後直接在 Brython 前端介面設定 uArm 機械手臂的設計參數, 經由 AJAX 將參數送至後端 Flask + NXOpen Python API 伺服器, 產生 uArm 機械手臂組合場景後, 再透過 <a href="https://www.coppeliarobotics.com/helpFiles/en/legacyRemoteApiOverview.htm">Legacy Python remote API</a> 或 <a href="https://www.coppeliarobotics.com/helpFiles/en/zmqRemoteApiOverview.htm">ZeroMQ Python remote API</a> 控制 uArm 機械手臂 (或利用 <a href="https://www.ensta-bretagne.fr/zerr/dokuwiki/doku.php?id=vrep:socket-com-with-robot">Socket 傳遞控制參數</a>), 並以客製化 image sensor 的<a href="https://forum.coppeliarobotics.com/viewtopic.php?t=3457">影像串流</a>從 Flask server 送至各協同成員的瀏覽器, 或採 <a href="https://www.coppeliarobotics.com/helpFiles/en/externalFrontEnd.htm">Web browser based frontend</a> 方式呈現控制流程.</p>
 <p><a href="https://www.york.ac.uk/media/electronic-engineering/welcome/Simulation%20Challenge%20-%20Python%20Scripting.pdf">https://www.york.ac.uk/media/electronic-engineering/welcome/Simulation%20Challenge%20-%20Python%20Scripting.pdf</a></p>
-<p><a href="http://hades.mech.northwestern.edu/index.php/Getting_Started_with_the_CoppeliaSim_Simulator">http://hades.mech.northwestern.edu/index.php/Getting_Started_with_the_CoppeliaSim_Simulator</a> </p>
-<p><a href="https://www.doc.ic.ac.uk/~ajd/Robotics/RoboticsResources/questions1.pdf">https://www.doc.ic.ac.uk/~ajd/Robotics/RoboticsResources/questions1.pdf</a> </p>
-<p><a href="https://github.com/stepjam/PyRep">https://github.com/stepjam/PyRep</a> </p>
-<p><a href="https://www.diva-portal.org/smash/get/diva2:1569215/FULLTEXT02.pdf">https://www.diva-portal.org/smash/get/diva2:1569215/FULLTEXT02.pdf</a> </p><h1>Tic-Tat-Toe</h1>
+<p><a href="http://hades.mech.northwestern.edu/index.php/Getting_Started_with_the_CoppeliaSim_Simulator">http://hades.mech.northwestern.edu/index.php/Getting_Started_with_the_CoppeliaSim_Simulator</a></p>
+<p><a href="https://www.doc.ic.ac.uk/~ajd/Robotics/RoboticsResources/questions1.pdf">https://www.doc.ic.ac.uk/~ajd/Robotics/RoboticsResources/questions1.pdf</a></p>
+<p><a href="https://github.com/stepjam/PyRep">https://github.com/stepjam/PyRep</a></p>
+<p><a href="https://www.diva-portal.org/smash/get/diva2:1569215/FULLTEXT02.pdf">https://www.diva-portal.org/smash/get/diva2:1569215/FULLTEXT02.pdf</a></p>
+<p><a href="https://github.com/abr/abr_control">https://github.com/abr/abr_control</a> </p><h1>Tic-Tat-Toe</h1>
 <p><a href="https://techvidvan.com/tutorials/python-game-project-tic-tac-toe/">https://techvidvan.com/tutorials/python-game-project-tic-tac-toe/</a> </p>
 <p><a href="https://www.geeksforgeeks.org/tic-tac-toe-game-with-gui-using-tkinter-in-python/">https://www.geeksforgeeks.org/tic-tac-toe-game-with-gui-using-tkinter-in-python/</a> </p>
 <p><a href="https://www.universal-robots.com/products/ur10-robot/">UR10e</a> Robot 透過影像辨識與人進行 <a href="https://en.wikipedia.org/wiki/Tic-tac-toe">Tic-Tat-Toe</a> 遊戲:</p>
