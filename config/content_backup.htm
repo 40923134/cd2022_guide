@@ -358,7 +358,38 @@ var winkVideoData2 = {
 <li>各大組將所有完成的程式碼、編譯結果、MCAD 零組件檔案以及場景模擬檔案壓縮為 .7z (以 2ag1 大分組為例, 檔案名稱設為w7_pap_cd2022ag1.7z) 後, 送到組長的 @gm 帳號下的 <a href="https://www.microsoft.com/zh-tw/education/products/office">OneDrive</a> 共享區, 設定為只有 @gm 帳號登入者可以下載的共用權限後, 將連結發布在大組的 Pelican 網誌中.</li>
 <li>各大組以程式方法執行上述任務的量化查驗後, 結合組員自評與互評流程後, 將各組員的評量結果存為 w7_cd2022ag1_evaluation.txt (以 2ag1 為例), 採允許各組組員與 yen@gm 共享下載進行設定.</li>
 </ol>
-<h3>w7_summary</h3>
+<script>
+var winkVideoData = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+    "2": [
+      { type: "gotourl", rect: { x: 127, y: 172, width: 60, height: 24 }, target: "https://www.msys2.org/", window: "MSYS2" },
+    ],
+    "30": [
+      { type: "gotourl", rect: { x: 618, y: 366, width: 60, height: 24 }, target: "https://www.msys2.org/", window: "MSYS2" },
+    ],
+    "43": [
+      { type: "gotourl", rect: { x: 729, y: 328, width: 60, height: 24 }, target: "https://www.msys2.org/", window: "MSYS2" },
+    ],
+  },
+};
+</script>
+<!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData" height="630" muted="true" width="1008">
+<source src="/downloads/w7_pap/w7_pap.mp4" type="video/mp4"/></video>
+<div class="winkVideoOverlayClass"></div>
+<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
+<div class="winkVideoControlBarProgressLeftClass"></div>
+<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
+<div class="winkVideoControlBarProgressRightClass"></div>
+<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
+<div class="winkVideoControlBarProgressThumbClass"></div>
+</div>
+<div class="winkVideoPlayOverlayClass"></div>
+</div><h3>w7_summary</h3>
 <p>請各大組在分組 blog 區域加入一個 Slug: w7_summary 的工作摘要說明, 將本週課堂上每位組員的工作內容與進度列在網誌中, 並以連結導引至各組員的個人網站中.</p>
 <p>如何集結各大組組員在各週所完成的工作進度?</p>
 <p>假如在各大組倉儲的 downloads 目錄中針對每週的任務進行分類, 例如: 建立 downloads/w7 目錄, 讓各組組員利用 users/學號.leo 編寫個人有關的 blog 或其他相關資料的導入或引用, 如此, 就可以在上課階段 (stage1) 或次週上課前 (stage2), 以手動或程式方法集合各組員的 blog, reveal 或 cmsimde 內容, 經過人工查核後, 直接發布在各大組的網頁、網誌或簡報上.</p>
@@ -1188,7 +1219,7 @@ doc["grp2a_2022"].bind("click", grp2a_2022.do)
 <h2>Brython</h2>
 <p><a href="https://mde.tw/cd2022_guide/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/0999a227153ea9a20954e4b2b77f783337197627/w4_grp_src.py&amp;src2=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/0999a227153ea9a20954e4b2b77f783337197627/w4_grp_src2.py">2a 分組程式練習</a></p>
 <p><a href="https://mde.tw/cd2022_guide/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/507db6ddb7b5bcdd3027235761208b32ac93bcd0/w4_b_grp.py&amp;src2=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/507db6ddb7b5bcdd3027235761208b32ac93bcd0/w4_b_grp_src2.py">2b 分組程式練習</a></p>
-<p><a href="https://mde.tw/cd2022_guide/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/a79d474df5500b7487a352903b81989f9a0cd24f/w6_blog.py">2a w6 blog 查驗</a></p>
+<p><a href="https://mde.tw/cd2022_guide/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/a79d474df5500b7487a352903b81989f9a0cd24f/w6_blog.py">2a w6 blog 查驗</a> | <a href="https://mde.tw/cd2022_guide/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/07fc8d08e6738f91f7f8042ff48385b4e10436bf/w7_a_summary.py">2a w7 summary</a></p>
 <p><a href="https://mde.tw/cd2022_guide/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/c0e6d1f197434988c56451b2c25f7607c06a15d8/w6_blog_2b.py">2b w6 blog 查驗</a></p>
 <p>
 <script src="/static/brython.js"></script>
