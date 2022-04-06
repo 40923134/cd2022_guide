@@ -359,7 +359,34 @@ var winkVideoData2 = {
 <li>各大組以程式方法執行上述任務的量化查驗後, 結合組員自評與互評流程後, 將各組員的評量結果存為 w7_cd2022ag1_evaluation.txt (以 2ag1 為例), 採允許各組組員與 yen@gm 共享下載進行設定.</li>
 </ol>
 <h3>w7_summary</h3>
-<p>請各大組在分組 blog 區域加入一個 Slug: w7_summary 的工作摘要說明, 將本週課堂上每位組員的工作內容與進度列在網誌中, 並以連結導引至各組員的個人網站中.</p><h1>Solvespace</h1>
+<p>請各大組在分組 blog 區域加入一個 Slug: w7_summary 的工作摘要說明, 將本週課堂上每位組員的工作內容與進度列在網誌中, 並以連結導引至各組員的個人網站中.</p>
+<p>如何集結各大組組員在各週所完成的工作進度?</p>
+<p>假如在各大組倉儲的 downloads 目錄中針對每週的任務進行分類, 例如: 建立 downloads/w7 目錄, 讓各組組員利用 users/學號.leo 編寫個人有關的 blog 或其他相關資料的導入或引用, 如此, 就可以在上課階段 (stage1) 或次週上課前 (stage2), 以手動或程式方法集合各組員的 blog, reveal 或 cmsimde 內容, 經過人工查核後, 直接發布在各大組的網頁、網誌或簡報上.</p>
+<h4>協同重點:</h4>
+<ol>
+<li>各組員負責維護各自的 users/學號.leo, 每次提交推送並不會產生衝突.</li>
+<li>經由 users/學號.leo 建立 downloads/w7 目錄中, 各組員根據學號或主題所提交推送的網誌、網頁或簡報片段資料, 若產生衝突, 將會比較容易進行檢查與合併.</li>
+<li>透過已經處理衝突後的 downloads/w7 目錄資料, 由人工或程式集結各段落內容, 可以減少解決衝突的難度.</li>
+</ol>
+<p>Leo Editor 常用大綱標題指令:</p>
+<p style="padding-left: 30px;">@path</p>
+<p style="padding-left: 30px;">@edit 檔名</p>
+<p style="padding-left: 30px;">@clean 檔名 + sub-outline 中的 @others</p>
+<p style="padding-left: 30px;">@auto 檔名</p>
+<p style="padding-left: 30px;">@button</p>
+<p>@path mardown 表示隨後的 sub-outline 路徑都將位於 markdown 目錄之下.</p>
+<p>@edit myfile.md 表示存檔後, 將在此節點所對應的路徑下, 修改或新建 myfile.md 檔案.</p>
+<p>@clean myfile.md 表示存檔後, 將在此節點所對應的路徑下, 結合其子節點與上層 @others 所在位置的所有內容, 修改或新建 myfile.md 檔案.</p>
+<p>以下程式片段, 存於節點對應的內容區後, 按下 ctrl + b 可以執行.</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">'''Recursively import all python files in a directory and clean the result.'''
+
+c.recursiveImport(
+    dir_ = r'./',
+    kind = '@clean', 
+    safe_at_file = False,
+    theTypes =  ['.py']
+)</pre>
+<p></p><h1>Solvespace</h1>
 <p>根據 <a href="https://mde.tw/cad2021/content/Compile%20Solvespace.html">https://mde.tw/cad2021/content/Compile%20Solvespace.html</a> 中的說明, 可以利用 <a href="https://drive.google.com/file/d/16L08jH3ZtoMeeGWBJrP9DuIk-cby_Wqw/view?usp=sharing">compile_copsim_for_cd2022.7z</a> (file size: 5 GB, extracted size: 17.3 GB), 完成編譯.</p>
 <p>自行編譯 Solvespace 的目的是希望透過 <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm</a> 與 <a href="https://www.coppeliarobotics.com/helpFiles/en/importExport.htm">https://www.coppeliarobotics.com/helpFiles/en/importExport.htm</a> 的資訊, 自行在 Solvespace 中將組立檔案直接轉入 Coppeliasim 的場景檔案. 其中牽涉如何將 Solvespace 組立件中的零件檔案進行分割後, 以 <a href="https://en.wikipedia.org/wiki/STL">STL</a>、<a href="http://wiki.ros.org/urdf">URDF</a> 或 <a href="http://sdformat.org/">SDF</a> 格式直接轉入 Coppeliasim.</p><h1>NX</h1>
 <p><a href="https://www.plm.automation.siemens.com/global/en/products/nx/">https://www.plm.automation.siemens.com/global/en/products/nx/</a> </p>
