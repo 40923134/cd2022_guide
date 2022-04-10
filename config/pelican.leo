@@ -113,10 +113,15 @@ Author: yen
 <t tx="leo.20220407160001.1">cd 協同分組
 ----
 2a 名單: &lt;https://mde.tw/studlist/2022spring/2a.txt&gt;
+
 2b 名單: &lt;https://mde.tw/studlist/2022spring/2b.txt&gt;
+
 [2a 分組]
+
 [2b 分組]
+
  [Onshape 中的 uArm 組立圖]
+ 
  [分配 NX 教學影片]
  
  以下影片說明如何利用 Leo Editor 編輯 config/pelican.leo 網誌檔案:

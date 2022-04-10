@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>協同產品設計實習</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2022-04-10T19:55:48+08:00</updated><entry><title>w7 程式專案</title><link href="./2022-Spring-CD-w7-programming-project.html" rel="alternate"></link><published>2022-04-07T11:00:00+08:00</published><updated>2022-04-10T19:55:48+08:00</updated><author><name>yen</name></author><id>tag:None,2022-04-07:./2022-Spring-CD-w7-programming-project.html</id><summary type="html">&lt;p&gt;協同產品設計實習第七週執行機械手臂的物件取放實習&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>協同產品設計實習</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2022-04-10T20:00:14+08:00</updated><entry><title>w7 程式專案</title><link href="./2022-Spring-CD-w7-programming-project.html" rel="alternate"></link><published>2022-04-07T11:00:00+08:00</published><updated>2022-04-10T20:00:14+08:00</updated><author><name>yen</name></author><id>tag:None,2022-04-07:./2022-Spring-CD-w7-programming-project.html</id><summary type="html">&lt;p&gt;協同產品設計實習第七週執行機械手臂的物件取放實習&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;協同產品設計實習第七週執行機械手臂的物件取放實習&lt;/p&gt;
 
 
@@ -8,11 +8,12 @@
 &lt;script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"&gt;&lt;/script&gt;
 
 &lt;h2&gt;cd 協同分組&lt;/h2&gt;
-&lt;p&gt;2a 名單: &lt;a href="https://mde.tw/studlist/2022spring/2a.txt"&gt;https://mde.tw/studlist/2022spring/2a.txt&lt;/a&gt;
-2b 名單: &lt;a href="https://mde.tw/studlist/2022spring/2b.txt"&gt;https://mde.tw/studlist/2022spring/2b.txt&lt;/a&gt;
-&lt;a href="https://mde.tw/cd2022_guide/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/507db6ddb7b5bcdd3027235761208b32ac93bcd0/w4_b_grp.py&amp;amp;src2=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/507db6ddb7b5bcdd3027235761208b32ac93bcd0/w4_b_grp_src2.py"&gt;2a 分組&lt;/a&gt;
- &lt;a href="https://cad.onshape.com/documents/21d631bfd9ab509e3a2079c0/w/832791ed26ad65d49a0711b4/e/6957bf222554da36040535be"&gt;Onshape 中的 uArm 組立圖&lt;/a&gt;
- &lt;a href="https://www.youtube.com/watch?v=GUaa97tALxE&amp;amp;list=PLzEsJue49U_EMMv0eBo8MNJjJOq_WHCrl"&gt;分配 NX 教學影片&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2a 名單: &lt;a href="https://mde.tw/studlist/2022spring/2a.txt"&gt;https://mde.tw/studlist/2022spring/2a.txt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2b 名單: &lt;a href="https://mde.tw/studlist/2022spring/2b.txt"&gt;https://mde.tw/studlist/2022spring/2b.txt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://mde.tw/cd2022_guide/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/0999a227153ea9a20954e4b2b77f783337197627/w4_grp_src.py&amp;amp;src2=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/0999a227153ea9a20954e4b2b77f783337197627/w4_grp_src2.py"&gt;2a 分組&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://mde.tw/cd2022_guide/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/507db6ddb7b5bcdd3027235761208b32ac93bcd0/w4_b_grp.py&amp;amp;src2=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/507db6ddb7b5bcdd3027235761208b32ac93bcd0/w4_b_grp_src2.py"&gt;2b 分組&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://cad.onshape.com/documents/21d631bfd9ab509e3a2079c0/w/832791ed26ad65d49a0711b4/e/6957bf222554da36040535be"&gt;Onshape 中的 uArm 組立圖&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=GUaa97tALxE&amp;amp;list=PLzEsJue49U_EMMv0eBo8MNJjJOq_WHCrl"&gt;分配 NX 教學影片&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;以下影片說明如何利用 Leo Editor 編輯 config/pelican.leo 網誌檔案:&lt;/p&gt;
 &lt;script&gt;
 var winkVideoData_pelican = {
