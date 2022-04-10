@@ -1,13 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>協同產品設計實習</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2022-04-07T16:34:38+08:00</updated><entry><title>w7 程式專案</title><link href="./2022-Spring-CD-w7-programming-project.html" rel="alternate"></link><published>2022-04-07T11:00:00+08:00</published><updated>2022-04-07T16:34:38+08:00</updated><author><name>yen</name></author><id>tag:None,2022-04-07:./2022-Spring-CD-w7-programming-project.html</id><summary type="html">&lt;p&gt;協同產品設計實習第七週執行機械手臂的物件取放實習&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>協同產品設計實習</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2022-04-10T19:55:48+08:00</updated><entry><title>w7 程式專案</title><link href="./2022-Spring-CD-w7-programming-project.html" rel="alternate"></link><published>2022-04-07T11:00:00+08:00</published><updated>2022-04-10T19:55:48+08:00</updated><author><name>yen</name></author><id>tag:None,2022-04-07:./2022-Spring-CD-w7-programming-project.html</id><summary type="html">&lt;p&gt;協同產品設計實習第七週執行機械手臂的物件取放實習&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;協同產品設計實習第七週執行機械手臂的物件取放實習&lt;/p&gt;
 
 
-&lt;h2&gt;scarysim 專案&lt;/h2&gt;
-&lt;p&gt;位於 &lt;a href="https://github.com/mdecourse/scarysim"&gt;https://github.com/mdecourse/scarysim&lt;/a&gt;, 採用  Qt5 與 OpenGL 編寫, 可以使用 qmake 進行編譯與連結.&lt;/p&gt;
 &lt;!-- css and js for Wink3 --&gt;
 &lt;p&gt;&lt;link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" /&gt;&lt;/p&gt;
 &lt;script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"&gt;&lt;/script&gt;
+
+&lt;h2&gt;cd 協同分組&lt;/h2&gt;
+&lt;p&gt;2a 名單: &lt;a href="https://mde.tw/studlist/2022spring/2a.txt"&gt;https://mde.tw/studlist/2022spring/2a.txt&lt;/a&gt;
+2b 名單: &lt;a href="https://mde.tw/studlist/2022spring/2b.txt"&gt;https://mde.tw/studlist/2022spring/2b.txt&lt;/a&gt;
+&lt;a href="https://mde.tw/cd2022_guide/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/507db6ddb7b5bcdd3027235761208b32ac93bcd0/w4_b_grp.py&amp;amp;src2=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/507db6ddb7b5bcdd3027235761208b32ac93bcd0/w4_b_grp_src2.py"&gt;2a 分組&lt;/a&gt;
+ &lt;a href="https://cad.onshape.com/documents/21d631bfd9ab509e3a2079c0/w/832791ed26ad65d49a0711b4/e/6957bf222554da36040535be"&gt;Onshape 中的 uArm 組立圖&lt;/a&gt;
+ &lt;a href="https://www.youtube.com/watch?v=GUaa97tALxE&amp;amp;list=PLzEsJue49U_EMMv0eBo8MNJjJOq_WHCrl"&gt;分配 NX 教學影片&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;以下影片說明如何利用 Leo Editor 編輯 config/pelican.leo 網誌檔案:&lt;/p&gt;
+&lt;script&gt;
+var winkVideoData_pelican = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+&lt;/script&gt;
+&lt;!-- 接下來將 mp4 檔案從 downloads 目錄取出 --&gt;
+&lt;div class="winkVideoContainerClass"&gt;&lt;video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="./../cmsimde/static" data-varname="winkVideoData_pelican" height="630" muted="true" width="1008"&gt;
+&lt;source src="./../downloads/w6_blog/w6_blog.mp4" type="video/mp4"/&gt;&lt;/video&gt;
+&lt;div class="winkVideoOverlayClass"&gt;&lt;/div&gt;
+&lt;div class="winkVideoControlBarClass"&gt;&lt;button class="winkVideoControlBarPlayButtonClass"&gt;&lt;/button&gt; &lt;button class="winkVideoControlBarPauseButtonClass"&gt;&lt;/button&gt;
+&lt;div class="winkVideoControlBarProgressLeftClass"&gt;&lt;/div&gt;
+&lt;div class="winkVideoControlBarProgressEmptyMiddleClass"&gt;&lt;/div&gt;
+&lt;div class="winkVideoControlBarProgressRightClass"&gt;&lt;/div&gt;
+&lt;div class="winkVideoControlBarProgressFilledMiddleClass"&gt;&lt;/div&gt;
+&lt;div class="winkVideoControlBarProgressThumbClass"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="winkVideoPlayOverlayClass"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;以下為第三週的課程教學影片:&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/roJ3Bk44qO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2&gt;如何建立可攜 NX1980 系統&lt;/h2&gt;
+&lt;p&gt;製作 Portable NX1980 的步驟請參考以下影片:&lt;/p&gt;
+&lt;script&gt;
+var winkVideoData_nx1980 = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+&lt;/script&gt;
+&lt;!-- 接下來將 mp4 檔案從 downloads 目錄取出 --&gt;
+&lt;div class="winkVideoContainerClass"&gt;&lt;video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="./../cmsimde/static" data-varname="winkVideoData_nx1980" height="630" muted="true" width="1008"&gt;
+&lt;source src="./../downloads/w5_portable_nx1980/w5_portable_nx1980.mp4" type="video/mp4"/&gt;&lt;/video&gt;
+&lt;div class="winkVideoOverlayClass"&gt;&lt;/div&gt;
+&lt;div class="winkVideoControlBarClass"&gt;&lt;button class="winkVideoControlBarPlayButtonClass"&gt;&lt;/button&gt; &lt;button class="winkVideoControlBarPauseButtonClass"&gt;&lt;/button&gt;
+&lt;div class="winkVideoControlBarProgressLeftClass"&gt;&lt;/div&gt;
+&lt;div class="winkVideoControlBarProgressEmptyMiddleClass"&gt;&lt;/div&gt;
+&lt;div class="winkVideoControlBarProgressRightClass"&gt;&lt;/div&gt;
+&lt;div class="winkVideoControlBarProgressFilledMiddleClass"&gt;&lt;/div&gt;
+&lt;div class="winkVideoControlBarProgressThumbClass"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="winkVideoPlayOverlayClass"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;NX1980 setup&lt;/h2&gt;
+&lt;p&gt;以下影片說明如何設定 Journal 存檔格式, 關閉 Product Execellence Program, 並查驗版本與授權使用單位:&lt;/p&gt;
+&lt;script&gt;
+var winkVideoData_nx1980_setup = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+&lt;/script&gt;
+&lt;!-- 接下來將 mp4 檔案從 downloads 目錄取出 --&gt;
+&lt;div class="winkVideoContainerClass"&gt;&lt;video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="./../cmsimde/static" data-varname="winkVideoData_nx1980_setup" height="630" muted="true" width="1008"&gt;
+&lt;source src="./../downloads/w5_nx_api/w5_nx_api.mp4" type="video/mp4"/&gt;&lt;/video&gt;
+&lt;div class="winkVideoOverlayClass"&gt;&lt;/div&gt;
+&lt;div class="winkVideoControlBarClass"&gt;&lt;button class="winkVideoControlBarPlayButtonClass"&gt;&lt;/button&gt; &lt;button class="winkVideoControlBarPauseButtonClass"&gt;&lt;/button&gt;
+&lt;div class="winkVideoControlBarProgressLeftClass"&gt;&lt;/div&gt;
+&lt;div class="winkVideoControlBarProgressEmptyMiddleClass"&gt;&lt;/div&gt;
+&lt;div class="winkVideoControlBarProgressRightClass"&gt;&lt;/div&gt;
+&lt;div class="winkVideoControlBarProgressFilledMiddleClass"&gt;&lt;/div&gt;
+&lt;div class="winkVideoControlBarProgressThumbClass"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="winkVideoPlayOverlayClass"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Three.js&lt;/h2&gt;
+&lt;p&gt;&lt;iframe frameborder="0" height="300" src="./../downloads/threejs_ex/index.html" width="300"&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder="0" height="300" src="./../downloads/threejs_ex/ex1/asm.html" width="300"&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;h2&gt;scarysim 專案&lt;/h2&gt;
+&lt;p&gt;位於 &lt;a href="https://github.com/mdecourse/scarysim"&gt;https://github.com/mdecourse/scarysim&lt;/a&gt;, 採用  Qt5 與 OpenGL 編寫, 可以使用 qmake 進行編譯與連結.&lt;/p&gt;
 &lt;!-- 導入 winkVideoData 變數值 --&gt;
 &lt;script&gt;
 var winkVideoData = {
@@ -63,7 +154,7 @@ var winkVideoData = {
 &lt;div class="winkVideoPlayOverlayClass"&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/pre&gt;
-&lt;h2&gt;simExtMtb 專案&lt;/h2&gt;</content><category term="Programming"></category><category term="2022SpringCD"></category></entry><entry><title>2022 Spring CD 課程</title><link href="./2022-Spring-CD.html" rel="alternate"></link><published>2022-03-29T11:00:00+08:00</published><updated>2022-03-30T09:08:04+08:00</updated><author><name>yen</name></author><id>tag:None,2022-03-29:./2022-Spring-CD.html</id><summary type="html">&lt;p&gt;2022 Spring 協同產品設計實習.&lt;/p&gt;
+&lt;h2&gt;simExtMtb 專案&lt;/h2&gt;</content><category term="Programming"></category><category term="2022SpringCD"></category></entry><entry><title>2022 Spring CD 課程</title><link href="./2022-Spring-CD.html" rel="alternate"></link><published>2022-03-29T11:00:00+08:00</published><updated>2022-03-31T21:49:14+08:00</updated><author><name>yen</name></author><id>tag:None,2022-03-29:./2022-Spring-CD.html</id><summary type="html">&lt;p&gt;2022 Spring 協同產品設計實習.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;2022 Spring 協同產品設計實習.&lt;/p&gt;
 
 
