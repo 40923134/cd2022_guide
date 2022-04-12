@@ -58,7 +58,9 @@
 <v t="leo.20180423103639.1"><vh>2022 Spring CD 課程</vh>
 <v t="leo.20180423103656.1"><vh>@edit 20220329.md</vh></v>
 <v t="leo.20220407155920.1"><vh>@clean 20200407.md</vh>
-<v t="leo.20220407160001.1"><vh>w7 程式專案</vh></v>
+<v t="leo.20220407160001.1"><vh>w7 程式專案</vh>
+<v t="leo.20220412105430.1"><vh>&lt;&lt; 相關連結 &gt;&gt;</vh></v>
+</v>
 </v>
 </v>
 </v>
@@ -122,6 +124,8 @@ Author: yen
 
  [Onshape 中的 uArm 組立圖]
  
+ [cd2022_uarm_nx12_imported.7z]
+ 
  [分配 NX 教學影片]
  
  以下影片說明如何利用 Leo Editor 編輯 config/pelican.leo 網誌檔案:
@@ -150,14 +154,20 @@ var winkVideoData_pelican = {
 &lt;div class="winkVideoPlayOverlayClass"&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-[2a 分組]: https://mde.tw/cd2022_guide/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/0999a227153ea9a20954e4b2b77f783337197627/w4_grp_src.py&amp;src2=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/0999a227153ea9a20954e4b2b77f783337197627/w4_grp_src2.py
-[2b 分組]: https://mde.tw/cd2022_guide/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/507db6ddb7b5bcdd3027235761208b32ac93bcd0/w4_b_grp.py&amp;src2=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/507db6ddb7b5bcdd3027235761208b32ac93bcd0/w4_b_grp_src2.py
-[Onshape 中的 uArm 組立圖]: https://cad.onshape.com/documents/21d631bfd9ab509e3a2079c0/w/832791ed26ad65d49a0711b4/e/6957bf222554da36040535be
- [分配 NX 教學影片]: https://www.youtube.com/watch?v=GUaa97tALxE&amp;list=PLzEsJue49U_EMMv0eBo8MNJjJOq_WHCrl
+&lt;&lt; 相關連結 &gt;&gt;
 
 以下為第三週的課程教學影片:
 
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/roJ3Bk44qO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+uarm 機械手臂
+----
+
+[uarm] 是一組四個自由度的桌上型機械手臂, [uarm developer] 倉儲提供許多與 [uarm] 相關的設計與應用資料.
+
+從 [UFACTORY uArm Swift Pro 3D Models] 可以下載 [uarm] 的 STEP 203 格式的檔案, 從而得知 [uarm] 是採用 SolidWorks 2014 設計繪製, 但其中的零件檔案以簡體中文命名, 採 [GB2312] 編碼, 在 Windows code page 代號為 [936].
+
+希望讀取 [UFACTORY uArm Swift Pro 3D Models] 中正確的簡體中文資料, 可以將 SciTE 中的 SciTEGlobal.properties code.page 設定從 [65001] (UTF-8) 改為 [936], 再將正確顯示的 [GB2312] 編碼資料轉為 UTF-8 內容, 就可在 import 進入 Onshape 與 NX12 後, 的到正確的 [Onshape 中的 uArm 組立圖] 以及 [cd2022_uarm_nx12_imported.7z].
 
 如何建立可攜 NX1980 系統
 ----
@@ -285,7 +295,32 @@ var winkVideoData = {
 &lt;/div&gt;
 &lt;/pre&gt;
 simExtMtb 專案
-----</t>
+----
+
+[CoppeliaSim 4.1.0 原始碼編譯專案] (登入 @gm OneDrive 後下載).
+
+[CoppeliaSim 從 4.1.0 的 help files] (只能在系上以 IPv6 網路連線).
+
+[CoppeliaSim 編譯說明 1]  (只能在系上以 IPv6 網路連線).
+
+[CoppeliaSim 編譯] (只能在系上以 IPv6 網路連線).
+
+</t>
+<t tx="leo.20220412105430.1">[2a 分組]: https://mde.tw/cd2022_guide/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/0999a227153ea9a20954e4b2b77f783337197627/w4_grp_src.py&amp;src2=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/0999a227153ea9a20954e4b2b77f783337197627/w4_grp_src2.py
+[2b 分組]: https://mde.tw/cd2022_guide/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/507db6ddb7b5bcdd3027235761208b32ac93bcd0/w4_b_grp.py&amp;src2=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/507db6ddb7b5bcdd3027235761208b32ac93bcd0/w4_b_grp_src2.py
+[Onshape 中的 uArm 組立圖]: https://cad.onshape.com/documents/3c81d3f7fc38f5da16eef9ed/w/f6d4616f188bc9425608890c/e/08936ec436f9e9668efeaefd?renderMode=0&amp;uiState=6254c8ae6d93450dec4bb2b2
+[分配 NX 教學影片]: https://www.youtube.com/watch?v=GUaa97tALxE&amp;list=PLzEsJue49U_EMMv0eBo8MNJjJOq_WHCrl
+[cd2022_uarm_nx12_imported.7z]: https://localhost:9445/downloads/cd2022_uarm_nx12_imported.7z
+[uarm]: https://www.ufactory.cc/pages/uarm
+[uarm developer]: https://github.com/uArm-Developer
+[UFACTORY uArm Swift Pro 3D Models]: https://cdn.shopifycdn.net/s/files/1/0012/6979/2886/files/uArmSwiftPro_UP1300_3D.STEP?v=1601200945
+[GB2312]: https://en.wikipedia.org/wiki/GB_2312
+[936]: https://en.wikipedia.org/wiki/Code_page_936_(Microsoft_Windows)
+[65001]: https://zh.wikipedia.org/wiki/Unicode
+[CoppeliaSim 4.1.0 原始碼編譯專案]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EccOQ_vbC2FAqk59lpm3sMIB8L7T9hc1wKbT3dkz5Aa9MA?e=dLP7ql
+[CoppeliaSim 從 4.1.0 的 help files]: http://wcm.cycu.org:88/github/copsim410
+[CoppeliaSim 編譯說明 1]: http://wcm.cycu.org:88/github/cad2021/content/Task7-1-1.html
+[CoppeliaSim 編譯]: http://wcm.cycu.org:88/github/cad2021/content/Compile%20CoppeliaSim.html</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
