@@ -66,6 +66,7 @@
 <v t="leo.20220407134416.40"><vh>bool Scara::calcSpeed (scara.cpp)</vh></v>
 </v>
 </v>
+<v t="leo.20220412140946.1"><vh>編譯 simExtMtb</vh></v>
 <v t="leo.20220407134651.2"><vh>@path simExtMtb</vh>
 <v t="leo.20220407134651.3"><vh>@clean simExtMTB.cpp</vh>
 <v t="leo.20220407134651.4"><vh>int getServerIndexFromServerHandle (simExtMTB.cpp)</vh></v>
@@ -1654,5 +1655,18 @@ std::string currentDirAndPath;
     由於此套程式碼在 Target 模式下, 零組件間會造成干涉, 表示其 Inverse Kinematic 運算並不正確, 請設法修正此錯誤後, 修改其零件尺寸與操作控制方法, 設法模擬 MTB 的 Pick and Place demo 範例.
     請各組指定組員分別利用 Solvespace、NX12、NX1980、NX2008 與 Onshape 繪製 Pick and Place demo 範例所需的零組件, 並完成 Coppeliasim 4.1.0、4.2.0 與 4.3.0 版的 MTB 機械手臂 Pick and Place 模擬, 完成後請說明在使用不同 MCAD 系統與版次的情況下, 該如何執行協同產品設計專案.
 </t>
+<t tx="leo.20220412140946.1">編譯 simExtMtb plugin:
+
+https://github.com/CoppeliaRobotics/simExtMTB
+
+針對 simExtMtb.pro:
+
+    CoppeliaSim 4.1.0 原始碼編譯專案 (登入 @gm OneDrive 後下載).
+    
+    https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EccOQ_vbC2FAqk59lpm3sMIB8L7T9hc1wKbT3dkz5Aa9MA?e=dLP7ql
+    
+    E:\downloads\cop410\programming\simExtMTB&gt;qmake -o Makefile simExtMtb.pro
+    E:\downloads\cop410\programming\simExtMTB&gt;mingw32-make -f Makefile.Release
+    在 release 目錄中取得 simExtMtb.dll, 啟動前放入 Coppeliasim 根目錄.</t>
 </tnodes>
 </leo_file>

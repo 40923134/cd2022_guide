@@ -166,6 +166,15 @@ var winkVideoData2 = {
 <div class="winkVideoPlayOverlayClass"></div>
 </div><h2>Revealjs</h2>
 <p><a href="https://revealjs.com/">https://revealjs.com/</a> 是一個 Javascript 程式框架, 可用來建立全球資訊網上的簡報.</p>
+<p>將 reveal.js 納入分組倉儲的真正目的, 是能直接在統一的 GitHub 提交推送過程中, 持續查核各組員對於協同產品開發流程的貢獻度.</p>
+<p>至於為何要利用 markdown 格式, 在 Leo Editor 中轉為 index.html 進行展示, 是希望在組員改版間避開以 html 格式處理衝突的難度.</p>
+<p>課程中所採的各種方法並非限制, 而是在衡量協同利弊得失後的可行方法之一.你們可以就各種工具在協同產品設計流程中的應用. 進行討論及實作, 然後查驗所採行的方法是否也能:</p>
+<ol>
+<li>持續改進</li>
+<li>保有各組員的改版紀錄</li>
+<li>方便處理合併及展示</li>
+<li>具永續性及可應變性</li>
+</ol>
 <p><a href="https://github.com/hakimel/reveal.js">https://github.com/hakimel/reveal.js</a> 引用了許多 Javascript 程式庫, 這些程式庫的改版非常頻繁, 經常造成改版頻率相對緩慢的 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 經常收到來自 Github 的改版通知.</p>
 <p>因此在利用 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 建立 cd2022 課程網站與大分組網站時, 若要直接使用 Reveal.js 建立線上簡報, 就必須將 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 的 reveal 目錄內容保持在最新的 Reveal.js 版本.</p>
 <p><a href="https://github.com/mdecycu/cmsimde_site">https://github.com/mdecycu/cmsimde_site</a> 就是用於開發 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 的倉儲. cmsimde_site 的 main 分支直接將 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 內容放入 cmsimde 目錄, 可以直接根據需求修改其中的任何內容, 當測試無誤後(尚未使用 <a href="https://docs.python.org/3/library/unittest.html">unittest</a>), 將改版內容反應至 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 後, 將在 cmsimde_site 倉儲中的 submodule 分支中進行測試.</p>
@@ -416,7 +425,16 @@ c.recursiveImport(
 )</pre>
 <h4>Reference:</h4>
 <p style="padding-left: 30px;"><a href="https://leoeditor.com/tutorial.html">https://leoeditor.com/tutorial.html</a> </p>
-<p></p><h1>Solvespace</h1>
+<p></p><h2>w8 任務</h2>
+<p>專案位於 downloads\w7_project\w7_project.leo</p>
+<p>編譯 <a href="https://github.com/CoppeliaRobotics/simExtMTB">simExtMtb</a> plugin:</p>
+<p>針對 simExtMtb.pro:</p>
+<ol>
+<li><a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EccOQ_vbC2FAqk59lpm3sMIB8L7T9hc1wKbT3dkz5Aa9MA?e=dLP7ql">CoppeliaSim 4.1.0 原始碼編譯專案</a> (登入 @gm OneDrive 後下載).</li>
+<li>E:\downloads\cop410\programming\simExtMTB&gt;qmake -o Makefile simExtMtb.pro</li>
+<li>E:\downloads\cop410\programming\simExtMTB&gt;mingw32-make -f Makefile.Release</li>
+<li>在 release 目錄中取得 simExtMtb.dll, 啟動前放入 Coppeliasim 根目錄.</li>
+</ol><h1>Solvespace</h1>
 <p>根據 <a href="https://mde.tw/cad2021/content/Compile%20Solvespace.html">https://mde.tw/cad2021/content/Compile%20Solvespace.html</a> 中的說明, 可以利用 <a href="https://drive.google.com/file/d/16L08jH3ZtoMeeGWBJrP9DuIk-cby_Wqw/view?usp=sharing">compile_copsim_for_cd2022.7z</a> (file size: 5 GB, extracted size: 17.3 GB), 完成編譯.</p>
 <p>自行編譯 Solvespace 的目的是希望透過 <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm</a> 與 <a href="https://www.coppeliarobotics.com/helpFiles/en/importExport.htm">https://www.coppeliarobotics.com/helpFiles/en/importExport.htm</a> 的資訊, 自行在 Solvespace 中將組立檔案直接轉入 Coppeliasim 的場景檔案. 其中牽涉如何將 Solvespace 組立件中的零件檔案進行分割後, 以 <a href="https://en.wikipedia.org/wiki/STL">STL</a>、<a href="http://wiki.ros.org/urdf">URDF</a> 或 <a href="http://sdformat.org/">SDF</a> 格式直接轉入 Coppeliasim.</p><h1>NX</h1>
 <p><a href="https://www.plm.automation.siemens.com/global/en/products/nx/">https://www.plm.automation.siemens.com/global/en/products/nx/</a> </p>
