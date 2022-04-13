@@ -57,10 +57,13 @@
 <v t="leo.20180115115910.1"><vh>2022</vh>
 <v t="leo.20180423103639.1"><vh>2022 Spring CD 課程</vh>
 <v t="leo.20180423103656.1"><vh>@edit 20220329.md</vh></v>
-<v t="leo.20220407155920.1"><vh>@clean 20200407.md</vh>
+<v t="leo.20220407155920.1"><vh>@clean 20220407.md</vh>
 <v t="leo.20220407160001.1"><vh>w7 程式專案</vh>
 <v t="leo.20220412105430.1"><vh>&lt;&lt; 相關連結 &gt;&gt;</vh></v>
 </v>
+</v>
+<v t="leo.20220413133022.1"><vh>@clean 20220413.md</vh>
+<v t="leo.20220413133649.1"><vh>w8 debug 40923136 倉儲</vh></v>
 </v>
 </v>
 </v>
@@ -321,6 +324,55 @@ simExtMtb 專案
 [CoppeliaSim 從 4.1.0 的 help files]: http://wcm.cycu.org:88/github/copsim410
 [CoppeliaSim 編譯說明 1]: http://wcm.cycu.org:88/github/cad2021/content/Task7-1-1.html
 [CoppeliaSim 編譯]: http://wcm.cycu.org:88/github/cad2021/content/Compile%20CoppeliaSim.html</t>
+<t tx="leo.20220413133022.1">@language md
+---
+Title: w8 debug 40923136 倉儲
+Date: 2022-04-13 11:00
+Category: Programming
+Tags: 2022SpringCD
+Slug: w8-debug-40923136-cmsimde-repo
+Author: yen
+---
+
+今天上課碰到一個看似詭異的問題: 將目前 [40923136 cd2022 倉儲] clone 到近端後, 只要進入倉儲執行 cms.bat 就會同時開啟 Leo Editor, 而且 Leo Editor 是隨著 cmsimde/wsgi.py 啟動, 意即, Leo Editor 在 Flask 網際程式的架構下啟動, 因此一旦手動關閉 Leo Editor, Flask 會自動重新開啟 Leo Editor.
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+[40923136 cd2022 倉儲]: https://github.com/40923136-1/cd2022/tree/ae71aee67b73123f2f62a896174a3c130c0fb85c
+
+@others</t>
+<t tx="leo.20220413133649.1">cmsimde
+----
+
+[cmsimde] 是在 2013 年11 月啟動開發, 至 2014 年 1 月 21 日可運作初版釋出之後, 密集開發時程大約只到 2017 年, 之後就沿用至今, 當時所設計的基本架構已經幾年沒有更新, 許多細節若沒有仔細閱讀當年的開發日誌, 其實都已經忘了.
+
+今天在上課時段, 同學提問: 只要將 [40923136 cd2022 倉儲] clone 到近端, 然後在命令列中進入倉儲執行 cms.bat, 除了開啟動態系統外, 竟然同時開啟 Leo Editor, 而且詭異的是, 手動關閉 Leo Editor, 系統會重新開啟 Leo Editor.
+
+[cmsimde]: https://github.com/mdecycu/cmsimde
+[WinMerge]: https://winmerge.org
+[第 180 行]: https://github.com/40923136-1/cd2022/blob/ae71aee67b73123f2f62a896174a3c130c0fb85c/user.py#L180
+[flaskapp.py 第 52 行]: https://github.com/40923136-1/cd2022/blob/ae71aee67b73123f2f62a896174a3c130c0fb85c/cmsimde/flaskapp.py#L52
+
+啟動 debug 流程
+----
+
+光是從最後一點, 當下就知道 Leo Editor 是經由 Flask 開啟, 於是第一時間就判斷應該是 cmsimde 中的程式碼被塞入與 Leo Editor 啟動有關的啟動資料.
+
+但是經由 [WinMerge] 的目錄比對, 除了提供比對用的 cmsimde 目錄中, 多了 Mac 操作系統使用過程殘存未刪除的檔案外, 其餘的程式檔案都完全相同.
+
+既然如此, 問題就不是出在 cmsimde 目錄, 儘管 [40923136 cd2022 倉儲]中的 cmsimde 並非使用子模組設定, 但這並不影響使用功能, 因此接下的 debug 目標, 就應該是倉儲中其他檔案, 而且一定是與 cmsimde 中的 Flask 程式有關的資料檔案.
+
+記憶中與 wsgi.py 及 flaskapp.py 有關的啟動檔案只有 init.py, 因此比對 [40923136 cd2022 倉儲] 倉儲中的 init.py 以及 cms.bat 都沒有異狀.
+
+最後在 [40923136 cd2022 倉儲]還需要比對的 .py 檔案, 就只剩下 Pelican 相關的  .py 設定檔案, 以及一個 user.py.
+
+因為完全不記得為何使用者的倉儲中為何會有這個 user.py,  但還是以 SciTE 開啟後拉動檢查, 最後終於在[第 180 行] 找到造成詭異反應的 Leo Editor 啟動程式.
+
+這時才想起來 [flaskapp.py 第 52 行] 設置了使用者延伸機制, user.py 是讓使用者用來延伸 cmsimde 的範例程式段, 讓需要延伸 cmsimde 的用戶可以自行加入所需要的額外功能程式碼.
+
+好了, 透過 Flask 啟動 Leo Editor 的元兇找到了, 只要將 [40923136 cd2022 倉儲]中的這段啟動 Leo Editor 的程式碼刪除, 應該就可以了.
+
+</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
