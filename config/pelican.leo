@@ -346,7 +346,7 @@ Author: yen
 
 [cmsimde] 是在 2013 年11 月啟動開發, 至 2014 年 1 月 21 日可運作初版釋出之後, 密集開發時程大約只到 2017 年, 之後就沿用至今, 當時所設計的基本架構已經幾年沒有更新, 許多細節若沒有仔細閱讀當年的開發日誌, 其實都已經忘了.
 
-今天在上課時段, 同學提問: 只要將 [40923136 cd2022 倉儲] clone 到近端, 然後在命令列中進入倉儲執行 cms.bat, 除了開啟動態系統外, 竟然同時開啟 Leo Editor, 而且詭異的是, 手動關閉 Leo Editor, 系統會重新開啟 Leo Editor.
+今天在上課時段, 同學提問: 只要將 [40923136 cd2022 倉儲] clone 到近端, 然後在命令列中進入倉儲執行 cms.bat, 除了開啟動態系統外, 竟然同時開啟 Leo Editor, 而且詭異的是, 手動關閉 Leo Editor, 系統會重新開啟 Leo Editor. 
 
 [cmsimde]: https://github.com/mdecycu/cmsimde
 [WinMerge]: https://winmerge.org
