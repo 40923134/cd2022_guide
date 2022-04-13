@@ -446,8 +446,8 @@ c.recursiveImport(
 <li>uarm 各零件工程圖</li>
 <li>uarm 組合圖</li>
 <li>uarm 組合圖 STL 格式轉入 CoppeliaSim</li>
-<li>GUI 控制前三軸作動</li>
-<li>cms 中第一階頁面, 標題為 midterm</li>
+<li>GUI slider 控制前三軸作動</li>
+<li>cmsimde 中第一階頁面, 標題為 midterm</li>
 <li>網誌名稱為 midterm.html</li>
 <li>流程與心得簡報</li>
 </ol>
@@ -767,7 +767,8 @@ var winkVideoData = {
 <p><a href="https://github.com/Bioruebe/UniExtract2">https://github.com/Bioruebe/UniExtract2</a> 可用來解開 SiemensNX-2008_wntx64\nx\SiemensNX.msi, 但必須配合 SiemensNX-2008_wntx64\nx\VC_redist.x64.exe 的安裝或解壓縮檔案才能執行.</p>
 <p>至於要解開 SiemensNX-2008_wntx64\nx\VC_redist.x64.exe 中的檔案, 可先利用 <a href="https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm">https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm</a> 中的 wix311-binaries.zip, 以 wix311-binaries\dark.exe vc_redist.x64.exe -x x64-extracted, 在 x64-extracted 目錄中取得 x64-extracted\AttachedContainer\packages\vcRuntimeMinimum_amd64\vc_runtimeMinimum_x64.msi 之後, 再利用 UniExtract2 解開所需的 dll 檔案後, 再放入 NXBIN 目錄.</p>
 <p>NX2008 啟動方式同 NX1980.</p>
-<h1>Onshape</h1>
+<h2>Research</h2>
+<p><a href="https://ieeexplore.ieee.org/document/8076193">Implementation of recognition algorithm with NXOpen API in siemens NX</a> (IEEE Xplore 2017)</p><h1>Onshape</h1>
 <p>以 <a href="https://cad.onshape.com/documents/3c81d3f7fc38f5da16eef9ed/w/f6d4616f188bc9425608890c/e/08936ec436f9e9668efeaefd?renderMode=0&amp;uiState=6254c8ae6d93450dec4bb2b2">Onshape 中的 uArm robot</a>. (並未自行繪製零組件而是從 <a href="/downloads/cd2022_uarm/UTF8_uArmSwiftPro_UP1300_3D.STEP">uArmSwiftPro_UP1300_3D.STEP</a> import)</p><h1>Coppeliasim</h1>
 <p>根據 <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm</a> 中有關 simple format 的說明, 可直接將 uArm 機械手臂在 NX 中的零組件, 透過 NXOpen Python API 的程式轉為 CoppeliaSim 的 Scene hierarchy 組合狀態.</p>
 <p>如此便將 uArm 機械手臂各零組件參數化, 然後直接在 Brython 前端介面設定 uArm 機械手臂的設計參數, 經由 AJAX 將參數送至後端 Flask + NXOpen Python API 伺服器, 產生 uArm 機械手臂組合場景後, 再透過 <a href="https://www.coppeliarobotics.com/helpFiles/en/legacyRemoteApiOverview.htm">Legacy Python remote API</a> 或 <a href="https://www.coppeliarobotics.com/helpFiles/en/zmqRemoteApiOverview.htm">ZeroMQ Python remote API</a> 控制 uArm 機械手臂 (或利用 <a href="https://www.ensta-bretagne.fr/zerr/dokuwiki/doku.php?id=vrep:socket-com-with-robot">Socket 傳遞控制參數</a>), 並以客製化 image sensor 的<a href="https://forum.coppeliarobotics.com/viewtopic.php?t=3457">影像串流</a>從 Flask server 送至各協同成員的瀏覽器, 或採 <a href="https://www.coppeliarobotics.com/helpFiles/en/externalFrontEnd.htm">Web browser based frontend</a> 方式呈現控制流程.</p>
