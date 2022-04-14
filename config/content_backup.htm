@@ -491,7 +491,7 @@ c.recursiveImport(
 <p><a href="https://www.plm.automation.siemens.com/global/en/products/nx/">https://www.plm.automation.siemens.com/global/en/products/nx/</a></p>
 <p><a href="https://www.plm.automation.siemens.com/global/en/products/nx/nx-for-design.html">https://www.plm.automation.siemens.com/global/en/products/nx/nx-for-design.html</a></p>
 <p><a href="https://en.wikipedia.org/wiki/Siemens_NX">https://en.wikipedia.org/wiki/Siemens_NX</a></p>
-<p><a href="http://toolnotes.com/home/engineering-graphics/siemens-nx-topics/nx-tutorials-version-1855/">View Commands</a>:</p>
+<p><a href="http://toolnotes.com/home/engineering-graphics/siemens-nx-topics/nx-tutorials-version-1855/">View Commands</a> (<a href="https://www.youtube.com/watch?v=GUaa97tALxE">Video</a>):</p>
 <p style="padding-left: 30px;">Zoom in and out<br/>    (roll mouse wheel)<br/>    MB2<br/>3D Orbit<br/>    (move mouse while holding in middle mouse wheel)<br/>    MB2<br/>Pan<br/>    (move mouse and right click button)<br/>    MB2 + MB3<br/>Twist view<br/>    MB2 + Slide along edges of screen<br/>Align view<br/>    F8</p><h2>NX3</h2>
 <p>因為 NX 從 NX10 之後才支援 NXOpen for Python, 在 NX3 環境希望利用 Python 編寫延伸程式, 可以透過 UGOpen C 將延伸程式編譯為 Python 可以呼叫執行的動態連結程式庫, 然後間接透過 Python 驅動 NX3 的零組件延伸應用.</p>
 <p>相關說明位於: <a href="https://github.com/mdecycu/cd2022_guide/tree/main/downloads/nx3_c_pyd">https://github.com/mdecycu/cd2022_guide/tree/main/downloads/nx3_c_pyd</a> (2004 年採用 <a href="https://netbeans.apache.org/">Netbean</a> 作為 IDE)</p>
@@ -859,6 +859,15 @@ for dim in workPart.Dimensions:</pre>
 <p style="padding-left: 30px;"><a href="https://smartech.gatech.edu/bitstream/handle/1853/62626/RAMAMURTHY-DISSERTATION-2019.pdf">A REINFORCEMENT LEARNING FRAMEWORK FOR THE AUTOMATION OF ENGINEERING DECISIONS IN COMPLEX SYSTEMS</a></p>
 <p style="padding-left: 30px;"><a href="https://aaltodoc.aalto.fi/bitstream/handle/123456789/44315/master_Korhonen_Konsta_2020.pdf?sequence=1&amp;isAllowed=y">Design of an engineer-to-order product configuration with CAD integration</a></p>
 <p style="padding-left: 30px;"><a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/custom/en_US/nxopen_net/class_n_x_open_1_1_sketch.html#ad0e5c9fa4361cc5f63386b800a14dbf1">https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/custom/en_US/nxopen_net/class_n_x_open_1_1_sketch.html#ad0e5c9fa4361cc5f63386b800a14dbf1</a></p>
+<p style="padding-left: 30px;"><a href="https://www.nxjournaling.com/content/how-i-stopped-worrying-and-learned-love-help-file">https://www.nxjournaling.com/content/how-i-stopped-worrying-and-learned-love-help-file</a> </p>
+<p style="padding-left: 30px;"><a href="https://www.sciencedirect.com/science/article/pii/S2351978920319995">Object-oriented approach to product design using extended NX Open API</a></p>
+<p style="padding-left: 30px;"><a href="https://www.tandfonline.com/doi/full/10.1080/23311916.2019.1665396?scroll=top&amp;needAccess=true">Multi-objective spur gear design using teaching learning-based optimization and decision-making techniques</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/marmakoide/gear-profile-generator">https://github.com/marmakoide/gear-profile-generator</a> </p>
+<p style="padding-left: 30px;"><a href="https://github.com/ZiniuLu/SmartConverter">https://github.com/ZiniuLu/SmartConverter</a> </p>
+<p style="padding-left: 30px;"><a href="https://community.sw.siemens.com/s/question/0D54O000061xBkLSAU/spur-gear-creation">NXOpen Spur Gear Creation</a></p>
+<p style="padding-left: 60px;"><a href="https://www.grobinc.com/spur-gears/">https://www.grobinc.com/spur-gears/</a> </p>
+<p style="padding-left: 60px;"><a href="https://ieeexplore.ieee.org/document/6052107">The Discussion of Spur Gear Library System Based on UG/Open</a></p>
+<p style="padding-left: 60px;">The dlx file must be placed in one of the following locations:<br/><br/>1. From where NX session is launched<br/><br/>2. $UGII_USER_DIR/application<br/><br/>3. For released applications, using UGII_CUSTOM_DIRECTORY_FILE is highly<br/><br/>recommended. This variable is set to a full directory path to a file</p>
 <p></p><h1>Onshape</h1>
 <p>以 <a href="https://cad.onshape.com/documents/3c81d3f7fc38f5da16eef9ed/w/f6d4616f188bc9425608890c/e/08936ec436f9e9668efeaefd?renderMode=0&amp;uiState=6254c8ae6d93450dec4bb2b2">Onshape 中的 uArm robot</a>. (並未自行繪製零組件而是從 <a href="/downloads/cd2022_uarm/UTF8_uArmSwiftPro_UP1300_3D.STEP">uArmSwiftPro_UP1300_3D.STEP</a> import)</p><h1>Coppeliasim</h1>
 <p>根據 <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm</a> 中有關 simple format 的說明, 可直接將 uArm 機械手臂在 NX 中的零組件, 透過 NXOpen Python API 的程式轉為 CoppeliaSim 的 Scene hierarchy 組合狀態.</p>
