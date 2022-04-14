@@ -485,7 +485,22 @@ c.recursiveImport(
 <p style="padding-left: 30px;"><a href="https://www.nxjournaling.com/content/convert-stl-file-solid-getting-started">從 STL 檔案轉為 non-parametric solid</a>.</p>
 <p style="padding-left: 30px;"><a href="https://www.swooshtech.com/2018/04/13/taking-the-next-step-in-nx/">https://www.swooshtech.com/2018/04/13/taking-the-next-step-in-nx/</a></p>
 <p style="padding-left: 30px;"><a href="https://www.nxjournaling.com/content/beginning-journaling-using-nx-journal">https://www.nxjournaling.com/content/beginning-journaling-using-nx-journal</a></p>
-<p style="padding-left: 30px;">與 uarm 相同機構的 EvoArm: <a href="https://github.com/AliShug/EvoArm">https://github.com/AliShug/EvoArm</a> (採 Inventor 繪圖)</p><h1>Solvespace</h1>
+<p style="padding-left: 30px;">與 uarm 相同機構的 EvoArm: <a href="https://github.com/AliShug/EvoArm">https://github.com/AliShug/EvoArm</a> (採 Inventor 繪圖)</p><h3>Spur Gear</h3>
+<p>uarm 機械手臂零組件從 STEP 203 轉入 NX12 - <a href="/downloads/cd2022_uarm_nx12_imported.7z">cd2022_uarm_nx12_imported.7z</a></p>
+<p>若使用 NX12, 其中需要設計並繪製減速機中的正齒輪組 (Spur Gear Train), 若採 UGOPEN C 編寫延伸程式, 可以利用 MSYS2 中的 gcc 進行編譯與連結:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">mkdir build
+
+mkdir dist
+
+REM compile gear.c
+gcc.exe -c -g -IC:\nx12_portable\data\nx12\UGOPEN -MMD -MP -MF build/gear.o.d -o build/gear.o gear.c
+
+REM link with libufun.lib and libugopenint.lib
+gcc.exe -shared -o dist/gear.dll build/gear.o C:\nx12_portable\data\nx12\UGOPEN\libufun.lib C:\nx12_portable\data\nx12\UGOPEN\libugopenint.lib </pre>
+<p>取得 gear.dll 後, 可開啟 new Model file 後, 以 File -&gt; Execute -&gt; NX Open 執行 gear.dll.</p>
+<p>UGOpen C 程式架構請參考 <a href="/downloads/nxopen/UG_Open-API_Programming.pdf">UG_Open-API_Programming.pdf</a></p>
+<p>UGOpen 技術文件請參考: <a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/11/nx_api/custom/en_US/ugopen_doc/index.html">UG Open Doc</a></p>
+<p></p><h1>Solvespace</h1>
 <p>根據 <a href="https://mde.tw/cad2021/content/Compile%20Solvespace.html">https://mde.tw/cad2021/content/Compile%20Solvespace.html</a> 中的說明, 可以利用 <a href="https://drive.google.com/file/d/16L08jH3ZtoMeeGWBJrP9DuIk-cby_Wqw/view?usp=sharing">compile_copsim_for_cd2022.7z</a> (file size: 5 GB, extracted size: 17.3 GB), 完成編譯.</p>
 <p>自行編譯 Solvespace 的目的是希望透過 <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm</a> 與 <a href="https://www.coppeliarobotics.com/helpFiles/en/importExport.htm">https://www.coppeliarobotics.com/helpFiles/en/importExport.htm</a> 的資訊, 自行在 Solvespace 中將組立檔案直接轉入 Coppeliasim 的場景檔案. 其中牽涉如何將 Solvespace 組立件中的零件檔案進行分割後, 以 <a href="https://en.wikipedia.org/wiki/STL">STL</a>、<a href="http://wiki.ros.org/urdf">URDF</a> 或 <a href="http://sdformat.org/">SDF</a> 格式直接轉入 Coppeliasim.</p><h1>NX</h1>
 <p><a href="https://www.plm.automation.siemens.com/global/en/products/nx/">https://www.plm.automation.siemens.com/global/en/products/nx/</a></p>
@@ -864,6 +879,7 @@ for dim in workPart.Dimensions:</pre>
 <p style="padding-left: 30px;"><a href="https://www.tandfonline.com/doi/full/10.1080/23311916.2019.1665396?scroll=top&amp;needAccess=true">Multi-objective spur gear design using teaching learning-based optimization and decision-making techniques</a></p>
 <p style="padding-left: 30px;"><a href="https://github.com/marmakoide/gear-profile-generator">https://github.com/marmakoide/gear-profile-generator</a> </p>
 <p style="padding-left: 30px;"><a href="https://github.com/ZiniuLu/SmartConverter">https://github.com/ZiniuLu/SmartConverter</a> </p>
+<p style="padding-left: 30px;"><a href="https://github.com/chiamingyen/mdeCourse">https://github.com/chiamingyen/mdeCourse</a> </p>
 <p style="padding-left: 30px;"><a href="https://community.sw.siemens.com/s/question/0D54O000061xBkLSAU/spur-gear-creation">NXOpen Spur Gear Creation</a></p>
 <p style="padding-left: 60px;"><a href="https://www.grobinc.com/spur-gears/">https://www.grobinc.com/spur-gears/</a> </p>
 <p style="padding-left: 60px;"><a href="https://ieeexplore.ieee.org/document/6052107">The Discussion of Spur Gear Library System Based on UG/Open</a></p>
