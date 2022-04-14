@@ -485,8 +485,7 @@ c.recursiveImport(
 <p style="padding-left: 30px;"><a href="https://www.nxjournaling.com/content/convert-stl-file-solid-getting-started">從 STL 檔案轉為 non-parametric solid</a>.</p>
 <p style="padding-left: 30px;"><a href="https://www.swooshtech.com/2018/04/13/taking-the-next-step-in-nx/">https://www.swooshtech.com/2018/04/13/taking-the-next-step-in-nx/</a></p>
 <p style="padding-left: 30px;"><a href="https://www.nxjournaling.com/content/beginning-journaling-using-nx-journal">https://www.nxjournaling.com/content/beginning-journaling-using-nx-journal</a></p>
-<p style="padding-left: 30px;">與 uarm 相同機構的 EvoArm: <a href="https://github.com/AliShug/EvoArm">https://github.com/AliShug/EvoArm</a> (採 Inventor 繪圖)</p>
-<p></p><h1>Solvespace</h1>
+<p style="padding-left: 30px;">與 uarm 相同機構的 EvoArm: <a href="https://github.com/AliShug/EvoArm">https://github.com/AliShug/EvoArm</a> (採 Inventor 繪圖)</p><h1>Solvespace</h1>
 <p>根據 <a href="https://mde.tw/cad2021/content/Compile%20Solvespace.html">https://mde.tw/cad2021/content/Compile%20Solvespace.html</a> 中的說明, 可以利用 <a href="https://drive.google.com/file/d/16L08jH3ZtoMeeGWBJrP9DuIk-cby_Wqw/view?usp=sharing">compile_copsim_for_cd2022.7z</a> (file size: 5 GB, extracted size: 17.3 GB), 完成編譯.</p>
 <p>自行編譯 Solvespace 的目的是希望透過 <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm</a> 與 <a href="https://www.coppeliarobotics.com/helpFiles/en/importExport.htm">https://www.coppeliarobotics.com/helpFiles/en/importExport.htm</a> 的資訊, 自行在 Solvespace 中將組立檔案直接轉入 Coppeliasim 的場景檔案. 其中牽涉如何將 Solvespace 組立件中的零件檔案進行分割後, 以 <a href="https://en.wikipedia.org/wiki/STL">STL</a>、<a href="http://wiki.ros.org/urdf">URDF</a> 或 <a href="http://sdformat.org/">SDF</a> 格式直接轉入 Coppeliasim.</p><h1>NX</h1>
 <p><a href="https://www.plm.automation.siemens.com/global/en/products/nx/">https://www.plm.automation.siemens.com/global/en/products/nx/</a> </p>
@@ -802,14 +801,59 @@ var winkVideoData = {
 <p><a href="https://ieeexplore.ieee.org/document/8076193">Implementation of recognition algorithm with NXOpen API in siemens NX</a> (2017)</p>
 <p><a href="https://ieeexplore.ieee.org/document/8725312">The Method of Automatic Determination of the Types of Spatial Angles in 3D Models of CAD Systems</a> (2019)</p>
 <p>能不能利用 <a href="/downloads/NXOpen_Getting_Started_2019.pdf">NXOpen_Getting_Started_2019.pdf</a> 中的程式庫,  自動從 <a href="/downloads/cd2022_uarm_nx12_imported.7z">cd2022_uarm_nx12_imported.7z</a> 中的零件, 整理出對應的工程圖? 甚至根據這些零件的關鍵尺寸"自動建立對應的參數化零件檔案?</p>
+<p>根據<a href="https://www.eng-tips.com/viewthread.cfm?qid=328072">這裡</a>的說明, 利用 Visual Basic 列出零件陣列的程式段為:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">Dim partDimensions() As Annotations.Dimension
+partDimensions = workPart.Dimensions.ToArray </pre>
+<p>從 <a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/custom/en_US/nxopen_python_ref/index.html">NX12 NXOpen Python Reference</a> (同 <a href="http://c.cycu.org">http://c.cycu.org</a>), 與 Annotations.Dimension 相關的資料在<a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/custom/en_US/nxopen_python_ref/NXOpen.Annotations.Dimension.html?highlight=dimension">這裡</a> (或<a href="http://c.cycu.org/NXOpen.Annotations.Dimension.html?highlight=dimension">這裡</a>). 可以試著以 Python 根據這裡的<a href="https://stackoverflow.com/questions/16953842/using-os-walk-to-recursively-traverse-directories-in-python">說明</a>, 透過 os.walk(), 進入 NX 零件目錄後, 逐一取出各個零件檔案, 並以 for 迴圈列出相關幾何尺寸:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">theSession  = NXOpen.Session.GetSession()
+workPart = theSession.Parts.Work
+ 
+# 利用迴圈列出 workPark 中的所有尺寸
+for dim in workPart.Dimensions:</pre>
+<p>也可以從<a href="https://community.sw.siemens.com/s/question/0D54O000061xM7nSAE/check-if-dimension-is-cylindrical">這裡</a>的討論中, 取出參考用的 NXOpen Python 程式段:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">    for  dim in workPart.Dimensions:
+    	linearDimensionBuilder = workPart.Dimensions.CreateLinearDimensionBuilder(dim)
+    	method = linearDimensionBuilder.Measurement.Method
+    	linearDimensionBuilder.Destroy()
+     
+    	#   check if measurement is cylindrical (see ref: https://docs.plm.automation.siemens.com/data_services/resources/nx/10/nx_api/en_US/custom/nxopen_python_ref/NXOpen.Annotations.DimensionMeasurementBuilderMeasurementMethod.html#NXOpen.Annotations.DimensionMeasurementBuilderMeasurementMethod)
+    	if method == 5:</pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">    #report dimension type
+    #
+     
+    import NXOpen
+    import NXOpen.UF
+     
+    theSession = NXOpen.Session.GetSession()
+    theLw = theSession.ListingWindow
+    theUfSession = NXOpen.UF.UFSession.GetUFSession()
+        
+        
+    def main(): 
+     
+        workPart = theSession.Parts.Work
+        displayPart = theSession.Parts.Display
+        
+        theLw.Open()
+        
+        for  dim in workPart.Dimensions:
+            theLw.WriteLine(str(type(dim)))
+            if type(dim).__name__ == 'CylindricalDimension':
+                theLw.WriteLine("Cylindrical dimension found!")
+        theLw.Close()
+        
+        
+    if __name__ == '__main__':
+        main()</pre>
+<p><br/><br/></p>
 <h4>References:</h4>
-<p style="padding-left: 30px;"><a href="https://www.youtube.com/watch?v=l9Lq3D4AMAQ">https://www.youtube.com/watch?v=l9Lq3D4AMAQ</a> </p>
-<p style="padding-left: 30px;"><a href="http://www.nxjournaling.com/content/get-all-dimensions-formula-set-value">http://www.nxjournaling.com/content/get-all-dimensions-formula-set-value</a> </p>
-<p style="padding-left: 30px;"><a href="http://www.nxjournaling.com/content/expressions-query-existing-expressions">http://www.nxjournaling.com/content/expressions-query-existing-expressions</a> </p>
-<p style="padding-left: 30px;"><a href="https://nxopen1.rssing.com/chan-61486962/all_p16.html">https://nxopen1.rssing.com/chan-61486962/all_p16.html</a> </p>
+<p style="padding-left: 30px;"><a href="https://www.youtube.com/watch?v=l9Lq3D4AMAQ">https://www.youtube.com/watch?v=l9Lq3D4AMAQ</a></p>
+<p style="padding-left: 30px;"><a href="http://www.nxjournaling.com/content/get-all-dimensions-formula-set-value">http://www.nxjournaling.com/content/get-all-dimensions-formula-set-value</a></p>
+<p style="padding-left: 30px;"><a href="http://www.nxjournaling.com/content/expressions-query-existing-expressions">http://www.nxjournaling.com/content/expressions-query-existing-expressions</a></p>
+<p style="padding-left: 30px;"><a href="https://nxopen1.rssing.com/chan-61486962/all_p16.html">https://nxopen1.rssing.com/chan-61486962/all_p16.html</a></p>
 <p style="padding-left: 30px;"><a href="https://smartech.gatech.edu/bitstream/handle/1853/62626/RAMAMURTHY-DISSERTATION-2019.pdf">A REINFORCEMENT LEARNING FRAMEWORK FOR THE AUTOMATION OF ENGINEERING DECISIONS IN COMPLEX SYSTEMS</a></p>
 <p style="padding-left: 30px;"><a href="https://aaltodoc.aalto.fi/bitstream/handle/123456789/44315/master_Korhonen_Konsta_2020.pdf?sequence=1&amp;isAllowed=y">Design of an engineer-to-order product configuration with CAD integration</a></p>
-<p style="padding-left: 30px;"><a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/custom/en_US/nxopen_net/class_n_x_open_1_1_sketch.html#ad0e5c9fa4361cc5f63386b800a14dbf1">https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/custom/en_US/nxopen_net/class_n_x_open_1_1_sketch.html#ad0e5c9fa4361cc5f63386b800a14dbf1</a> </p>
+<p style="padding-left: 30px;"><a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/custom/en_US/nxopen_net/class_n_x_open_1_1_sketch.html#ad0e5c9fa4361cc5f63386b800a14dbf1">https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/custom/en_US/nxopen_net/class_n_x_open_1_1_sketch.html#ad0e5c9fa4361cc5f63386b800a14dbf1</a></p>
 <p></p><h1>Onshape</h1>
 <p>以 <a href="https://cad.onshape.com/documents/3c81d3f7fc38f5da16eef9ed/w/f6d4616f188bc9425608890c/e/08936ec436f9e9668efeaefd?renderMode=0&amp;uiState=6254c8ae6d93450dec4bb2b2">Onshape 中的 uArm robot</a>. (並未自行繪製零組件而是從 <a href="/downloads/cd2022_uarm/UTF8_uArmSwiftPro_UP1300_3D.STEP">uArmSwiftPro_UP1300_3D.STEP</a> import)</p><h1>Coppeliasim</h1>
 <p>根據 <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm</a> 中有關 simple format 的說明, 可直接將 uArm 機械手臂在 NX 中的零組件, 透過 NXOpen Python API 的程式轉為 CoppeliaSim 的 Scene hierarchy 組合狀態.</p>
