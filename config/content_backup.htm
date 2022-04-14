@@ -488,9 +488,14 @@ c.recursiveImport(
 <p style="padding-left: 30px;">與 uarm 相同機構的 EvoArm: <a href="https://github.com/AliShug/EvoArm">https://github.com/AliShug/EvoArm</a> (採 Inventor 繪圖)</p><h1>Solvespace</h1>
 <p>根據 <a href="https://mde.tw/cad2021/content/Compile%20Solvespace.html">https://mde.tw/cad2021/content/Compile%20Solvespace.html</a> 中的說明, 可以利用 <a href="https://drive.google.com/file/d/16L08jH3ZtoMeeGWBJrP9DuIk-cby_Wqw/view?usp=sharing">compile_copsim_for_cd2022.7z</a> (file size: 5 GB, extracted size: 17.3 GB), 完成編譯.</p>
 <p>自行編譯 Solvespace 的目的是希望透過 <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm</a> 與 <a href="https://www.coppeliarobotics.com/helpFiles/en/importExport.htm">https://www.coppeliarobotics.com/helpFiles/en/importExport.htm</a> 的資訊, 自行在 Solvespace 中將組立檔案直接轉入 Coppeliasim 的場景檔案. 其中牽涉如何將 Solvespace 組立件中的零件檔案進行分割後, 以 <a href="https://en.wikipedia.org/wiki/STL">STL</a>、<a href="http://wiki.ros.org/urdf">URDF</a> 或 <a href="http://sdformat.org/">SDF</a> 格式直接轉入 Coppeliasim.</p><h1>NX</h1>
-<p><a href="https://www.plm.automation.siemens.com/global/en/products/nx/">https://www.plm.automation.siemens.com/global/en/products/nx/</a> </p>
-<p><a href="https://www.plm.automation.siemens.com/global/en/products/nx/nx-for-design.html">https://www.plm.automation.siemens.com/global/en/products/nx/nx-for-design.html</a> </p>
-<p><a href="https://en.wikipedia.org/wiki/Siemens_NX">https://en.wikipedia.org/wiki/Siemens_NX</a> </p><h2>NX12</h2>
+<p><a href="https://www.plm.automation.siemens.com/global/en/products/nx/">https://www.plm.automation.siemens.com/global/en/products/nx/</a></p>
+<p><a href="https://www.plm.automation.siemens.com/global/en/products/nx/nx-for-design.html">https://www.plm.automation.siemens.com/global/en/products/nx/nx-for-design.html</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Siemens_NX">https://en.wikipedia.org/wiki/Siemens_NX</a></p>
+<p><a href="http://toolnotes.com/home/engineering-graphics/siemens-nx-topics/nx-tutorials-version-1855/">View Commands</a>:</p>
+<p style="padding-left: 30px;">Zoom in and out<br/>    (roll mouse wheel)<br/>    MB2<br/>3D Orbit<br/>    (move mouse while holding in middle mouse wheel)<br/>    MB2<br/>Pan<br/>    (move mouse and right click button)<br/>    MB2 + MB3<br/>Twist view<br/>    MB2 + Slide along edges of screen<br/>Align view<br/>    F8</p><h2>NX3</h2>
+<p>因為 NX 從 NX10 之後才支援 NXOpen for Python, 在 NX3 環境希望利用 Python 編寫延伸程式, 可以透過 UGOpen C 將延伸程式編譯為 Python 可以呼叫執行的動態連結程式庫, 然後間接透過 Python 驅動 NX3 的零組件延伸應用.</p>
+<p>相關說明位於: <a href="https://github.com/mdecycu/cd2022_guide/tree/main/downloads/nx3_c_pyd">https://github.com/mdecycu/cd2022_guide/tree/main/downloads/nx3_c_pyd</a> (2004 年採用 <a href="https://netbeans.apache.org/">Netbean</a> 作為 IDE)</p>
+<p>至於在 Windows 操作系統編譯 C/C++ 的環境, 則可以<a href="https://www.cnblogs.com/yucloud/p/vs_code_config.html">結合 VSCode 與 MSYS2</a>, 用於 NXOpen C/C++ 與 Python 的延伸開發.</p><h2>NX12</h2>
 <p>NX12 於 2017.10 釋出, 完整安裝容量約 18 GB.</p>
 <p>NX 自 NX10 之後支援 NXOpen Python API:</p>
 <p style="padding-left: 30px;"><a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/10/nx_api/en_US/custom/nxopen_python_ref">https://docs.plm.automation.siemens.com/data_services/resources/nx/10/nx_api/en_US/custom/nxopen_python_ref</a></p>
@@ -798,6 +803,7 @@ var winkVideoData = {
 <p>至於要解開 SiemensNX-2008_wntx64\nx\VC_redist.x64.exe 中的檔案, 可先利用 <a href="https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm">https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm</a> 中的 wix311-binaries.zip, 以 wix311-binaries\dark.exe vc_redist.x64.exe -x x64-extracted, 在 x64-extracted 目錄中取得 x64-extracted\AttachedContainer\packages\vcRuntimeMinimum_amd64\vc_runtimeMinimum_x64.msi 之後, 再利用 UniExtract2 解開所需的 dll 檔案後, 再放入 NXBIN 目錄.</p>
 <p>NX2008 啟動方式同 NX1980.</p>
 <h2>Research</h2>
+<p>NX12, NX1980 與 NX2008 的動態連結程式庫位於 NXBIN\python 目錄中.</p>
 <p><a href="https://ieeexplore.ieee.org/document/8076193">Implementation of recognition algorithm with NXOpen API in siemens NX</a> (2017)</p>
 <p><a href="https://ieeexplore.ieee.org/document/8725312">The Method of Automatic Determination of the Types of Spatial Angles in 3D Models of CAD Systems</a> (2019)</p>
 <p>能不能利用 <a href="/downloads/NXOpen_Getting_Started_2019.pdf">NXOpen_Getting_Started_2019.pdf</a> 中的程式庫,  自動從 <a href="/downloads/cd2022_uarm_nx12_imported.7z">cd2022_uarm_nx12_imported.7z</a> 中的零件, 整理出對應的工程圖? 甚至根據這些零件的關鍵尺寸"自動建立對應的參數化零件檔案?</p>
