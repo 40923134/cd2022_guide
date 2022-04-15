@@ -499,7 +499,10 @@ REM link with libufun.lib and libugopenint.lib
 gcc.exe -shared -o dist/gear.dll build/gear.o C:\nx12_portable\data\nx12\UGOPEN\libufun.lib C:\nx12_portable\data\nx12\UGOPEN\libugopenint.lib </pre>
 <p>取得 gear.dll 後, 可開啟 new Model file 後, 以 File -&gt; Execute -&gt; NX Open 執行 gear.dll.</p>
 <p>UGOpen C 程式架構請參考 <a href="/downloads/nxopen/UG_Open-API_Programming.pdf">UG_Open-API_Programming.pdf</a></p>
-<p>UGOpen 技術文件請參考: <a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/11/nx_api/custom/en_US/ugopen_doc/index.html">UG Open Doc</a></p>
+<p>UGOpen 技術文件請參考:</p>
+<p style="padding-left: 30px;"><a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/11/nx_api/custom/en_US/ugopen_doc/index.html">UG Open Doc</a></p>
+<p style="padding-left: 30px;"><a href="http://wcm.cycu.org:88/nx3doc/apiprog/index.htm">Open C Programmer's Guide</a> (for internal use only)</p>
+<p style="padding-left: 30px;"><a href="http://wcm.cycu.org:88/nx3doc/ugopen_doc/main.html">Open C Reference Manual</a> (for internal use only)</p>
 <p>以下為 gear.c 編譯連結與執行過程:</p>
 <script>
 var winkVideoData_gear_design = {
@@ -531,6 +534,7 @@ var winkVideoData_gear_design = {
 <p><a href="https://en.wikipedia.org/wiki/Siemens_NX">https://en.wikipedia.org/wiki/Siemens_NX</a></p>
 <p><a href="http://toolnotes.com/home/engineering-graphics/siemens-nx-topics/nx-tutorials-version-1855/">View Commands</a> (<a href="https://www.youtube.com/watch?v=GUaa97tALxE">Video</a>):</p>
 <p style="padding-left: 30px;">Zoom in and out<br/>    (roll mouse wheel)<br/>    MB2<br/>3D Orbit<br/>    (move mouse while holding in middle mouse wheel)<br/>    MB2<br/>Pan<br/>    (move mouse and right click button)<br/>    MB2 + MB3<br/>Twist view<br/>    MB2 + Slide along edges of screen<br/>Align view<br/>    F8</p><h2>NX3</h2>
+<p><a href="http://wcm.cycu.org:88/nx3doc/index.html">NX3 Document</a> (for internal use only)</p>
 <p>因為 NX 從 NX10 之後才支援 NXOpen for Python, 在 NX3 環境希望利用 Python 編寫延伸程式, 可以透過 UGOpen C 將延伸程式編譯為 Python 可以呼叫執行的動態連結程式庫, 然後間接透過 Python 驅動 NX3 的零組件延伸應用.</p>
 <p>相關說明位於: <a href="https://github.com/mdecycu/cd2022_guide/tree/main/downloads/nx3_c_pyd">https://github.com/mdecycu/cd2022_guide/tree/main/downloads/nx3_c_pyd</a> (2004 年採用 <a href="https://netbeans.apache.org/">Netbean</a> 作為 IDE)</p>
 <p>至於在 Windows 操作系統編譯 C/C++ 的環境, 則可以<a href="https://www.cnblogs.com/yucloud/p/vs_code_config.html">結合 VSCode 與 MSYS2</a>, 用於 NXOpen C/C++ 與 Python 的延伸開發.</p><h2>NX12</h2>
