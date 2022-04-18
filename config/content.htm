@@ -571,7 +571,21 @@ var winkVideoData_gear_design = {
 <p style="padding-left: 30px;"><a href="https://community.sw.siemens.com/s/topic/0TO4O000000MiiWWAS/nx-customization-and-programming">NX Customization and Programming Discussion</a></p>
 <p style="padding-left: 30px;"><a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/common/en_US/graphics/fileLibrary/nx/nxopen/nxopen_getting_started_v12.pdf">https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/common/en_US/graphics/fileLibrary/nx/nxopen/nxopen_getting_started_v12.pdf</a></p>
 <p style="padding-left: 30px;"><a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/common/en_US/graphics/fileLibrary/nx/snap/SNAP_Getting_Started_v12.pdf">https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/common/en_US/graphics/fileLibrary/nx/snap/SNAP_Getting_Started_v12.pdf</a></p>
-<p style="padding-left: 30px;"></p><h2>NX1980</h2>
+<h3>NX12_API</h3>
+<p>假如希望套用 NX12 的 Python Journal 程式錄製, 首先需要將操作過程的程式錄製類別從內建的 VB 轉為 Python.</p>
+<p>Journal 錄製程式類別的設定, 位於 File -&gt; Preferences -&gt; User Interfaces -&gt; Tools -&gt; Journal -&gt; Python.</p>
+<p>選定採 Python 格式錄製操作過程 Journal 之後, 就可以利用上方下拉式功能表最右方的 Toolbar Options 將 Menu 功能表開啟, 然後透過 Menu -&gt; Tools -&gt; Journal -&gt; Record 選擇將 NX12 設計繪圖的操作過程以 NXOpen Python API 程式進行錄製, 完成後則可以透過 Menu -&gt; Tools -&gt; Journal -&gt; Play 執行.</p>
+<p>選擇 Record 之後, 跳出標題為 Journal Record 的視窗, 內容如下:</p>
+<p style="padding-left: 30px;">Some NX commands are not recorded. Therefore, replay many not produce the same results as the interactive NX session.</p>
+<p style="padding-left: 30px;">Replay of Journals recorded in VB, C# are supported only on Windows. Replay of journals recorded in Python are supported on both Windows and Linux.</p>
+<p style="padding-left: 30px;">To execute Journals recorded in other languages and/or on Linux, first create executable and then use the File-&gt; Execute -&gt; NXOpen command.</p>
+<p style="padding-left: 30px;">Refer to on-line Help documentation for further information.</p>
+<p>表示:</p>
+<ol>
+<li>NXOpen API 錄製程式可能無法將全部互動操作細節還原</li>
+<li>採 VB 及 C# 錄製的程式只能在 Windows 執行, 而 Python 格式的程式可以在 Windows 與 Linux 操作系統執行</li>
+<li>採 C/C++ 及 Java 錄製的程式, 經過編譯後, 可利用 File -&gt; Execute -&gt; NX Open 選單執行</li>
+</ol><h2>NX1980</h2>
 <p>NX1980 於 2021.06 釋出, 完整安裝容量約 28 GB.</p>
 <h4>NX1980 參考頁面:</h4>
 <p style="padding-left: 30px;">有關 Siemens NX 的歷史, 請參考 <a href="https://en.wikipedia.org/wiki/Siemens_NX">https://en.wikipedia.org/wiki/Siemens_NX</a></p>
