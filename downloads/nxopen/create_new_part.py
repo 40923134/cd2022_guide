@@ -6,6 +6,9 @@ import NXOpen.Features
 import NXOpen.GeometricUtilities
 
 def main():
+    theUI = NXOpen.UI.GetUI()
+    theMsgBox = theUI.NXMessageBox
+    theMsgBox.Show("簡要說明", NXOpen.NXMessageBox.DialogType.Information,"以下流程將建立一個簡單的長方體")
     # 取得目前開啟的工作階段
     theSession = NXOpen.Session.GetSession()
     theUfSession = NXOpen.UF.UFSession.GetUFSession()
