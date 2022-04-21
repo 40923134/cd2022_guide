@@ -65,6 +65,9 @@
 <v t="leo.20220413133022.1"><vh>@clean 20220413.md</vh>
 <v t="leo.20220413133649.1"><vh>w8 debug 40923136 倉儲</vh></v>
 </v>
+<v t="leo.20220421203323.1"><vh>@clean 20220421.md</vh>
+<v t="leo.20220421203351.1"><vh>Q and A</vh></v>
+</v>
 </v>
 </v>
 </v>
@@ -373,6 +376,95 @@ Author: yen
 好了, 透過 Flask 啟動 Leo Editor 的元兇找到了, 只要將 [40923136 cd2022 倉儲]中的這段啟動 Leo Editor 的程式碼刪除, 應該就可以了.
 
 </t>
+<t tx="leo.20220421203323.1">@language md
+---
+Title: Q and A
+Date: 2022-04-21 11:00
+Category: Programming
+Tags: 2022SpringCD
+Slug: w9-Q-and-A
+Author: yen
+---
+
+Windows 環境中還不會使用 SSH push github 版本
+----
+
+利用 SSH 協定推送 Github 版本的做法其實很簡單, 共有四個階段:
+
+ - 啟動可攜時設定 GIT_SSH 變數
+ - 將 OpenSSH 格式的公鑰送到 Github
+ - 讓 Putty 可以上網且 Session 連結到近端的私鑰
+ - 確定近端倉儲的 .git/config 檔案中轉為採 SSH 進行連線
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+@others</t>
+<t tx="leo.20220421203351.1">上述在 Windows 環境中透過 Putty 以 SSH 推送改版資料到 Github 的四個階段, 只有將 Putty 設定的 session 放入電腦 registry 的部分比較容易發生問題, 因為電腦輔助設計室中的電腦帶有防寫卡, 重新開機後 registry 會重置. 因此比較建立透過設定完成的 .reg 在每次提交推送之前, 將 session 設定改為自己的設定. 詳細說明請參考 &lt;https://mde.tw/wcm2022_guide/content/Token%20and%20SSH.html&gt;
+
+Pelican Blog 的問題
+----
+
+pelican markdown -o blog -s local_publishconf.py
+
+指令的意思為: 利用 Scripts/pelican.exe 程式將 markdown 目錄中的所有 .md 檔案, 以 local_publishconf.py 中的設定轉為網誌 html 檔案, 其 output 輸出目錄設為 blog.
+
+比較常見的問題是: 每一個 .md 檔案中的前面標題部分格式要求非常嚴謹, 因為 Pelican 必須根據各變數的內容, 將此 .md 檔案轉為 blog 目錄中的網誌超文件.
+
+&lt;pre class="brush: jscript"&gt;
+@language md
+---
+Title: Q and A
+Date: 2022-04-21 11:00
+Category: Programming
+Tags: 2022SpringCD
+Slug: w9-Q-and-A
+Author: yen
+---
+&lt;/pre&gt;
+
+上面第一行中的 @language md 是 Leo Editor 的內文指令, 表示要以 Markdown 的語法來解析以下的檔案內容.
+
+Title: 後的字串會成為網誌文章的標題.
+
+Date: 標示文章編寫十的日期與時間, 而格式必須按照年月日再加上編寫時間的設定進行標記.
+
+Category: 中的字串表示文章類別, 當使用者在特定類別中有多篇文章時, 只要點選特定 Category, 就會列出此一類別的網誌文章.
+
+Tags: 中的字串為用來分類網誌文章的第二層註記.
+
+Slug: 中的字串為此篇文章轉進  blog 目錄之後所使用的檔案名稱, 也因為如此, 每一篇網誌都必須有獨一的 Slug 字串.
+
+Authon: 則用來標示此篇文章的作者.
+
+不同 CAD 與版本繪製零組件的協同
+----
+
+Solvespace 是開源的參數式 CAD, 所建立的零組件檔案只能轉進 CoppeliaSim.
+
+NX 是高階的參數式 CAD/CAM/CAE 套件, 目前使用的 NX 共有 NX12, NX1980 與 NX2008, 利用舊版 NX 建立的零件檔案, 可以用新版打開, 但若該檔案由新版 NX 編輯後, 就無法讓舊版的 NX 開啟, 因此在協同產品設計時, 若組員中分別使用不同版本的 NX 建立零組件, 則參數 CAD 的協同流程只能單向進行, 但無論採用哪一版的 NX 建立零件檔案轉為 STL 後, 都可以進入 Coppeliasim 建立模擬場景.
+
+ 而 Onshape 則是全雲端的參數式 CAD, 在沒有後端 API 權限的情況下只能利用 Featurescript 協助建立參數式驅動的 uarm 機械手臂零件.
+
+
+&lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-mde-tw-eng.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="https://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

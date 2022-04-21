@@ -5,84 +5,91 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>./</loc>
-<lastmod>2022-04-13T14:42:26-00:00</lastmod>
+<lastmod>2022-04-21T21:54:36-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./archives.html</loc>
-<lastmod>2022-04-13T14:42:26-00:00</lastmod>
+<lastmod>2022-04-21T21:54:36-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./tags.html</loc>
-<lastmod>2022-04-13T14:42:26-00:00</lastmod>
+<lastmod>2022-04-21T21:54:36-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./categories.html</loc>
-<lastmod>2022-04-13T14:42:26-00:00</lastmod>
+<lastmod>2022-04-21T21:54:36-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./pages/about/</loc>
-<lastmod>2022-04-07T17:54:48+08:00</lastmod>
+<lastmod>2022-03-31T21:49:14+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>./w9-Q-and-A.html</loc>
+<lastmod>2022-04-21T21:29:38+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./w8-debug-40923136-cmsimde-repo.html</loc>
-<lastmod>2022-04-13T14:41:36+08:00</lastmod>
+<lastmod>2022-04-13T20:13:55+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./2022-Spring-CD-w7-programming-project.html</loc>
-<lastmod>2022-04-13T13:31:07+08:00</lastmod>
+<lastmod>2022-04-13T20:13:55+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./2022-Spring-CD.html</loc>
-<lastmod>2022-04-07T17:54:48+08:00</lastmod>
+<lastmod>2022-03-31T21:49:14+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./category/misc.html</loc>
-<lastmod>2022-04-07T17:54:48+08:06</lastmod>
+<lastmod>2022-03-31T21:49:14+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./category/programming.html</loc>
-<lastmod>2022-04-13T14:41:36+08:06</lastmod>
+<lastmod>2022-04-21T21:29:38+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./tag/2022springcd.html</loc>
-<lastmod>2022-04-13T14:41:36+08:06</lastmod>
+<lastmod>2022-04-21T21:29:38+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./author/yen.html</loc>
-<lastmod>2022-04-13T14:41:36+08:06</lastmod>
+<lastmod>2022-04-21T21:29:38+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
