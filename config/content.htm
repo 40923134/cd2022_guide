@@ -954,7 +954,61 @@ for dim in workPart.Dimensions:</pre>
 <p style="padding-left: 60px;"><a href="https://www.grobinc.com/spur-gears/">https://www.grobinc.com/spur-gears/</a> </p>
 <p style="padding-left: 60px;"><a href="https://ieeexplore.ieee.org/document/6052107">The Discussion of Spur Gear Library System Based on UG/Open</a></p>
 <p style="padding-left: 60px;">The dlx file must be placed in one of the following locations:<br/><br/>1. From where NX session is launched<br/><br/>2. $UGII_USER_DIR/application<br/><br/>3. For released applications, using UGII_CUSTOM_DIRECTORY_FILE is highly<br/><br/>recommended. This variable is set to a full directory path to a file</p>
-<p></p><h1>Onshape</h1>
+<p></p><h3>Python API</h3>
+<p>設定 NX Journal 存為 Python: File -&gt; Preferences -&gt; User Interface -&gt; Tools -&gt; Journal 將 Jpurnal Language 設為 Python.</p>
+<p>接著將 Quick Access Toolbar 中的 Menu 功能表開啟. 然後透過 Menu -&gt; Tools -&gt; Journal 選擇 Record, 將 Journal 檔案存至特定目錄區後, 開始錄製操作過程.</p>
+<p>Create New Model Python API 程式:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import NXOpen
+
+def main() : 
+
+    theSession  = NXOpen.Session.GetSession()
+    fileNew1 = theSession.Parts.FileNew()
+    fileNew1.TemplateFileName = "model-plain-1-mm-template.prt"
+    fileNew1.UseBlankTemplate = False
+    fileNew1.ApplicationName = "ModelTemplate"
+    fileNew1.Units = NXOpen.Part.Units.Millimeters
+    fileNew1.UsesMasterModel = "No"
+    fileNew1.TemplateType = NXOpen.FileNewTemplateType.Item
+    fileNew1.TemplatePresentationName = "Model"
+    fileNew1.SetCanCreateAltrep(False)
+    fileNew1.NewFileName = "Y:\\model1.prt"
+    fileNew1.MakeDisplayedPart = True
+    fileNew1.DisplayPartOption = NXOpen.DisplayPartOption.AllowAdditional
+    nXObject1 = fileNew1.Commit()
+    
+    workPart = theSession.Parts.Work
+    displayPart = theSession.Parts.Display
+    
+    fileNew1.Destroy()
+    theSession.ApplicationSwitchImmediate("UG_APP_MODELING")
+    
+if __name__ == '__main__':
+    main()</pre>
+<p>List and Edit Expressions:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import NXOpen
+
+def main():
+
+    theSession  = NXOpen.Session.GetSession()
+    theUI = NXOpen.UI.GetUI()
+    theMsgBox = theUI.NXMessageBox
+    theMsgBox.Show("window", NXOpen.NXMessageBox.DialogType.Information,"Edit parameter")
+    workPart = theSession.Parts.Work
+    unit1 = workPart.UnitCollection.FindObject("MilliMeter")
+    for i in workPart.Expressions:
+        theMsgBox.Show("window", NXOpen.NXMessageBox.DialogType.Information, i.Name)
+        dim = workPart.Expressions.FindObject(i.Name)
+        # dim type is Expressions
+        workPart.Expressions.EditWithUnits(dim, unit1, "150")
+    theSession.UpdateManager.DoUpdate(0)
+
+    # Insert code here
+
+if __name__ == '__main__':
+    main()
+</pre>
+<p>Tools -&gt; Expressions 可以列出所有 Expressions</p><h1>Onshape</h1>
 <p>以 <a href="https://cad.onshape.com/documents/3c81d3f7fc38f5da16eef9ed/w/f6d4616f188bc9425608890c/e/08936ec436f9e9668efeaefd?renderMode=0&amp;uiState=6254c8ae6d93450dec4bb2b2">Onshape 中的 uArm robot</a>. (並未自行繪製零組件而是從 <a href="/downloads/cd2022_uarm/UTF8_uArmSwiftPro_UP1300_3D.STEP">uArmSwiftPro_UP1300_3D.STEP</a> import)</p><h1>Coppeliasim</h1>
 <p>根據 <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm</a> 中有關 simple format 的說明, 可直接將 uArm 機械手臂在 NX 中的零組件, 透過 NXOpen Python API 的程式轉為 CoppeliaSim 的 Scene hierarchy 組合狀態.</p>
 <p>如此便將 uArm 機械手臂各零組件參數化, 然後直接在 Brython 前端介面設定 uArm 機械手臂的設計參數, 經由 AJAX 將參數送至後端 Flask + NXOpen Python API 伺服器, 產生 uArm 機械手臂組合場景後, 再透過 <a href="https://www.coppeliarobotics.com/helpFiles/en/legacyRemoteApiOverview.htm">Legacy Python remote API</a> 或 <a href="https://www.coppeliarobotics.com/helpFiles/en/zmqRemoteApiOverview.htm">ZeroMQ Python remote API</a> 控制 uArm 機械手臂 (或利用 <a href="https://www.ensta-bretagne.fr/zerr/dokuwiki/doku.php?id=vrep:socket-com-with-robot">Socket 傳遞控制參數</a>), 並以客製化 image sensor 的<a href="https://forum.coppeliarobotics.com/viewtopic.php?t=3457">影像串流</a>從 Flask server 送至各協同成員的瀏覽器, 或採 <a href="https://www.coppeliarobotics.com/helpFiles/en/externalFrontEnd.htm">Web browser based frontend</a> 方式呈現控制流程.</p>

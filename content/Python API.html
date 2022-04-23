@@ -2,7 +2,7 @@
         <head>
         <title>CD_Guide</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -139,13 +139,61 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Tic-Tat-Toe << <a href='Tic-Tat-Toe.html'>Previous</a> <a href='run.html'>Next</a> >> run<br /><h1>Threejs</h1>
-<p>假如能夠在 server 端配置 NX + Flask 延伸應用程式, 並讓 Brython 前端程式操控產品設計參數, 完成後的零組件將可在轉為 OBJ 格式後, 直接展示在客戶端的瀏覽器中.</p>
-<p><a href="https://jayconsystems.com/blog/exporting-3d-files-stl-vs-obj-vs-iges-vs-step">https://jayconsystems.com/blog/exporting-3d-files-stl-vs-obj-vs-iges-vs-step</a> </p>
-<p><a href="https://threejs.org/">https://threejs.org/</a></p>
-<p><iframe frameborder="0" height="300" src="./../downloads/threejs_ex/index.html" width="300"></iframe></p>
-<p><iframe frameborder="0" height="300" src="./../downloads/threejs_ex/ex1/asm.html" width="300"></iframe></p>
-<p><a href="https://www.coppeliarobotics.com/helpFiles/en/externalFrontEnd.htm">https://www.coppeliarobotics.com/helpFiles/en/externalFrontEnd.htm</a></p><br />Tic-Tat-Toe << <a href='Tic-Tat-Toe.html'>Previous</a> <a href='run.html'>Next</a> >> run</div>
+    <div id="tipue_search_content">Research << <a href='Research.html'>Previous</a> <a href='Onshape.html'>Next</a> >> Onshape<br /><h1>Python API</h1>
+<p>設定 NX Journal 存為 Python: File -&gt; Preferences -&gt; User Interface -&gt; Tools -&gt; Journal 將 Jpurnal Language 設為 Python.</p>
+<p>接著將 Quick Access Toolbar 中的 Menu 功能表開啟. 然後透過 Menu -&gt; Tools -&gt; Journal 選擇 Record, 將 Journal 檔案存至特定目錄區後, 開始錄製操作過程.</p>
+<p>Create New Model Python API 程式:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import NXOpen
+
+def main() : 
+
+    theSession  = NXOpen.Session.GetSession()
+    fileNew1 = theSession.Parts.FileNew()
+    fileNew1.TemplateFileName = "model-plain-1-mm-template.prt"
+    fileNew1.UseBlankTemplate = False
+    fileNew1.ApplicationName = "ModelTemplate"
+    fileNew1.Units = NXOpen.Part.Units.Millimeters
+    fileNew1.UsesMasterModel = "No"
+    fileNew1.TemplateType = NXOpen.FileNewTemplateType.Item
+    fileNew1.TemplatePresentationName = "Model"
+    fileNew1.SetCanCreateAltrep(False)
+    fileNew1.NewFileName = "Y:\\model1.prt"
+    fileNew1.MakeDisplayedPart = True
+    fileNew1.DisplayPartOption = NXOpen.DisplayPartOption.AllowAdditional
+    nXObject1 = fileNew1.Commit()
+    
+    workPart = theSession.Parts.Work
+    displayPart = theSession.Parts.Display
+    
+    fileNew1.Destroy()
+    theSession.ApplicationSwitchImmediate("UG_APP_MODELING")
+    
+if __name__ == '__main__':
+    main()</pre>
+<p>List and Edit Expressions:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import NXOpen
+
+def main():
+
+    theSession  = NXOpen.Session.GetSession()
+    theUI = NXOpen.UI.GetUI()
+    theMsgBox = theUI.NXMessageBox
+    theMsgBox.Show("window", NXOpen.NXMessageBox.DialogType.Information,"Edit parameter")
+    workPart = theSession.Parts.Work
+    unit1 = workPart.UnitCollection.FindObject("MilliMeter")
+    for i in workPart.Expressions:
+        theMsgBox.Show("window", NXOpen.NXMessageBox.DialogType.Information, i.Name)
+        dim = workPart.Expressions.FindObject(i.Name)
+        # dim type is Expressions
+        workPart.Expressions.EditWithUnits(dim, unit1, "150")
+    theSession.UpdateManager.DoUpdate(0)
+
+    # Insert code here
+
+if __name__ == '__main__':
+    main()
+</pre>
+<p>Tools -&gt; Expressions 可以列出所有 Expressions</p><br />Research << <a href='Research.html'>Previous</a> <a href='Onshape.html'>Next</a> >> Onshape</div>
         
     <!-- footer -->
       <div class="container">
