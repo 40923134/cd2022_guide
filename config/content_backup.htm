@@ -557,6 +557,8 @@ var winkVideoData_gear_design = {
 <p>Application -&gt; Gateway -&gt; More -&gt; Block UI Styler</p>
 <p><a href="/downloads/NXOpen_Getting_Started_2019.pdf">NXOpen_Getting_Started_2019.pdf</a> 中 <a href="https://mde.tw/cd2022_guide/downloads/NXOpen_Getting_Started_2019.pdf#[{%22num%22%3A253%2C%22gen%22%3A0}%2C{%22name%22%3A%22XYZ%22}%2C62%2C787%2C0]">Chapter 14: Block-Based Dialogs</a> 說明如何利用 Block UI Styler 應用程式建立 API 程式所需要的表單.</p>
 <p><a href="https://docs.sw.siemens.com/en-US/product/209349590/doc/PL20200507135732916.blockstyler/html/intro_int_ov_bl">NX1953 Block UI Styler Documentation</a></p>
+<p>利用 Block UI Styler 建立表單, 用來控制 block.prt 零件的長寬與高: <a href="/downloads/block_ui.7z">block_ui.7z</a> (NX2008 零件檔案)</p>
+<p style="padding-left: 30px;">操作方法: 以 NX2008 開啟 block.prt, 利用 Menu -&gt; Tools -&gt; Journal -&gt; Play 執行 length_width_height.py, 待出現方塊長度、寬度與高度的設定表單後, 填入所需尺寸後, 按下 Ok, 零件即可依照設定修改尺寸.</p>
 <h4>Example codes:</h4>
 <p style="padding-left: 30px;">CreateNode API:</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">node = self.tree_control0.CreateNode("NodeDisplayText")
@@ -668,6 +670,14 @@ def OnContextMenuCallback(self, tree, node, columnID):
         # ---- Enter your exception handling code here -----
         pass
     return stateIcon</pre>
+<p style="padding-left: 30px;">OnSelectCallback</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def OnSelectCallback (self, tree, node, columnID, selected):
+    node1 = self.tree_control0.CreateNode(self.newNodeString)
+    parentNode = NXOpen.BlockStyler.Tree.Node.Null
+    afterNode = NXOpen.BlockStyler.Tree.Node.Null
+    self.tree_control0.InsertNode(
+        node1, parentNode, afterNode, 
+        NXOpen.BlockStyler.Tree.NodeInsertOption.Sort)</pre>
 <h4>Tutorial:</h4>
 <p style="padding-left: 30px;"><a href="https://www.youtube.com/watch?v=qeDgmwz-xQU">https://www.youtube.com/watch?v=qeDgmwz-xQU</a></p>
 <p style="padding-left: 30px;"><a href="https://www.youtube.com/watch?v=Qo_A2lJEn0c">https://www.youtube.com/watch?v=Qo_A2lJEn0c</a></p><h1>NX</h1>

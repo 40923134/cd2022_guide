@@ -557,6 +557,8 @@ var winkVideoData_gear_design = {
 <p>Application -&gt; Gateway -&gt; More -&gt; Block UI Styler</p>
 <p><a href="/downloads/NXOpen_Getting_Started_2019.pdf">NXOpen_Getting_Started_2019.pdf</a> 中 <a href="https://mde.tw/cd2022_guide/downloads/NXOpen_Getting_Started_2019.pdf#[{%22num%22%3A253%2C%22gen%22%3A0}%2C{%22name%22%3A%22XYZ%22}%2C62%2C787%2C0]">Chapter 14: Block-Based Dialogs</a> 說明如何利用 Block UI Styler 應用程式建立 API 程式所需要的表單.</p>
 <p><a href="https://docs.sw.siemens.com/en-US/product/209349590/doc/PL20200507135732916.blockstyler/html/intro_int_ov_bl">NX1953 Block UI Styler Documentation</a></p>
+<p>利用 Block UI Styler 建立表單, 用來控制 block.prt 零件的長寬與高: <a href="/downloads/block_ui.7z">block_ui.7z</a> (NX2008 零件檔案)</p>
+<p style="padding-left: 30px;">操作方法: 以 NX2008 開啟 block.prt, 利用 Menu -&gt; Tools -&gt; Journal -&gt; Play 執行 length_width_height.py, 待出現方塊長度、寬度與高度的設定表單後, 填入所需尺寸後, 按下 Ok, 零件即可依照設定修改尺寸. 此為利用 Block UI Styler 所製作的互動式零件參數設定. 若將表單移置網誌 Brython 前端, 則可依相同方式設定 Server 上的 NX2008 零組件檔案的設計參數.</p>
 <h4>Example codes:</h4>
 <p style="padding-left: 30px;">CreateNode API:</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">node = self.tree_control0.CreateNode("NodeDisplayText")
