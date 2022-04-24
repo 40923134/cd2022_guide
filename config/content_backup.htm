@@ -557,10 +557,120 @@ var winkVideoData_gear_design = {
 <p>Application -&gt; Gateway -&gt; More -&gt; Block UI Styler</p>
 <p><a href="/downloads/NXOpen_Getting_Started_2019.pdf">NXOpen_Getting_Started_2019.pdf</a> 中 <a href="https://mde.tw/cd2022_guide/downloads/NXOpen_Getting_Started_2019.pdf#[{%22num%22%3A253%2C%22gen%22%3A0}%2C{%22name%22%3A%22XYZ%22}%2C62%2C787%2C0]">Chapter 14: Block-Based Dialogs</a> 說明如何利用 Block UI Styler 應用程式建立 API 程式所需要的表單.</p>
 <p><a href="https://docs.sw.siemens.com/en-US/product/209349590/doc/PL20200507135732916.blockstyler/html/intro_int_ov_bl">NX1953 Block UI Styler Documentation</a></p>
+<h4>Example codes:</h4>
+<p style="padding-left: 30px;">CreateNode API:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">node = self.tree_control0.CreateNode("NodeDisplayText")
+# Set properties of node
+node.ForegroundColor = 198
+node.DisplayIcon = "edge"
+node.SelectedIcon = "draft"</pre>
+<p style="padding-left: 30px;">InsertNode API:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">self.tree_control0.InsertNode(
+    node, parentNode, afterNode, 
+    NXOpen.BlockStyler.Tree.NodeInsertOption.AlwaysLast)</pre>
+<p style="padding-left: 30px;">AskEditControl Callback:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def AskEditControl (self, tree, node, columnID):
+    control = None
+    try:
+        options = ["AcceptText", "DefaultText", " RejectText"]
+        # The option must be set here or there will 
+        # be no options available to edit.
+        tree.SetEditOptions(options, 1)
+        control = NXOpen.BlockStyler.Tree.ControlType.ListBox 
+        # or NXOpen.BlockStyler.Tree.ControlType.ComboBox
+    except Exception as ex:
+        # ---- Enter the exception handling code here. -----
+        pass
+    return control</pre>
+<p style="padding-left: 30px;">OnEditOptionSelected Callback:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def OnEditOptionSelected(
+    tree, node, columnId, selectedOptionID, 
+    selectedOptionText, type):
+    try:
+        if type == NXOpen.BlockStyler.Tree.ControlType.ComboBox:
+            if selectedOptionText == "RejectText":
+                OnEditOptionSelected = 
+                    NXOpen.BlockStyler.Tree.EditControlOption.Reject
+            else:
+                OnEditOptionSelected = 
+                    NXOpen.BlockStyler.Tree.EditControlOption.Accept
+        elif type == NXOpen.BlockStyler.Tree.ControlType.ListBox:
+            if selectedOptionText == "RejectText":
+                OnEditOptionSelected = 
+                    NXOpen.BlockStyler.Tree.EditControlOption.Reject
+            else:
+                OnEditOptionSelected = 
+                    NXOpen.BlockStyler.Tree.EditControlOption.Accept
+    except Exception as ex:
+        # ---- Enter the exception handling code here. -----
+        pass</pre>
+<p style="padding-left: 30px;">OnMenuCallback:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">class MenuID:
+    AddNode = 0
+    DeleteNode = 1
+    SubMenuItem1 = 2
+    SubMenu1 = 3
+def OnContextMenuCallback(self, tree, node, columnID):
+    try:
+        menu = tree.CreateMenu()
+        SubMenu1 = tree.CreateMenu()
+        menu.AddMenuItem(MenuID.AddNode, "Add Node")
+        menu.AddSeperator()
+        menu.AddMenuItem(MenuID.DeleteNode, "Delete Node")
+        # Sub menu
+        SubMenu1.AddMenuItem(MenuID.SubMenuItem1, "Sub Menu Item 1")
+        # Set submenu
+        menu.SetSubMenu(MenuID.SubMenu1, SubMenu1)
+        # Set menu on the tree
+        tree.SetMenu(menu)
+        # Dispose the menu only after setting the menu on the tree
+        menu.Dispose()
+        SubMenu1.Dispose()
+    except Exception as ex:
+        # ---- Enter the exception handling code here. -----
+        self.theUI.NXMessageBox.Show(
+            "Block Styler", 
+            NXOpen.NXMessageBox.DialogType.Error, 
+            str(ex))</pre>
+<p style="padding-left: 30px;">OnMenuCommandCallback:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def OnMenuCommandCallback(self, tree, node, menu_item_id):
+    try:
+        if menu_item_id == MenuID.DeleteNode:
+            tree.DeleteNode(node)
+    except Exception as ex:
+        # ---- Enter your exception handling code here -----
+        pass</pre>
+<p style="padding-left: 30px;">StateIconName Callback:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def StateIconNameCallback (self, tree, node, state):
+    stateIcon = ""
+    try:
+        if state == 3:
+            stateIcon = "hole"
+        elif state == 4:
+            stateIcon = "boss"
+        elif state == 5:
+            stateIcon = "revolve"
+    except Exception as ex:
+        # ---- Enter your exception handling code here -----
+        pass
+    return stateIcon</pre>
+<p style="padding-left: 30px;">StateIconName Callback:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def StateIconNameCallback (self, tree, node, state):
+    stateIcon = ""
+    try:
+        if state == 3:
+            stateIcon = "hole"
+        elif state == 4:
+            stateIcon = "boss"
+        elif state == 5:
+            stateIcon = "revolve"
+    except Exception as ex:
+        # ---- Enter your exception handling code here -----
+        pass
+    return stateIcon</pre>
 <h4>Tutorial:</h4>
 <p style="padding-left: 30px;"><a href="https://www.youtube.com/watch?v=qeDgmwz-xQU">https://www.youtube.com/watch?v=qeDgmwz-xQU</a></p>
-<p style="padding-left: 30px;"><a href="https://www.youtube.com/watch?v=Qo_A2lJEn0c">https://www.youtube.com/watch?v=Qo_A2lJEn0c</a></p>
-<h1>NX</h1>
+<p style="padding-left: 30px;"><a href="https://www.youtube.com/watch?v=Qo_A2lJEn0c">https://www.youtube.com/watch?v=Qo_A2lJEn0c</a></p><h1>NX</h1>
 <p><a href="https://www.plm.automation.siemens.com/global/en/products/nx/">https://www.plm.automation.siemens.com/global/en/products/nx/</a></p>
 <p><a href="https://www.plm.automation.siemens.com/global/en/products/nx/nx-for-design.html">https://www.plm.automation.siemens.com/global/en/products/nx/nx-for-design.html</a></p>
 <p><a href="https://en.wikipedia.org/wiki/Siemens_NX">https://en.wikipedia.org/wiki/Siemens_NX</a></p>
@@ -1133,7 +1243,7 @@ def add_numbers():
 if __name__ == '__main__':
     app.run(debug=True, port=9448) #, ssl_context="adhoc")</pre>
 <p></p>
-<h1>Extensions</h1>
+<h1>Applications</h1>
 <h4>Solvespace</h4>
 <p>根據 <a href="https://mde.tw/cad2021/content/Compile%20Solvespace.html">https://mde.tw/cad2021/content/Compile%20Solvespace.html</a> 中的說明, 可以利用 <a href="https://drive.google.com/file/d/16L08jH3ZtoMeeGWBJrP9DuIk-cby_Wqw/view?usp=sharing">compile_copsim_for_cd2022.7z</a> (file size: 5 GB, extracted size: 17.3 GB), 完成編譯.</p>
 <p>自行編譯 Solvespace 的目的是希望透過 <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm</a> 與 <a href="https://www.coppeliarobotics.com/helpFiles/en/importExport.htm">https://www.coppeliarobotics.com/helpFiles/en/importExport.htm</a> 的資訊, 自行在 Solvespace 中將組立檔案直接轉入 Coppeliasim 的場景檔案. 其中牽涉如何將 Solvespace 組立件中的零件檔案進行分割後, 以 <a href="https://en.wikipedia.org/wiki/STL">STL</a>、<a href="http://wiki.ros.org/urdf">URDF</a> 或 <a href="http://sdformat.org/">SDF</a> 格式直接轉入 Coppeliasim.</p>
@@ -1159,7 +1269,7 @@ if __name__ == '__main__':
 <p style="padding-left: 30px;"><a href="http://wcm.cycu.org:88/github/cad2021/content/Task7-1-1.html">CoppeliaSim 編譯說明 1</a> (只能在系上以 IPv6 網路連線).</p>
 <p style="padding-left: 30px;"><a href="http://wcm.cycu.org:88/github/cad2021/content/Compile%20CoppeliaSim.html">CoppeliaSim 編譯</a> (只能在系上以 IPv6 網路連線).</p>
 <p></p>
-<h1>Tic-Tat-Toe</h1>
+<h2>Tic-Tat-Toe</h2>
 <p><a href="https://techvidvan.com/tutorials/python-game-project-tic-tac-toe/">https://techvidvan.com/tutorials/python-game-project-tic-tac-toe/</a></p>
 <p><a href="https://www.geeksforgeeks.org/tic-tac-toe-game-with-gui-using-tkinter-in-python/">https://www.geeksforgeeks.org/tic-tac-toe-game-with-gui-using-tkinter-in-python/</a></p>
 <p><a href="https://www.universal-robots.com/products/ur10-robot/">UR10e</a> Robot 透過影像辨識與人進行 <a href="https://en.wikipedia.org/wiki/Tic-tac-toe">Tic-Tat-Toe</a> 遊戲:</p>
