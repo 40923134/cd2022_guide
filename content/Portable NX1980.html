@@ -147,7 +147,9 @@ img.add_border {
 <li><a href="https://github.com/Bioruebe/UniExtract2">https://github.com/Bioruebe/UniExtract2</a></li>
 <li><a href="https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm">https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm</a></li>
 </ol>
-<p>等兩項工具, UniExtract2 用來解開 SiemensNX-1980_wntx64\nx\SiemensNX.msi, 以及 .msi, 而 wix 則用來解開 SiemensNX-1980_wntx64\nx\VC_redist.x64.exe</p>
+<p>等兩項工具, UniExtract2 用來解開 SiemensNX-1980_wntx64\nx\SiemensNX.msi, 以及 .msi, 而 wix 則用來解開 SiemensNX-1980_wntx64\nx\VC_redist.x64.exe, 指令為:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">wix311-binaries\dark.exe vc_redist.x64.exe -x x64-extracted</pre>
+<p>表示要在 x64-extracted 目錄中取得 x64-extracted\AttachedContainer\packages\vcRuntimeMinimum_amd64\vc_runtimeMinimum_x64.msi 之後, 再利用 UniExtract2 解開所需的 dll 檔案後, 再放入 NXBIN 目錄.</p>
 <p>製作 Portable NX1980 的步驟請參考以下影片:</p>
 <p>
 <script>
@@ -164,17 +166,7 @@ var winkVideoData = {
 <!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
 <div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="./../cmsimde/static" data-varname="winkVideoData" height="630" muted="true" width="1008">
 <source src="./../downloads/w5_portable_nx1980/w5_portable_nx1980.mp4" type="video/mp4"/></video>
-<div class="winkVideoOverlayClass"></div>
-<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
-<div class="winkVideoControlBarProgressLeftClass"></div>
-<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
-<div class="winkVideoControlBarProgressRightClass"></div>
-<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
-<div class="winkVideoControlBarProgressThumbClass"></div>
-</div>
-<div class="winkVideoPlayOverlayClass"></div>
-</div>
-<br />Start_NX1980 << <a href='Start_NX1980.html'>Previous</a> <a href='NX1980_setup.html'>Next</a> >> NX1980_setup</div>
+</div><br />Start_NX1980 << <a href='Start_NX1980.html'>Previous</a> <a href='NX1980_setup.html'>Next</a> >> NX1980_setup</div>
         
     <!-- footer -->
       <div class="container">
