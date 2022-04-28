@@ -269,8 +269,16 @@ var winkVideoData2 = {
 <p><a href="https://ftp.ntou.edu.tw/ctan/info/gentle/gentle.pdf">https://ftp.ntou.edu.tw/ctan/info/gentle/gentle.pdf</a></p>
 <p><a href="http://tug.ctan.org/info/impatient/book.pdf">http://tug.ctan.org/info/impatient/book.pdf</a></p>
 <p><a href="https://texdoc.org/serve/TeXbyTopic.pdf/0">https://texdoc.org/serve/TeXbyTopic.pdf/0</a></p>
-<p></p>
-<h1>Assignments</h1>
+<h3>有關 TeX</h3>
+<p><a href="https://www.overleaf.com/learn/latex/Articles/What%27s_in_a_Name%3A_A_Guide_to_the_Many_Flavours_of_TeX">A Guide to the Many Flavours of TeX</a></p>
+<p style="padding-left: 30px;">解釋何謂 LaTeX, pdfTeX, pdfLaTeX, XeTeX, XeLaTeX, LuaTeX, and LuaLaTeX.</p>
+<p><a href="https://tug.org/tugboat/tb42-1/tb130knuth-tuneup21.pdf">The TeX tuneup of 2021</a></p>
+<p>XeLaTeX means using the LaTeX macro package with the XeTeX engine.</p>
+<p>LuaLaTeX means using the LaTeX macro package with the LuaTeX engine.</p>
+<p style="padding-left: 30px;"><a href="https://www.luatex.org/">https://www.luatex.org</a> </p>
+<p><a href="https://www.tug.org/texlive/">https://www.tug.org/texlive/</a> </p>
+<p><a href="https://miktex.org/">https://miktex.org/</a> </p>
+<p></p><h1>Assignments</h1>
 <p>協同產品設計實習課程學員評分要點:</p>
 <p>sustainable (可持續使用, 永續):</p>
 <p style="padding-left: 30px;">1 : capable of being sustained (可持續)</p>
@@ -739,9 +747,26 @@ var winkVideoData_w10_ssh = {
 <div class="winkVideoContainerClass" style="border: thin solid black; padding: 10px;"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData_w10_ssh" height="100%" muted="true" width="100%">
 <source src="/downloads/w10_ssh/w10_ssh.mp4" type="video/mp4"/></video></div>
 <h3>run_journal</h3>
+<p>run_journal.exe help:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">Usage: run_journal [ -pim ] [ -r=&lt;filename&gt;[,lang=&lt;lang&gt;][,format=&lt;format&gt;] ] [ -profile ] [ -allow_redo ] &lt;journal-file&gt; [ -args .... ]
+    Runs a journal file from the command line
+
+    -pim           Run the journal with NX connected to Teamcenter
+                   Any arguments after -pim that are not in the list below but are before
+                   the -args switch are assumed to be for setting up the Teamcenter session,
+                   examples are -u=&lt;user&gt;, -p=&lt;password&gt; and -g=&lt;group&gt;
+    -r=&lt;filename&gt;[,lang=&lt;lang&gt;][,format=&lt;format&gt;]
+                   Rerecord a new journal to the given file name
+                   &lt;lang&gt; must be vb, cpp, cs, java or py
+                   &lt;format&gt; must be ascii, utf8, unicode, or unicode_big_endian
+    -profile       Profile this journal's calls
+    -args ...      Pass the rest of the command line after this as
+                   an array of strings to Main in the journal file
+    -allow_redo    Enables redo, useful for tests but not for normal automation and
+                   takes some resources when enabled
+    -help          Prints this message</pre>
 <p>block_modified_on_site.py</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># nx_open_part.py
-# 導入 NXOpen
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 導入 NXOpen
 import NXOpen
 import NXOpen.UF
 import NXOpen.Gateway
