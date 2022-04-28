@@ -2,7 +2,7 @@
         <head>
         <title>CD_Guide</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -141,27 +141,114 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Applications << <a href='Applications.html'>Previous</a> <a href='Tic-Tat-Toe.html'>Next</a> >> Tic-Tat-Toe<br /><h1>Coppeliasim</h1>
-<p>根據 <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm</a> 中有關 simple format 的說明, 可直接將 uArm 機械手臂在 NX 中的零組件, 透過 NXOpen Python API 的程式轉為 CoppeliaSim 的 Scene hierarchy 組合狀態.</p>
-<p>如此便將 uArm 機械手臂各零組件參數化, 然後直接在 Brython 前端介面設定 uArm 機械手臂的設計參數, 經由 AJAX 將參數送至後端 Flask + NXOpen Python API 伺服器, 產生 uArm 機械手臂組合場景後, 再透過 <a href="https://www.coppeliarobotics.com/helpFiles/en/legacyRemoteApiOverview.htm">Legacy Python remote API</a> 或 <a href="https://www.coppeliarobotics.com/helpFiles/en/zmqRemoteApiOverview.htm">ZeroMQ Python remote API</a> 控制 uArm 機械手臂 (或利用 <a href="https://www.ensta-bretagne.fr/zerr/dokuwiki/doku.php?id=vrep:socket-com-with-robot">Socket 傳遞控制參數</a>), 並以客製化 image sensor 的<a href="https://forum.coppeliarobotics.com/viewtopic.php?t=3457">影像串流</a>從 Flask server 送至各協同成員的瀏覽器, 或採 <a href="https://www.coppeliarobotics.com/helpFiles/en/externalFrontEnd.htm">Web browser based frontend</a> 方式呈現控制流程.</p>
-<p><a href="https://www.york.ac.uk/media/electronic-engineering/welcome/Simulation%20Challenge%20-%20Python%20Scripting.pdf">https://www.york.ac.uk/media/electronic-engineering/welcome/Simulation%20Challenge%20-%20Python%20Scripting.pdf</a></p>
-<p><a href="http://hades.mech.northwestern.edu/index.php/Getting_Started_with_the_CoppeliaSim_Simulator">http://hades.mech.northwestern.edu/index.php/Getting_Started_with_the_CoppeliaSim_Simulator</a></p>
-<p><a href="https://www.doc.ic.ac.uk/~ajd/Robotics/RoboticsResources/questions1.pdf">https://www.doc.ic.ac.uk/~ajd/Robotics/RoboticsResources/questions1.pdf</a></p>
-<p><a href="https://github.com/stepjam/PyRep">https://github.com/stepjam/PyRep</a></p>
-<p><a href="https://www.diva-portal.org/smash/get/diva2:1569215/FULLTEXT02.pdf">https://www.diva-portal.org/smash/get/diva2:1569215/FULLTEXT02.pdf</a></p>
-<p><a href="https://github.com/abr/abr_control">https://github.com/abr/abr_control</a></p>
-<hr/>
-<p>利用 <a href="https://www.sympy.org">sympy</a> 根據 <a href="https://00873727922344666445.googlegroups.com/attach/286bbfb50ffde/MeArmPiTechnicalOverviewV0-1DRAFT.pdf?part=0.1&amp;view=1&amp;vt=ANaJVrGDe9LZ85pOQHyyD3YHg6RH_YMlaNxrwQbU1krMBmaDI6eM4g_K1qbkavpOFbSeHZMHSwN39Dn-VAQ9R8gXlPgNOu6lpwVM53o1SePKtQUe3UtGjEM">meArm Pi Technical Overview</a> 中的說明 (修正錯誤後), 解出 Inverse Kinematics 如下:</p>
-<p>當已知 manimpulator 端點的座標為 (x, y ,z) 時, 求 theta, ltheta (low arm link theta) 與 utheta (upper arm link theta). 利用 <a href="https://www.sympy.org">sympy</a> 之前必須先以 pip install sympy 安裝模組.</p>
-<p><a href="./../downloads/ik/mearm_ik_sympy.py">mearm_ik_sympy.py</a></p>
-<p>使用者可以設法在 CoppeliaSim meArm 場景中驗證上述推導是否正確, 並與 <a href="https://github.com/yorkhackspace/meArm">https://github.com/yorkhackspace/meArm</a> 中的控制運算進行比較.</p>
-<h4>CoppeliaSim 編譯:</h4>
-<p style="padding-left: 30px;"><a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EccOQ_vbC2FAqk59lpm3sMIB8L7T9hc1wKbT3dkz5Aa9MA?e=dLP7ql">CoppeliaSim 4.1.0 原始碼編譯專案</a> (登入 @gm OneDrive 後下載).</p>
-<p style="padding-left: 30px;"><a href="http://wcm.cycu.org:88/github/copsim410">CoppeliaSim 從 4.1.0 的 help files</a> (只能在系上以 IPv6 網路連線).</p>
-<p style="padding-left: 30px;"><a href="http://wcm.cycu.org:88/github/cad2021/content/Task7-1-1.html">CoppeliaSim 編譯說明 1</a> (只能在系上以 IPv6 網路連線).</p>
-<p style="padding-left: 30px;"><a href="http://wcm.cycu.org:88/github/cad2021/content/Compile%20CoppeliaSim.html">CoppeliaSim 編譯</a> (只能在系上以 IPv6 網路連線).</p>
-<p></p>
-<br />Applications << <a href='Applications.html'>Previous</a> <a href='Tic-Tat-Toe.html'>Next</a> >> Tic-Tat-Toe</div>
+    <div id="tipue_search_content">w10 任務 << <a href='w10 任務.html'>Previous</a> <a href='NX.html'>Next</a> >> NX<br /><h1>run_journal</h1>
+<p>block_modified_on_site.py</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 導入 NXOpen
+import NXOpen
+import NXOpen.UF
+import NXOpen.Gateway
+   
+def main():
+    # 取得目前開啟的工作階段
+    theSession = NXOpen.Session.GetSession()
+    theUfSession = NXOpen.UF.UFSession.GetUFSession()
+      
+    # 建立 ListingWindow
+    listWin= theSession.ListingWindow
+    # 開啟零件檔案
+    basePart1 = theSession.Parts.OpenBaseDisplay("C:/mdecycu/cd2022_guide/downloads/w11_ajax/block.prt")
+    workPart = theSession.Parts.Work
+    unit1 = workPart.UnitCollection.FindObject("MilliMeter")
+    # height
+    p7 = workPart.Expressions.FindObject("p7")
+    # width
+    p8 = workPart.Expressions.FindObject("p8")
+    # length
+    p9 = workPart.Expressions.FindObject("p9")
+    workPart.Expressions.EditWithUnits(p7, unit1, "30")
+    workPart.Expressions.EditWithUnits(p8, unit1, "60")
+    workPart.Expressions.EditWithUnits(p9, unit1, "90")
+    theSession.UpdateManager.DoUpdate(0)
+    #saveStatus1 = workPart.SaveAs("c:/tmp/block_new.prt")
+    #saveStatus1.Dispose()
+    # initialize list to hold bodies
+    theBodyTags = []
+   
+    for x in workPart.Bodies:
+        if x.IsSolidBody:
+            theBodyTags.append(x.Tag)
+      
+    # 準備輸出 ASCII 格式 STL 零件檔案
+    sTLCreator1 = theSession.DexManager.CreateStlCreator()
+    sTLCreator1.AutoNormalGen = True
+    sTLCreator1.ChordalTol = 0.08
+    sTLCreator1.AdjacencyTol = 0.08
+    sTLCreator1.OutputFile = "C:/mdecycu/cd2022_guide/downloads/w11_ajax/block_ascii.stl"
+    # Binary STL: NXOpen.STLCreatorOutputTypeEnum.Binary
+    sTLCreator1.OutputType = NXOpen.STLCreatorOutputTypeEnum.Text
+    # 已知 body1 命名
+    body1 = workPart.Bodies.FindObject("EXTRUDE(2)")
+    added1 = sTLCreator1.ExportSelectionBlock.Add(body1)
+    nXObject1 = sTLCreator1.Commit()
+    sTLCreator1.Destroy()
+  
+    # 開啟所建立的 ListingWindow
+    listWin.Open()
+    listWin.WriteLine("number of solid bodies: " + str(len(theBodyTags)))
+   
+    (massProps, Stats) = theUfSession.Modeling.AskMassProps3d(theBodyTags, len(theBodyTags), 1, 4, .03, 1, [0.99,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0])
+    listWin.WriteLine("units: kg, mm")
+    listWin.WriteLine("surface area: " + str(massProps[0]))
+    listWin.WriteLine("volume: " + str(massProps[1]*1E9))
+    # 在 ListingWindow 中寫入字串
+    listWin.WriteLine("Hello, NXOpen")
+    listWin.Close()
+     
+    # 將零件檔案 fit 之後, export 出 png 檔案
+    # 假如開啟 NX GUI 後執行 互動模式 1
+    '''
+    theUI = NXOpen.UI.GetUI()
+    imageExportBuilder1 = theUI.CreateImageExportBuilder()
+ 
+    custombackgroundcolor1 = [None] * 3
+    custombackgroundcolor1[0] = 1.0
+    custombackgroundcolor1[1] = 1.0
+    custombackgroundcolor1[2] = 1.0
+ 
+    imageExportBuilder1.SetCustomBackgroundColor(custombackgroundcolor1)
+    imageExportBuilder1.FileFormat = NXOpen.Gateway.ImageExportBuilder.FileFormats.Png
+    imageExportBuilder1.FileName = "C:/mdecycu/cd2022_guide/downloads/w11_ajax/block.png"
+ 
+    imageExportBuilder1.BackgroundOption = NXOpen.Gateway.ImageExportBuilder.BackgroundOptions.Original
+ 
+    imageExportBuilder1.EnhanceEdges = False
+    imageExportBuilder1.RegionMode = False
+    # fit view 後 commit export png
+    workPart.ModelingViews.WorkView.Fit()
+    nXObject6 = imageExportBuilder1.Commit()
+ 
+    imageExportBuilder1.Destroy()
+    
+    # 互動模式 2
+    # https://docs.plm.automation.siemens.com/data_services/resources/nx/11/nx_api/custom/en_US/nxopen_python_ref/NXOpen.UF.Disp.CreateImage.html?highlight=createimage
+    workPart.ModelingViews.WorkView.Fit()
+    disp = theUfSession.Disp
+    screenshotPath = "C:/mdecycu/cd2022_guide/downloads/w11_ajax/block"
+    png = NXOpen.UF.DispImageFormat.PNG
+    white = NXOpen.UF.DispBackgroundColor.WHITE
+    disp.CreateImage(screenshotPath, png, white)
+    '''
+    # 無 GUI 互動模式導出零件 .jpg
+    # https://docs.plm.automation.siemens.com/data_services/resources/nx/10/nx_api/en_US/custom/nxopen_python_ref/NXOpen.UF.Disp.BatchShade.html
+    workPart.ModelingViews.WorkView.Fit()
+    disp = theUfSession.Disp
+    screenshotPath = "C:/mdecycu/cd2022_guide/downloads/w11_ajax/block.jpg"
+    method = NXOpen.UF.DispShadeMethod.GOURAUD
+    disp.BatchShade(screenshotPath, 1920, 1080, method)
+      
+if __name__ == "__main__":
+    main()</pre>
+<p></p><br />w10 任務 << <a href='w10 任務.html'>Previous</a> <a href='NX.html'>Next</a> >> NX</div>
         
     <!-- footer -->
       <div class="container">
