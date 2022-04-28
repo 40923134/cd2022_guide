@@ -873,12 +873,22 @@ def main():
 if __name__ == "__main__":
     main()</pre>
 <p></p><h1>NX</h1>
+<p>多重啟動可攜程式與 NX:</p>
+<p>將各 NX 版本的啟動整合至不同的 start.bat 檔案中.</p>
+<p><img alt="" class="add_border" height="315" src="/images/multiple_nx_startup.png" width="300"/></p>
+<p>設定啟動 NX12 所需的環境變數:</p>
+<p><img caption="false" class="add_border" height="153" src="/images/nx12_startup_1.png" width="300"/></p>
+<p>設定認證用的伺服主機:</p>
+<p><img alt="" class="add_border" height="20" src="/images/nx12_startup_2.png" width="300"/></p>
+<p>使用英文介面, 並將啟動 NX 所需的指令搜尋路徑整合到 path:</p>
+<p><img alt="" class="add_border" height="127" src="/images/nx12_startup_3.png" width="300"/></p>
+<p>啟動 NX 所需的環境變數與指令搜尋路徑設定完成後, 利用 ugraf.exe 開啟 NX:</p>
+<p><img alt="" class="add_border" height="29" src="/images/nx12_startup_4.png" width="300"/></p>
 <p><a href="https://www.plm.automation.siemens.com/global/en/products/nx/">https://www.plm.automation.siemens.com/global/en/products/nx/</a></p>
 <p><a href="https://www.plm.automation.siemens.com/global/en/products/nx/nx-for-design.html">https://www.plm.automation.siemens.com/global/en/products/nx/nx-for-design.html</a></p>
 <p><a href="https://en.wikipedia.org/wiki/Siemens_NX">https://en.wikipedia.org/wiki/Siemens_NX</a></p>
 <p><a href="http://toolnotes.com/home/engineering-graphics/siemens-nx-topics/nx-tutorials-version-1855/">View Commands</a> (<a href="https://www.youtube.com/watch?v=GUaa97tALxE">Video</a>):</p>
-<p style="padding-left: 30px;">Zoom in and out<br/>    (roll mouse wheel)<br/>    MB2<br/>3D Orbit<br/>    (move mouse while holding in middle mouse wheel)<br/>    MB2<br/>Pan<br/>    (move mouse and right click button)<br/>    MB2 + MB3<br/>Twist view<br/>    MB2 + Slide along edges of screen<br/>Align view<br/>    F8</p>
-<h2>NX3</h2>
+<p style="padding-left: 30px;">Zoom in and out<br/>    (roll mouse wheel)<br/>    MB2<br/>3D Orbit<br/>    (move mouse while holding in middle mouse wheel)<br/>    MB2<br/>Pan<br/>    (move mouse and right click button)<br/>    MB2 + MB3<br/>Twist view<br/>    MB2 + Slide along edges of screen<br/>Align view<br/>    F8</p><h2>NX3</h2>
 <p><a href="http://wcm.cycu.org:88/nx3doc/index.html">NX3 Document</a> (for internal use only)</p>
 <p>因為 NX 從 NX10 之後才支援 NXOpen for Python, 在 NX3 環境希望利用 Python 編寫延伸程式, 可以透過 UGOpen C 將延伸程式編譯為 Python 可以呼叫執行的動態連結程式庫, 然後間接透過 Python 驅動 NX3 的零組件延伸應用.</p>
 <p>相關說明位於: <a href="https://github.com/mdecycu/cd2022_guide/tree/main/downloads/nx3_c_pyd">https://github.com/mdecycu/cd2022_guide/tree/main/downloads/nx3_c_pyd</a> (2004 年採用 <a href="https://netbeans.apache.org/">Netbean</a> 作為 IDE)</p>
