@@ -846,12 +846,19 @@ var winkVideoData_resolve_conflict = {
 <h4>模擬場景的 <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">XML 格式</a></h4>
 <p>CoppeliaSim 場景可以存為 exhaustive format 與 simple format 等兩種 <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">XML 格式</a>的純文字檔案. 意即使用者應該有機會可以根據這兩種 <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">XML 格式</a>中的語法, 透過程式方法建立所需的模擬場景.</p>
 <p>假如希望利用 Leo Editor 處理 CoppeliaSim <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">XML 格式</a>場景, 可以參考<a href="https://groups.google.com/g/leo-editor/c/kgwfUHJdM1s">這裡</a>的說明. 將 CoppeliaSim <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">XML 格式</a>的純文字文字場景 import 進入 Leo Editor 編輯環境.</p>
-<p>Leo Editor File -&gt; Import Files 可以導入 .simscene.xml 場景檔案, 但解讀 XML 節點的設定位於 Leo Editor 系統 Settings -&gt; LeoSettings.leo 檔案中的 @data import-xml-tags.</p>
+<p>Leo Editor File -&gt; Import Files 可以導入 .simscene.xml 場景檔案, 但解讀 XML 節點的設定位於 Leo Editor 系統 Settings -&gt; LeoSettings.leo 檔案中的 @data import-xml-tags. 下列設定以 CoppeliaSim, environment, dynamics, simulation, camera, dummy, shape 與 mesh 作為第一階節點 tags.</p>
 <p><img caption="false" height="347" src="/images/leoSettings.leo_import-xml-tags.png" width="600"/></p>
 <p>在上述 @data import-xml-tags 場景節點的設定下,  import MTB 機械手臂的 Leo Editor 畫面, 分別導入 simple 與 exhaustive 格式的場景.</p>
 <p><img alt="" height="261" src="/images/use_leo_import_simscene.xml.png" width="600"/></p>
-<p></p>
-<p></p><h1>NX</h1>
+<p>除了 Leo Editor 也可以使用 <a href="https://microsoft.github.io/XmlNotepad/">XmlNotepad</a> 編輯 XML 格式場景 (<a href="/downloads/XmlNotepad.7z">XmlNotepad.7z</a>).</p>
+<h3>XML</h3>
+<p>CoppeliaSim 檔案格式:</p>
+<p style="padding-left: 30px;"><a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm</a> </p>
+<p>UI 圖形介面格式:</p>
+<p style="padding-left: 30px;"><a href="https://www.coppeliarobotics.com/helpFiles/en/simUI-widgets.htm">https://www.coppeliarobotics.com/helpFiles/en/simUI-widgets.htm</a> </p>
+<p>Collada 輸出入插件:</p>
+<p style="padding-left: 30px;"><a href="https://www.coppeliarobotics.com/helpFiles/en/colladaPlugin.htm">https://www.coppeliarobotics.com/helpFiles/en/colladaPlugin.htm</a> </p>
+<p style="padding-left: 30px;">原始碼: <a href="https://github.com/CoppeliaRobotics/simExtCollada">https://github.com/CoppeliaRobotics/simExtCollada</a></p><h1>NX</h1>
 <p>多重啟動可攜程式與 NX:</p>
 <p>將各 NX 版本的啟動整合至不同的 start.bat 檔案中.</p>
 <p><img alt="" class="add_border" height="315" src="/images/multiple_nx_startup.png" width="300"/></p>

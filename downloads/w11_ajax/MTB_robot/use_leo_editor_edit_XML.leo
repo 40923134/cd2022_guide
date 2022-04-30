@@ -14,8 +14,18 @@
 <v t="leo.20220430151532.1"><vh>Imported Files</vh>
 <v t="leo.20220430151532.2"><vh>@auto Y:/mdecycu/cd2022_guide/downloads/w11_ajax/MTB_robot/two_link_slvs.simscene.xml</vh></v>
 </v>
-<v t="leo.20220430153307.1"><vh>Imported Files</vh>
+<v t="leo.20220430153307.1"><vh>Exhaustive format</vh>
 <v t="leo.20220430153307.2"><vh>@auto Y:/mdecycu/cd2022_guide/downloads/w11_ajax/MTB_robot/two_link_slvs_shaft_exhaustive.simscene.xml</vh></v>
+</v>
+<v t="leo.20220430210155.1"><vh>Simple format</vh>
+<v t="leo.20220430210155.2"><vh>@auto Y:/mdecycu/cd2022_guide/downloads/w11_ajax/MTB_robot/two_link_slvs_shaft_simple.simscene.xml</vh></v>
+</v>
+<v t="leo.20220430211656.1"><vh>add Shaft4 manually</vh>
+<v t="leo.20220430215347.1"><vh>手動加入第四軸</vh></v>
+<v t="leo.20220430211656.2"><vh>@auto Y:/mdecycu/cd2022_guide/downloads/w11_ajax/MTB_robot/two_link_slvs_shaft_simple4.simscene.xml</vh></v>
+</v>
+<v t="leo.20220430223759.1"><vh>ASCII link2 轉入</vh>
+<v t="leo.20220430223759.2"><vh>@auto Y:/mdecycu/cd2022_guide/downloads/w11_ajax/MTB_robot/link2_slvs_simple.simscene.xml</vh></v>
 </v>
 </vnodes>
 <tnodes>
@@ -111,5 +121,9 @@ dummy
 shape
 mesh</t>
 <t tx="leo.20220430153307.1"></t>
+<t tx="leo.20220430210155.1"></t>
+<t tx="leo.20220430211656.1"></t>
+<t tx="leo.20220430215347.1"></t>
+<t tx="leo.20220430223759.1"></t>
 </tnodes>
 </leo_file>
