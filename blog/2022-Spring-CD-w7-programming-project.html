@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>w7 程式專案</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="./" rel="canonical" />
+
+  <!-- Feed -->
+        <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="協同產品設計實習 Full Atom Feed" />
+          <link href="./feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="協同產品設計實習 Categories Atom Feed" />
+
+  <link href="./theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="./theme/css/code_blocks/tomorrow_night.css" rel="stylesheet">
+
+  
+    <link href="./theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+    <link href="./2022-Spring-CD-w7-programming-project.html" rel="canonical" />
+
+        <meta name="description" content="協同產品設計實習第七週執行機械手臂的物件取放實習">
+
+        <meta name="author" content="yen">
+
+        <meta name="tags" content="2022SpringCD">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="協同產品設計實習"/>
+<meta property="og:title" content="w7 程式專案"/>
+<meta property="og:description" content="協同產品設計實習第七週執行機械手臂的物件取放實習"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="./2022-Spring-CD-w7-programming-project.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2022-04-07 11:00:00+08:00"/>
+<meta property="article:modified_time" content="2022-04-13 20:13:55.182925+08:00"/>
+<meta property="article:author" content="./author/yen.html">
+<meta property="article:section" content="Programming"/>
+<meta property="article:tag" content="2022SpringCD"/>
+<meta property="og:image" content="./theme/images/post-bg.jpg">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "w7 程式專案",
+  "headline": "w7 程式專案",
+  "datePublished": "2022-04-07 11:00:00+08:00",
+  "dateModified": "2022-04-13 20:13:55.182925+08:00",
+  "author": {
+    "@type": "Person",
+    "name": "yen",
+    "url": "./author/yen.html"
+  },
+  "image": "./theme/images/post-bg.jpg",
+  "url": "./2022-Spring-CD-w7-programming-project.html",
+  "description": "協同產品設計實習第七週執行機械手臂的物件取放實習"
+}
+</script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "./../cmsimde/static/syntaxhighlighter/css/shCore.css";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "./../cmsimde/static/syntaxhighlighter/css/shThemeDefault.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+
+<!-- for LaTeX equations -->
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+    <!--
+
+              <li role="presentation"><a href="./pages/about/">About</a></li>
+      -->
+
+            <li><a href="./pages/about/index.html">About</span></a></li>
+            
+            <li><a href="./archives.html">Archives</span></a></li>
+            
+            <li><a href="./categories.html">Categories</span></a></li>
+            
+            <li><a href="./tags.html">Tags</span></a></li>
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="./index.html" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">w7 程式專案</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="./author/yen.html">Yen</a>
+            | <time datetime="週四 07 四月 2022">週四 07 四月 2022</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <span class="post-meta"> | Updated on 週三 13 四月 2022</span>
+            <div class="post-cover cover" style="background-image: url('./theme/images/post-bg.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+<section class="search">
+      <form class="navbar-search" action="./search.html">
+      <input type="text"  placeholder="Search" name="q" id="tipue_search_input" required>
+    </form>
+</section>
+
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <p>協同產品設計實習第七週執行機械手臂的物件取放實習</p>
+
+
+<!-- css and js for Wink3 -->
+<p><link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" /></p>
+<script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+
+<h2>cd 協同分組</h2>
+<p>2a 名單: <a href="https://mde.tw/studlist/2022spring/2a.txt">https://mde.tw/studlist/2022spring/2a.txt</a></p>
+<p>2b 名單: <a href="https://mde.tw/studlist/2022spring/2b.txt">https://mde.tw/studlist/2022spring/2b.txt</a></p>
+<p><a href="https://mde.tw/cd2022_guide/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/0999a227153ea9a20954e4b2b77f783337197627/w4_grp_src.py&amp;src2=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/0999a227153ea9a20954e4b2b77f783337197627/w4_grp_src2.py">2a 分組</a></p>
+<p><a href="https://mde.tw/cd2022_guide/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/507db6ddb7b5bcdd3027235761208b32ac93bcd0/w4_b_grp.py&amp;src2=https://gist.githubusercontent.com/mdecourse/e00a3b68d4defee1987d18cc998b377a/raw/507db6ddb7b5bcdd3027235761208b32ac93bcd0/w4_b_grp_src2.py">2b 分組</a></p>
+<p><a href="https://cad.onshape.com/documents/3c81d3f7fc38f5da16eef9ed/w/f6d4616f188bc9425608890c/e/08936ec436f9e9668efeaefd?renderMode=0&amp;uiState=6254c8ae6d93450dec4bb2b2">Onshape 中的 uArm 組立圖</a></p>
+<p><a href="https://localhost:9445/downloads/cd2022_uarm_nx12_imported.7z">cd2022_uarm_nx12_imported.7z</a></p>
+<p><a href="https://www.youtube.com/watch?v=GUaa97tALxE&amp;list=PLzEsJue49U_EMMv0eBo8MNJjJOq_WHCrl">分配 NX 教學影片</a></p>
+<p>以下影片說明如何利用 Leo Editor 編輯 config/pelican.leo 網誌檔案:</p>
+<script>
+var winkVideoData_pelican = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+</script>
+<!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="./../cmsimde/static" data-varname="winkVideoData_pelican" height="630" muted="true" width="1008">
+<source src="./../downloads/w6_blog/w6_blog.mp4" type="video/mp4"/></video>
+<div class="winkVideoOverlayClass"></div>
+<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
+<div class="winkVideoControlBarProgressLeftClass"></div>
+<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
+<div class="winkVideoControlBarProgressRightClass"></div>
+<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
+<div class="winkVideoControlBarProgressThumbClass"></div>
+</div>
+<div class="winkVideoPlayOverlayClass"></div>
+</div>
+
+<p>以下為第三週的課程教學影片:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/roJ3Bk44qO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h2>uarm 機械手臂</h2>
+<p><a href="https://www.ufactory.cc/pages/uarm">uarm</a> 是一組四個自由度的桌上型機械手臂, <a href="https://github.com/uArm-Developer">uarm developer</a> 倉儲提供許多與 <a href="https://www.ufactory.cc/pages/uarm">uarm</a> 相關的設計與應用資料.</p>
+<p>從 <a href="https://cdn.shopifycdn.net/s/files/1/0012/6979/2886/files/uArmSwiftPro_UP1300_3D.STEP?v=1601200945">UFACTORY uArm Swift Pro 3D Models</a> 可以下載 <a href="https://www.ufactory.cc/pages/uarm">uarm</a> 的 STEP 203 格式的檔案, 從而得知 <a href="https://www.ufactory.cc/pages/uarm">uarm</a> 是採用 SolidWorks 2014 設計繪製, 但其中的零件檔案以簡體中文命名, 採 <a href="https://en.wikipedia.org/wiki/GB_2312">GB2312</a> 編碼, 在 Windows code page 代號為 <a href="https://en.wikipedia.org/wiki/Code_page_936_(Microsoft_Windows)">936</a>.</p>
+<p>希望讀取 <a href="https://cdn.shopifycdn.net/s/files/1/0012/6979/2886/files/uArmSwiftPro_UP1300_3D.STEP?v=1601200945">UFACTORY uArm Swift Pro 3D Models</a> 中正確的簡體中文資料, 可以將 SciTE 中的 SciTEGlobal.properties code.page 設定從 <a href="https://zh.wikipedia.org/wiki/Unicode">65001</a> (UTF-8) 改為 <a href="https://en.wikipedia.org/wiki/Code_page_936_(Microsoft_Windows)">936</a>, 再將正確顯示的 <a href="https://en.wikipedia.org/wiki/GB_2312">GB2312</a> 編碼資料轉為 UTF-8 內容, 就可在 import 進入 Onshape 與 NX12 後, 的到正確的 <a href="https://cad.onshape.com/documents/3c81d3f7fc38f5da16eef9ed/w/f6d4616f188bc9425608890c/e/08936ec436f9e9668efeaefd?renderMode=0&amp;uiState=6254c8ae6d93450dec4bb2b2">Onshape 中的 uArm 組立圖</a> 以及 <a href="https://localhost:9445/downloads/cd2022_uarm_nx12_imported.7z">cd2022_uarm_nx12_imported.7z</a>.</p>
+<h2>如何建立可攜 NX1980 系統</h2>
+<p>製作 Portable NX1980 的步驟請參考以下影片:</p>
+<script>
+var winkVideoData_nx1980 = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+</script>
+<!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="./../cmsimde/static" data-varname="winkVideoData_nx1980" height="630" muted="true" width="1008">
+<source src="./../downloads/w5_portable_nx1980/w5_portable_nx1980.mp4" type="video/mp4"/></video>
+<div class="winkVideoOverlayClass"></div>
+<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
+<div class="winkVideoControlBarProgressLeftClass"></div>
+<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
+<div class="winkVideoControlBarProgressRightClass"></div>
+<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
+<div class="winkVideoControlBarProgressThumbClass"></div>
+</div>
+<div class="winkVideoPlayOverlayClass"></div>
+</div>
+
+<h2>NX1980 setup</h2>
+<p>以下影片說明如何設定 Journal 存檔格式, 關閉 Product Execellence Program, 並查驗版本與授權使用單位:</p>
+<script>
+var winkVideoData_nx1980_setup = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+</script>
+<!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="./../cmsimde/static" data-varname="winkVideoData_nx1980_setup" height="630" muted="true" width="1008">
+<source src="./../downloads/w5_nx_api/w5_nx_api.mp4" type="video/mp4"/></video>
+<div class="winkVideoOverlayClass"></div>
+<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
+<div class="winkVideoControlBarProgressLeftClass"></div>
+<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
+<div class="winkVideoControlBarProgressRightClass"></div>
+<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
+<div class="winkVideoControlBarProgressThumbClass"></div>
+</div>
+<div class="winkVideoPlayOverlayClass"></div>
+</div>
+
+<h2>Three.js</h2>
+<p><iframe frameborder="0" height="300" src="./../downloads/threejs_ex/index.html" width="300"></iframe></p>
+<p><iframe frameborder="0" height="300" src="./../downloads/threejs_ex/ex1/asm.html" width="300"></iframe></p>
+
+<h2>scarysim 專案</h2>
+<p>位於 <a href="https://github.com/mdecourse/scarysim">https://github.com/mdecourse/scarysim</a>, 採用  Qt5 與 OpenGL 編寫, 可以使用 qmake 進行編譯與連結.</p>
+<!-- 導入 winkVideoData 變數值 -->
+<script>
+var winkVideoData = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+</script>
+<!-- 將 mp4 檔案從 downloads 目錄取出播放 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="./../cmsimde/static" data-varname="winkVideoData" height="630" muted="true" width="1008">
+<source src="./../downloads/w7_pap/w7_pap.mp4" type="video/mp4"/></video>
+<div class="winkVideoOverlayClass"></div>
+<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
+<div class="winkVideoControlBarProgressLeftClass"></div>
+<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
+<div class="winkVideoControlBarProgressRightClass"></div>
+<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
+<div class="winkVideoControlBarProgressThumbClass"></div>
+</div>
+<div class="winkVideoPlayOverlayClass"></div>
+</div>
+
+<p>以上的 Wink 影片播放設定超文件:</p>
+<pre class="brush: html">
+<!-- css and js for Wink3 -->
+<link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
+<script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+<!-- 導入 winkVideoData 變數值 -->
+<script>
+var winkVideoData = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+</script>
+<!-- 將 mp4 檔案從 downloads 目錄取出播放 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="./../cmsimde/static" data-varname="winkVideoData" height="630" muted="true" width="1008">
+<source src="./../downloads/w7_pap/w7_pap.mp4" type="video/mp4"/></video>
+<div class="winkVideoOverlayClass"></div>
+<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
+<div class="winkVideoControlBarProgressLeftClass"></div>
+<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
+<div class="winkVideoControlBarProgressRightClass"></div>
+<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
+<div class="winkVideoControlBarProgressThumbClass"></div>
+</div>
+<div class="winkVideoPlayOverlayClass"></div>
+</div>
+</pre>
+<h2>simExtMtb 專案</h2>
+<p><a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EccOQ_vbC2FAqk59lpm3sMIB8L7T9hc1wKbT3dkz5Aa9MA?e=dLP7ql">CoppeliaSim 4.1.0 原始碼編譯專案</a> (登入 @gm OneDrive 後下載).</p>
+<p><a href="http://wcm.cycu.org:88/github/copsim410">CoppeliaSim 從 4.1.0 的 help files</a> (只能在系上以 IPv6 網路連線).</p>
+<p><a href="http://wcm.cycu.org:88/github/cad2021/content/Task7-1-1.html">CoppeliaSim 編譯說明 1</a>  (只能在系上以 IPv6 網路連線).</p>
+<p><a href="http://wcm.cycu.org:88/github/cad2021/content/Compile%20CoppeliaSim.html">CoppeliaSim 編譯</a> (只能在系上以 IPv6 網路連線).</p>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=w7 程式專案&amp;url=./2022-Spring-CD-w7-programming-project.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=./2022-Spring-CD-w7-programming-project.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=./2022-Spring-CD-w7-programming-project.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="./tag/2022springcd.html">2022SpringCD</a>                </aside>
+
+                <div class="clear"></div>
+
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <a class="post-nav-next" href="./w8-debug-40923136-cmsimde-repo.html">
+                        <section class="post-nav-teaser">
+                            <i class="ic ic-arrow-left"></i>
+                                <h2 class="post-nav-title">w8 debug 40923136 倉儲</h2>
+                            <p class="post-nav-excerpt">今天上課碰到一個看似詭異的問題: 將目前 40923136 cd2022 倉儲 clone 到近端後, 只要進入倉儲執行 cms.bat 就會同時開啟 Leo...</p>
+                        </section>
+                    </a>
+                    <a class="post-nav-prev" href="./2022-Spring-CD.html">
+                        <section class="post-nav-teaser">
+                            <i class="ic ic-arrow-right"></i>
+                                <h2 class="post-nav-title">2022 Spring CD 課程</h2>
+                            <p class="post-nav-excerpt">2022 Spring 協同產品設計實習.</p>
+                        </section>
+                    </a>
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+  
+  <script type="text/javascript" src="./theme/js/script.js"></script>
+
+ 
+
+
+</body>
+</html>

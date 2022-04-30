@@ -1,0 +1,212 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>CD_Guide</title>
+        <meta charset="utf-8">
+<meta property="head" content="H2">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <!-- for Wink3 -->
+        <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
+        <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushRust.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container-fluid'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>cd2022_guide 協同產品設計實習課程導引</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">cd2022_guide 協同產品設計實習課程導引</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li class='has-children'><a href='IPv6.html'>IPv6</a><ul class='dropdown'><li><a href='template and SSH.html'>template and SSH</a></li></ul><li class='has-children'><a href='Grouping.html'>Grouping</a><ul class='dropdown'><li><a href='Pull requests.html'>Pull requests</a></li></ul><li><a href='Revealjs.html'>Revealjs</a><li><a href='Meeting.html'>Meeting</a><li class='has-children'><a href='TEX and LaTeX.html'>TEX and LaTeX</a><ul class='dropdown'><li><a href='有關 TeX.html'>有關 TeX</a></li></li></ul></ul><li class='has-children'><a href='Assignments.html'>Assignments</a><ul class='dropdown'><li><a href='各週任務.html'>各週任務</a><li><a href='w6 任務.html'>w6 任務</a><li class='has-children'><a href='w7 任務.html'>w7 任務</a><ul class='dropdown'><li><a href='w7_summary.html'>w7_summary</a></li></ul><li class='has-children'><a href='w8 任務.html'>w8 任務</a><ul class='dropdown'><li><a href='uarm 主體零件.html'>uarm 主體零件</a><li><a href='Spur Gear.html'>Spur Gear</a><li><a href='Block UI Styler.html'>Block UI Styler</a></li></ul><li class='has-children'><a href='w10 任務.html'>w10 任務</a><ul class='dropdown'><li><a href='run_journal.html'>run_journal</a></li></li></ul></ul><li class='has-children'><a href='NX.html'>NX</a><ul class='dropdown'><li><a href='NX3.html'>NX3</a><li class='has-children'><a href='NX12.html'>NX12</a><ul class='dropdown'><li><a href='NX12_API.html'>NX12_API</a></li></ul><li class='has-children'><a href='NX1980.html'>NX1980</a><ul class='dropdown'><li><a href='Start_NX1980.html'>Start_NX1980</a><li><a href='Portable NX1980.html'>Portable NX1980</a><li><a href='NX1980_setup.html'>NX1980_setup</a><li><a href='NXOpen.html'>NXOpen</a><li><a href='UGOpen.html'>UGOpen</a></li></ul><li><a href='NX2008.html'>NX2008</a><li class='has-children'><a href='Research.html'>Research</a><ul class='dropdown'><li><a href='Python API.html'>Python API</a><li><a href='AJAX.html'>AJAX</a></li></li></ul></ul><li class='has-children'><a href='Applications.html'>Applications</a><ul class='dropdown'><li><a href='Coppeliasim.html'>Coppeliasim</a><li><a href='Tic-Tat-Toe.html'>Tic-Tat-Toe</a><li><a href='Threejs.html'>Threejs</a></li></ul><li class='has-children'><a href='run.html'>run</a><ul class='dropdown'><li><a href='Brython.html'>Brython</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">Applications << <a href='Applications.html'>Previous</a> <a href='Tic-Tat-Toe.html'>Next</a> >> Tic-Tat-Toe<br /><h1>Coppeliasim</h1>
+<p>根據 <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm</a> 中有關 simple format 的說明, 可直接將 uArm 機械手臂在 NX 中的零組件, 透過 NXOpen Python API 的程式轉為 CoppeliaSim 的 Scene hierarchy 組合狀態.</p>
+<p>如此便將 uArm 機械手臂各零組件參數化, 然後直接在 Brython 前端介面設定 uArm 機械手臂的設計參數, 經由 AJAX 將參數送至後端 Flask + NXOpen Python API 伺服器, 產生 uArm 機械手臂組合場景後, 再透過 <a href="https://www.coppeliarobotics.com/helpFiles/en/legacyRemoteApiOverview.htm">Legacy Python remote API</a> 或 <a href="https://www.coppeliarobotics.com/helpFiles/en/zmqRemoteApiOverview.htm">ZeroMQ Python remote API</a> 控制 uArm 機械手臂 (或利用 <a href="https://www.ensta-bretagne.fr/zerr/dokuwiki/doku.php?id=vrep:socket-com-with-robot">Socket 傳遞控制參數</a>), 並以客製化 image sensor 的<a href="https://forum.coppeliarobotics.com/viewtopic.php?t=3457">影像串流</a>從 Flask server 送至各協同成員的瀏覽器, 或採 <a href="https://www.coppeliarobotics.com/helpFiles/en/externalFrontEnd.htm">Web browser based frontend</a> 方式呈現控制流程.</p>
+<p><a href="https://www.york.ac.uk/media/electronic-engineering/welcome/Simulation%20Challenge%20-%20Python%20Scripting.pdf">https://www.york.ac.uk/media/electronic-engineering/welcome/Simulation%20Challenge%20-%20Python%20Scripting.pdf</a></p>
+<p><a href="http://hades.mech.northwestern.edu/index.php/Getting_Started_with_the_CoppeliaSim_Simulator">http://hades.mech.northwestern.edu/index.php/Getting_Started_with_the_CoppeliaSim_Simulator</a></p>
+<p><a href="https://www.doc.ic.ac.uk/~ajd/Robotics/RoboticsResources/questions1.pdf">https://www.doc.ic.ac.uk/~ajd/Robotics/RoboticsResources/questions1.pdf</a></p>
+<p><a href="https://github.com/stepjam/PyRep">https://github.com/stepjam/PyRep</a></p>
+<p><a href="https://www.diva-portal.org/smash/get/diva2:1569215/FULLTEXT02.pdf">https://www.diva-portal.org/smash/get/diva2:1569215/FULLTEXT02.pdf</a></p>
+<p><a href="https://github.com/abr/abr_control">https://github.com/abr/abr_control</a></p>
+<hr/>
+<p>利用 <a href="https://www.sympy.org">sympy</a> 根據 <a href="https://00873727922344666445.googlegroups.com/attach/286bbfb50ffde/MeArmPiTechnicalOverviewV0-1DRAFT.pdf?part=0.1&amp;view=1&amp;vt=ANaJVrGDe9LZ85pOQHyyD3YHg6RH_YMlaNxrwQbU1krMBmaDI6eM4g_K1qbkavpOFbSeHZMHSwN39Dn-VAQ9R8gXlPgNOu6lpwVM53o1SePKtQUe3UtGjEM">meArm Pi Technical Overview</a> 中的說明 (修正錯誤後), 解出 Inverse Kinematics 如下:</p>
+<p>當已知 manimpulator 端點的座標為 (x, y ,z) 時, 求 theta, ltheta (low arm link theta) 與 utheta (upper arm link theta). 利用 <a href="https://www.sympy.org">sympy</a> 之前必須先以 pip install sympy 安裝模組.</p>
+<p><a href="./../downloads/ik/mearm_ik_sympy.py">mearm_ik_sympy.py</a></p>
+<p>使用者可以設法在 CoppeliaSim meArm 場景中驗證上述推導是否正確, 並與 <a href="https://github.com/yorkhackspace/meArm">https://github.com/yorkhackspace/meArm</a> 中的控制運算進行比較.</p>
+<h4>CoppeliaSim 編譯:</h4>
+<p style="padding-left: 30px;"><a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EccOQ_vbC2FAqk59lpm3sMIB8L7T9hc1wKbT3dkz5Aa9MA?e=dLP7ql">CoppeliaSim 4.1.0 原始碼編譯專案</a> (登入 @gm OneDrive 後下載).</p>
+<p style="padding-left: 30px;"><a href="http://wcm.cycu.org:88/github/copsim410">CoppeliaSim 從 4.1.0 的 help files</a> (只能在系上以 IPv6 網路連線).</p>
+<p style="padding-left: 30px;"><a href="http://wcm.cycu.org:88/github/cad2021/content/Task7-1-1.html">CoppeliaSim 編譯說明 1</a> (只能在系上以 IPv6 網路連線).</p>
+<p style="padding-left: 30px;"><a href="http://wcm.cycu.org:88/github/cad2021/content/Compile%20CoppeliaSim.html">CoppeliaSim 編譯</a> (只能在系上以 IPv6 網路連線).</p>
+<p></p>
+<br />Applications << <a href='Applications.html'>Previous</a> <a href='Tic-Tat-Toe.html'>Next</a> >> Tic-Tat-Toe</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
