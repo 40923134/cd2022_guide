@@ -9,12 +9,19 @@
 <v t="leo.20220430224433.2"><vh>自行設定 import-xml-tags</vh></v>
 <v t="leo.20220430234455.1"><vh>@settings</vh>
 <v t="leo.20220430234455.2"><vh>@data qt-gui-plugin-style-sheet</vh></v>
-<v t="leo.20220430234229.1"><vh>@data import-xml-tags</vh></v>
+<v t="leo.20220501084930.1"><vh>只列出基本 tags</vh></v>
+<v t="leo.20220430234229.1"><vh>@@data import-xml-tags</vh></v>
+<v t="leo.20220501084907.1"><vh>以下為所有 simple xml 的 tags</vh></v>
+<v t="leo.20220501084849.1"><vh>@data import-xml-tags</vh></v>
 <v t="leo.20220430234455.3"><vh>@string initial_split_orientation = horizontal</vh></v>
 </v>
+<v t="leo.20220501085129.1"><vh>列出 xml 檔案中所有 tags</vh></v>
 <v t="leo.20220430224436.1"><vh>linked Link2 &lt;mesh&gt; (two_link_slvs_shaft_simple.simscene.xml)</vh></v>
-<v t="leo.20220430235721.1"><vh>Imported Files</vh>
+<v t="leo.20220430235721.1"><vh>基本 tags 解讀</vh>
 <v t="leo.20220430235721.2"><vh>@auto Y:/mdecycu/cd2022_guide/downloads/w11_ajax/MTB_robot/two_link_slvs_shaft_simple.simscene.xml</vh></v>
+</v>
+<v t="leo.20220501085012.1"><vh>所有 tags 解讀</vh>
+<v t="leo.20220501085012.2"><vh>@auto Y:/mdecycu/cd2022_guide/downloads/w11_ajax/MTB_robot/two_link_slvs_shaft_simple.simscene.xml</vh></v>
 </v>
 </vnodes>
 <tnodes>
@@ -136,5 +143,364 @@ QLineEdit#editorLabel {
 <t tx="leo.20220430234455.3">horizontal: body pane to the left
 vertical: body pane on the botton</t>
 <t tx="leo.20220430235721.1"></t>
+<t tx="leo.20220501084849.1">perspectiveMode
+oldfriction
+a1frictionmaxforce
+a2frictionloss
+down
+maxForce
+clippingPlanesEnabled
+constraintlinearkineticloss
+camera
+filetype
+visionSensorsEnabled
+mesh
+compliance
+primitive
+constraintangulardamping
+notDynamic
+linkedDummy
+sticky
+cannotDelete
+fog
+showContactPoints
+range
+collidable
+wireframe
+autoshrinkconvex
+seclinearaxisfriction
+prgFlavor
+autosleep
+usenondefaultcollisionmarginconvex
+maxcontacts
+p2stiffness
+primangulararaxisfrictionmodel
+p2loss
+primangularaxisslip
+a0loss
+seclinearaxisfrictionmodel
+vertices
+a2stiffness
+primaxisvectory
+newton
+engineVersion
+localObjectSpecialProperty
+initialAngularVelocity
+notShowAsInsideModel
+detectable
+primlinearaxisslip
+bounce
+name
+ignoredByViewFitting
+p0damping
+a1frictioncoeff
+constant
+respondable
+objectColor
+laserDetectable
+restitutionthreshold
+proximitySensorsEnabled
+a1damping
+localFrame
+linkType
+seclinearaxisstaticfrictionscale
+springMode
+frictionenabledbc
+skinthickness
+modelAcknowledgement
+dependencyoffset
+sphericalEuler
+principalMomentOfInertia
+angulardrag
+bullet
+realTime
+extensionString
+selectModelBaseInstead
+measurable
+primlinearaxisfriction
+secangularaxisslip
+notReset
+removeNewObjectsAtEnd
+prgVer
+ik
+startSleeping
+capacitiveDetectable
+quadratic
+notMeasurable
+modelBase
+contactmergetolerance
+startEnd
+p1stiffness
+secangularaxisslide
+p2frictioncoeff
+screwPitch
+fullinternalscaling
+primlinearaxisslide
+p0stiffness
+cannotDeleteDuringSimulation
+p1frictionmaxforce
+dependencyfactor
+simulationMode
+ode
+prgRev
+p2damping
+up
+kineticfriction
+a2frictionmaxforce
+settings
+collectionSelfCollisionIndicator
+ambientLight
+primlinearaxisstaticfrictionscale
+lowerlimitrestitution
+upperlimitstiffness
+materialuniqueid
+hierarchyCollapsed
+p0frictioncoeff
+joint
+backgroundColor
+seclinearaxisslip
+hierarchyColorIndex
+renderable
+quickstep
+softerp
+staticfriction
+secangularaxisstaticfrictionscale
+lowerlimitstiffness
+linear
+respondableMask
+autoslip
+a0frictioncoeff
+acknowledgment
+dynamicsEnabled
+primaxisvectorx
+pureshapesasconvex
+catchUpIfLate
+p1frictioncoeff
+a1stiffness
+a1frictionloss
+position
+notRenderable
+linkedDummyAlias
+spotExponent
+angulardamping
+dependentobjectid
+simulation
+primangularaxisslide
+scriptsInactive
+visibleLayers
+density
+convexshapesasrandom
+ikEnabled
+layer
+resetAtEnd
+dummy
+environment
+enabled
+trackedObjectAlias
+material
+pauseAtError
+object
+CoppeliaSim
+normalcfm
+lightIsActive
+normalangularaxisslide
+selectInvisible
+secangularaxisfriction
+motorfrictionenabled
+secmangulararaxisfrictionmodel
+attenuationFactors
+simulationPassesPerRendering
+upperVelocityLimit
+upperlimitdamping
+indices
+notDetectable
+damping
+randomseed
+normangaxissameasprimangaxis
+size
+lockInVelocityControl
+motorEnabled
+light
+primaxisvectorz
+p1loss
+setToDynamicIfGetsParent
+a0damping
+dynamics
+notRespondable
+constraintlinearcompliance
+specular
+autosleepsteplivethreshold
+proportionalmotorfriction
+xmlSerializationNb
+constraintangularkineticloss
+distanceCalculationsEnabled
+stepsize
+objectid
+autosleepangularspeedthreshold
+lowerlimitdamping
+autoangulardampingtensionratio
+culling
+inductiveDetectable
+primangularaxisfriction
+simulationTimeToPause
+notVisible
+depthInvisible
+localModelProperty
+switches
+restitution
+ultrasonicDetectable
+type
+engines
+settingsMode
+cfm
+sizes
+nondefaultcollisionmargingfactorconvex
+localInertiaFrame
+pauseAtTime
+p2frictionmaxforce
+usenondefaultcollisionmargin
+constraintlineardamping
+initialLinearVelocity
+adhesiveforce
+randomshapesasterrain
+targetPosition
+constraintangularcompliance
+p1frictionloss
+internalscalingfactor
+a0stiffness
+mirrorsEnabled
+shapeTexturesEnabled
+p2frictionloss
+lowerlimitmaxforce
+cutoffAngle
+softcfm
+euler
+a2frictioncoeff
+static
+seclinearaxisslide
+a0frictionloss
+a2damping
+common
+friction
+frictionproportionalbc
+highjointaccuracy
+dependency
+autosleepangularaccelthreshold
+shape
+dependentJoint
+p1damping
+cyclic
+lineardrag
+normalangularaxisstaticfrictionscale
+collisionmarginfactor
+lineardamping
+primangularaxisstaticfrictionscale
+contacttolerance
+compound
+minPosition
+autosleeplinearaccelthreshold
+altName
+a0frictionmaxforce
+a1loss
+diameter
+nondefaultcollisionmargingfactor
+controlLoopEnabled
+fastmoving
+orthoViewSize
+pidValues
+weight
+kcValues
+constraintsolvertype
+offset_m_or_rad
+a2loss
+mult_m_or_rad
+localObjectProperty
+upperlimitrestitution
+constraintsolvingiterations
+relaxationenabledbc
+p0frictionmaxforce
+normalangularaxisfriction
+color
+engine
+fudgefactor
+emission
+linearvelocitydamping
+collisionDetectionsEnabled
+infraredDetectable
+seclinaxissameasprimlinaxis
+autoangulardamping
+childOrder
+selectable
+realTimeCoefficient
+angularvelocitydamping
+shadingAngle
+clippingPlanes
+gravity
+alias
+motorconstraintfrictioncoeff
+erp
+hybridMode
+multithreading
+targetVelocity
+motorconstraintfrictionmaxforce
+viewAngle
+stoperp
+autosleeplinearspeedthreshold
+stopcfm
+mode
+exactsolver
+secangaxissameasprimangaxis
+notCollidable
+avoidBlocking
+mainCamera
+ambientDiffuse
+normalmangulararaxisfrictionmodel
+length
+dontShowAsInsideModel
+normalangularaxisslip
+motorconstraintfrictionloss
+dependentJointAlias
+p0frictionloss
+vortex
+mass
+p0loss
+primlinearaxisfrictionmodel
+trackedObject
+maxStepSize
+upperlimitmaxforce
+simulationTimeStep</t>
+<t tx="leo.20220501084907.1"></t>
+<t tx="leo.20220501084930.1"></t>
+<t tx="leo.20220501085012.1"></t>
+<t tx="leo.20220501085129.1">@language python
+# from https://stackoverflow.com/questions/29596584/getting-a-list-of-xml-tags-in-file-using-xml-etree-elementtree
+import xml.etree.ElementTree as ET
+
+def leo_print(x):
+    try:
+        print(x)
+    except:
+        g.es(x)
+
+# load and parse the file
+xmlTree = ET.parse('two_link_slvs_shaft_simple.simscene.xml')
+
+elemList = []
+
+for elem in xmlTree.iter():
+    elemList.append(elem.tag)
+
+# now I remove duplicities - by convertion to set and back to list
+elemList = list(set(elemList))
+
+# Just printing out the result
+try:
+    print(elemList)
+except:
+    # echo string
+    g.es(elemList)
+
+for i in elemList:
+    leo_print(i)</t>
 </tnodes>
 </leo_file>
