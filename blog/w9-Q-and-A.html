@@ -42,7 +42,7 @@
 
     <link href="./w9-Q-and-A.html" rel="canonical" />
 
-        <meta name="description" content="Windows 環境中還不會使用 SSH push github 版本 利用 SSH 協定推送 Github 版本的做法其實很簡單, 共有四個階段: 啟動可攜時設定 GIT_SSH 變數 將 OpenSSH 格式的公鑰送到 Github 讓 Putty 可以上網且...">
+        <meta name="description" content="利用 SSH 協定推送 Github 版本的做法其實很簡單, 共有四個階段:">
 
         <meta name="author" content="yen">
 
@@ -54,12 +54,12 @@
 <!-- Open Graph -->
 <meta property="og:site_name" content="協同產品設計實習"/>
 <meta property="og:title" content="Q and A"/>
-<meta property="og:description" content="Windows 環境中還不會使用 SSH push github 版本 利用 SSH 協定推送 Github 版本的做法其實很簡單, 共有四個階段: 啟動可攜時設定 GIT_SSH 變數 將 OpenSSH 格式的公鑰送到 Github 讓 Putty 可以上網且..."/>
+<meta property="og:description" content="利用 SSH 協定推送 Github 版本的做法其實很簡單, 共有四個階段:"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="./w9-Q-and-A.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2022-04-21 11:00:00+08:00"/>
-<meta property="article:modified_time" content="2022-04-21 21:29:38.644881+08:00"/>
+<meta property="article:modified_time" content="2022-05-01 19:11:27.582049+08:00"/>
 <meta property="article:author" content="./author/yen.html">
 <meta property="article:section" content="Programming"/>
 <meta property="article:tag" content="2022SpringCD"/>
@@ -74,7 +74,7 @@
   "name": "Q and A",
   "headline": "Q and A",
   "datePublished": "2022-04-21 11:00:00+08:00",
-  "dateModified": "2022-04-21 21:29:38.644881+08:00",
+  "dateModified": "2022-05-01 19:11:27.582049+08:00",
   "author": {
     "@type": "Person",
     "name": "yen",
@@ -82,7 +82,7 @@
   },
   "image": "./theme/images/post-bg.jpg",
   "url": "./w9-Q-and-A.html",
-  "description": "Windows 環境中還不會使用 SSH push github 版本 利用 SSH 協定推送 Github 版本的做法其實很簡單, 共有四個階段: 啟動可攜時設定 GIT_SSH 變數 將 OpenSSH 格式的公鑰送到 Github 讓 Putty 可以上網且..."
+  "description": "利用 SSH 協定推送 Github 版本的做法其實很簡單, 共有四個階段:"
 }
 </script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
@@ -204,7 +204,7 @@ init_mathjax();
             | <time datetime="週四 21 四月 2022">週四 21 四月 2022</time>
         </span>
         <!-- TODO : Modified check -->
-            <span class="post-meta"> | Updated on 週四 21 四月 2022</span>
+            <span class="post-meta"> | Updated on 週日 01 五月 2022</span>
             <div class="post-cover cover" style="background-image: url('./theme/images/post-bg.jpg')">
       </div>
     </header>
@@ -224,7 +224,10 @@ init_mathjax();
         <article class="post">
         <div class="inner">
             <section class="post-content">
-                <h2>Windows 環境中還不會使用 SSH push github 版本</h2>
+                <p>利用 SSH 協定推送 Github 版本的做法其實很簡單, 共有四個階段:</p>
+
+
+<h2>Windows 環境以 SSH 執行 git push</h2>
 <p>利用 SSH 協定推送 Github 版本的做法其實很簡單, 共有四個階段:</p>
 <ul>
 <li>啟動可攜時設定 GIT_SSH 變數</li>
@@ -232,8 +235,6 @@ init_mathjax();
 <li>讓 Putty 可以上網且 Session 連結到近端的私鑰</li>
 <li>確定近端倉儲的 .git/config 檔案中轉為採 SSH 進行連線</li>
 </ul>
-
-
 <p>上述在 Windows 環境中透過 Putty 以 SSH 推送改版資料到 Github 的四個階段, 只有將 Putty 設定的 session 放入電腦 registry 的部分比較容易發生問題, 因為電腦輔助設計室中的電腦帶有防寫卡, 重新開機後 registry 會重置. 因此比較建立透過設定完成的 .reg 在每次提交推送之前, 將 session 設定改為自己的設定. 詳細說明請參考 <a href="https://mde.tw/wcm2022_guide/content/Token%20and%20SSH.html">https://mde.tw/wcm2022_guide/content/Token%20and%20SSH.html</a></p>
 <h2>Pelican Blog 的問題</h2>
 <p>pelican markdown -o blog -s local_publishconf.py</p>

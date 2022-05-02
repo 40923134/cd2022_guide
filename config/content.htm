@@ -841,6 +841,33 @@ def main():
       
 if __name__ == "__main__":
     main()</pre><h2>w11 任務</h2>
+<p>本週將要進行兩項任務, 第一是確認各分組能夠有效在組長的分組倉儲中, 以非同步協同的方式進行 uArm 機械手臂場景的建置與操控, 第二則是從 CoppeliaSim 的兩種 <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">XML 檔案格式</a>, 了解如何透過程式方法建立 uArm 機械手臂場景.</p>
+<p>w11-1 任務:</p>
+<p style="padding-left: 30px;">請各組組員在第一節課堂時段, 以每兩人一小組的方式, 在組長帳號下的分組倉儲中的同一網頁 (標題為 w11s1 ~w11s4) 加入個人 w8-w10 協同設計過程所負責的項目內容與心得. 過程中請參考下列 Wink 影片解決可能產生的衝突, 最後並將 git pull 至 acp 過程的操作, 建立 Wink 影片後, 以組員為單位嵌入個人負責的協同網頁中.</p>
+<p>w11-2 任務:</p>
+<ol>
+<li>請自行搜尋 STL 檔案中的 ASCII 與 Binary 格式, 舉例說明這兩種零件檔案格式如何定義?</li>
+<li>請利用 MTB 機械手臂中的 Link2 零件檔案為例, 分別在 Solvespace、NX 與 Onshape 中建立 Link2 零件檔案後, 分別以 Binary 與 ASCII 格式轉出 STL 檔案, 若轉出的 STL 為 Binary 格式, 則請設法以 Python 程式轉為 ASCII 格式, 反之, 若轉出的 STL 為 ASCII 格式, 也請設法以 Python 程式轉為 Binary 格式.</li>
+<li>請試著將 Link2 零件檔案轉入 Coppeliasim 後, 分別以兩種 XML 格式轉出, 並以 Leo Editor 導入後比較其內容差異. CoppeliaSim 兩種 XML 格式中的 tags, 可利用下列檔案讀取:</li>
+</ol>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># from https://stackoverflow.com/questions/29596584/getting-a-list-of-xml-tags-in-file-using-xml-etree-elementtree
+import xml.etree.ElementTree as ET
+# load and parse the file
+xmlTree = ET.parse('two_link_slvs_shaft_simple.simscene.xml')
+
+elemList = []
+
+for elem in xmlTree.iter():
+    elemList.append(elem.tag)
+
+# now I remove duplicities - by convertion to set and back to list
+elemList = list(set(elemList))
+
+# Just printing out the result
+print(elemList)
+
+for i in elemList:
+    print(i)</pre>
 <h4>解決協同設計流程中的倉儲衝突</h4>
 <p>當各組學員對組長帳號下的分組倉儲具備協同管理權限後, 各學員可以 git 採非同步協同設計, 對組長帳號下的分組倉儲進行改版, 其間不免要設法以手動方式解決 config/content.htm 動態超文件中的衝突.</p>
 <p>以下影片就是利用動態網頁系統中的 Search 與 Edit All 設法找出帶有衝突起點、中線與衝突終點的超文件範圍, 然後根據協同設計整體需求解決衝突後, 新增、提交並推送新版本.</p>
@@ -868,15 +895,24 @@ var winkVideoData_resolve_conflict = {
 <p><img alt="" height="261" src="/images/use_leo_import_simscene.xml.png" width="600"/></p>
 <p>除了 Leo Editor 也可以使用 <a href="https://microsoft.github.io/XmlNotepad/">XmlNotepad</a> 編輯 XML 格式場景 (<a href="/downloads/XmlNotepad.7z">XmlNotepad.7z</a>).</p><h3>XML</h3>
 <p>CoppeliaSim 檔案格式:</p>
-<p style="padding-left: 30px;"><a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm</a> </p>
+<p style="padding-left: 30px;"><a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm</a></p>
 <p>UI 圖形介面格式:</p>
-<p style="padding-left: 30px;"><a href="https://www.coppeliarobotics.com/helpFiles/en/simUI-widgets.htm">https://www.coppeliarobotics.com/helpFiles/en/simUI-widgets.htm</a> </p>
+<p style="padding-left: 30px;"><a href="https://www.coppeliarobotics.com/helpFiles/en/simUI-widgets.htm">https://www.coppeliarobotics.com/helpFiles/en/simUI-widgets.htm</a></p>
 <p>Collada 輸出入插件:</p>
-<p style="padding-left: 30px;"><a href="https://www.coppeliarobotics.com/helpFiles/en/colladaPlugin.htm">https://www.coppeliarobotics.com/helpFiles/en/colladaPlugin.htm</a> </p>
+<p style="padding-left: 30px;"><a href="https://www.coppeliarobotics.com/helpFiles/en/colladaPlugin.htm">https://www.coppeliarobotics.com/helpFiles/en/colladaPlugin.htm</a></p>
 <p style="padding-left: 30px;">原始碼: <a href="https://github.com/CoppeliaRobotics/simExtCollada">https://github.com/CoppeliaRobotics/simExtCollada</a></p>
 <p><a href="https://wiki.ros.org/urdf">URDF</a> 輸入插件:</p>
 <p style="padding-left: 30px;"><a href="https://www.coppeliarobotics.com/helpFiles/en/urdfPlugin.htm">https://www.coppeliarobotics.com/helpFiles/en/urdfPlugin.htm</a> </p>
-<p style="padding-left: 30px;">原始碼: <a href="https://github.com/CoppeliaRobotics/simExtURDF">https://github.com/CoppeliaRobotics/simExtURDF</a></p><h1>NX</h1>
+<p style="padding-left: 30px;">原始碼: <a href="https://github.com/CoppeliaRobotics/simExtURDF">https://github.com/CoppeliaRobotics/simExtURDF</a></p>
+<h3>STL</h3>
+<p><a href="https://github.com/proverbialsunrise/pySTL">https://github.com/proverbialsunrise/pySTL</a> 是採 Python2 編寫的 STL 零件檔案編輯程式, 改為 Python3 格式後的主要程式碼為 <a href="/downloads/w11_ajax/MTB_robot/stl_project/pySTL/pySTL.py">pySTL.py</a>, 而應用範例程式則為 <a href="/downloads/w11_ajax/MTB_robot/stl_project/pySTL/sample.py">sample.py</a>.</p>
+<p>由於利用 CoppeliaSim 中的 XML 檔案格式建立場景, 需要編修對應的零件 STL 檔案, 並根據場景組件的樹狀結構建立動態模擬系統. 此處將設法利用 pySTL 編輯從 Solvespace、NX 與 Onshape 所轉出的 STL 零件檔案.</p>
+<p><a href="https://en.wikipedia.org/wiki/STL_(file_format)">https://en.wikipedia.org/wiki/STL_(file_format)</a></p>
+<p><a href="https://docs.fileformat.com/cad/stl/">https://docs.fileformat.com/cad/stl/</a></p>
+<p><a href="https://github.com/proverbialsunrise/pySTL">https://github.com/proverbialsunrise/pySTL</a></p>
+<p><a href="https://github.com/taxpon/pymesh">https://github.com/taxpon/pymesh</a></p>
+<p><a href="https://github.com/timzhang642/3D-Machine-Learning">https://github.com/timzhang642/3D-Machine-Learning</a></p>
+<p><a href="https://github.com/WoLpH/numpy-stl/">https://github.com/WoLpH/numpy-stl/</a></p><h1>NX</h1>
 <p>多重啟動可攜程式與 NX:</p>
 <p>將各 NX 版本的啟動整合至不同的 start.bat 檔案中.</p>
 <p><img alt="" class="add_border" height="315" src="/images/multiple_nx_startup.png" width="300"/></p>

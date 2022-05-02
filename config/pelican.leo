@@ -386,7 +386,11 @@ Slug: w9-Q-and-A
 Author: yen
 ---
 
-Windows 環境中還不會使用 SSH push github 版本
+利用 SSH 協定推送 Github 版本的做法其實很簡單, 共有四個階段:
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+Windows 環境以 SSH 執行 git push
 ----
 
 利用 SSH 協定推送 Github 版本的做法其實很簡單, 共有四個階段:
@@ -396,9 +400,11 @@ Windows 環境中還不會使用 SSH push github 版本
  - 讓 Putty 可以上網且 Session 連結到近端的私鑰
  - 確定近端倉儲的 .git/config 檔案中轉為採 SSH 進行連線
 
-&lt;!-- PELICAN_END_SUMMARY --&gt;
+@others
 
-@others</t>
+
+
+</t>
 <t tx="leo.20220421203351.1">上述在 Windows 環境中透過 Putty 以 SSH 推送改版資料到 Github 的四個階段, 只有將 Putty 設定的 session 放入電腦 registry 的部分比較容易發生問題, 因為電腦輔助設計室中的電腦帶有防寫卡, 重新開機後 registry 會重置. 因此比較建立透過設定完成的 .reg 在每次提交推送之前, 將 session 設定改為自己的設定. 詳細說明請參考 &lt;https://mde.tw/wcm2022_guide/content/Token%20and%20SSH.html&gt;
 
 Pelican Blog 的問題
