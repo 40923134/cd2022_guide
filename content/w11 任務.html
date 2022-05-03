@@ -144,13 +144,26 @@ img.add_border {
     <div id="tipue_search_content">run_journal << <a href='run_journal.html'>Previous</a> <a href='XML.html'>Next</a> >> XML<br /><h1>w11 任務</h1>
 <p>本週將要進行兩項任務, 第一是確認各分組能夠有效在組長的分組倉儲中, 以非同步協同的方式進行 uArm 機械手臂場景的建置與操控, 第二則是從 CoppeliaSim 的兩種 <a href="https://www.coppeliarobotics.com/helpFiles/en/xmlFormat.htm">XML 檔案格式</a>, 了解如何透過程式方法建立 uArm 機械手臂場景.</p>
 <p>w11-1 任務:</p>
-<p style="padding-left: 30px;">請各組組員在第一節課堂時段, 以每兩人一小組的方式, 在組長帳號下的分組倉儲中的同一網頁 (標題為 w11s1 ~w11s4) 加入個人 w8-w10 協同設計過程所負責的項目內容與心得. 過程中請參考下列 Wink 影片解決可能產生的衝突, 最後並將 git pull 至 acp 過程的操作, 建立 Wink 影片後, 以組員為單位嵌入個人負責的協同網頁中.</p>
+<p style="padding-left: 30px;">請各組組員在第一節課堂時段, 以每兩人一小組的方式, 在組長帳號下的分組倉儲中的同一網頁 (標題為 w11s1 ~w11s4) 加入個人 w8-w10 協同設計過程所負責的項目內容與心得. 過程中請參考下列 Wink 影片解決可能產生的衝突, 最後並將 git pull 至 acp 的操作過程, 建立 Wink 影片後, 以組員為單位嵌入個人負責的協同網頁中.</p>
+<h4 style="padding-left: 30px;">學習要點:</h4>
+<p style="padding-left: 60px;">各組員是否透過 SSH 協定, 參與組長帳號下的分組倉儲內容協同編輯?</p>
+<p style="padding-left: 60px;">各組員是否在自己的 Github 帳號下, fork 分組協同倉儲後, 與組長帳號下的分組倉儲內容保持同步?</p>
+<p style="padding-left: 60px;">各組員是否在近端對分組倉儲改版前, 都透過 git pull 處理內容衝突與合併後, 再對分組倉儲改版?</p>
+<p style="padding-left: 60px;">各組是否每週舉行分組會議, 檢討協同設計內容進度, 並研討所面臨議題解決方案?</p>
 <p>w11-2 任務:</p>
 <ol>
 <li>請自行搜尋 STL 檔案中的 ASCII 與 Binary 格式, 舉例說明這兩種零件檔案格式如何定義?</li>
 <li>請利用 MTB 機械手臂中的 Link2 零件檔案為例, 分別在 Solvespace、NX 與 Onshape 中建立 Link2 零件檔案後, 分別以 Binary 與 ASCII 格式轉出 STL 檔案, 若轉出的 STL 為 Binary 格式, 則請設法以 Python 程式轉為 ASCII 格式, 反之, 若轉出的 STL 為 ASCII 格式, 也請設法以 Python 程式轉為 Binary 格式.</li>
 <li>請試著將 Link2 零件檔案轉入 Coppeliasim 後, 分別以兩種 XML 格式轉出, 並以 Leo Editor 導入後比較其內容差異. CoppeliaSim 兩種 XML 格式中的 tags, 可利用下列檔案讀取:</li>
 </ol>
+<h4 style="padding-left: 30px;">學習要點:</h4>
+<p style="padding-left: 60px;">STL 零件檔案格式是如何定義的?</p>
+<p style="padding-left: 60px;">為什麼 STL 格式的零件檔案需要分 ASCII 與 Binary 格式?</p>
+<p style="padding-left: 60px;">Python 程式如何讀取 Binary 格式的 STL 零件檔案?</p>
+<p style="padding-left: 60px;">能否利用 Python 程式對 STL 格式的零件檔案, 分別在 ASCII 與 Binary 之間互相轉換?</p>
+<p style="padding-left: 60px;">CoppeliaSim 機電模擬場景中的 XML 檔案, 能否置入 STL 格式的零件?</p>
+<p style="padding-left: 60px;">利用程式方法組合 XML 格式的 CoppeliaSim 機電模擬場景的目的為何?</p>
+<p style="padding-left: 60px;">一個整合零組件架構、驅動配置、GUI 介面以及自動控制程式的 CoppeliaSim 場景, 其 XML tags 與屬性檔案能否透過 Leo Editor 執行編輯?</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># from https://stackoverflow.com/questions/29596584/getting-a-list-of-xml-tags-in-file-using-xml-etree-elementtree
 import xml.etree.ElementTree as ET
 # load and parse the file
